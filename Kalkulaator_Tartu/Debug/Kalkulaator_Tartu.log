@@ -1,0 +1,16 @@
+﻿  Pohi.cpp
+c:\users\steven zimdin\documents\visual studio 2015\projects\kalkulaator_tartu\kalkulaator_tartu\Ruut.h(784): warning C4566: character represented by universal-character-name '\u221A' cannot be represented in the current code page (1257)
+c:\users\steven zimdin\documents\visual studio 2015\projects\kalkulaator_tartu\kalkulaator_tartu\Ruut.h(792): warning C4566: character represented by universal-character-name '\u221A' cannot be represented in the current code page (1257)
+c:\users\steven zimdin\documents\visual studio 2015\projects\kalkulaator_tartu\kalkulaator_tartu\Ruut.h(798): warning C4566: character represented by universal-character-name '\u221A' cannot be represented in the current code page (1257)
+c:\users\steven zimdin\documents\visual studio 2015\projects\kalkulaator_tartu\kalkulaator_tartu\Ruut.h(799): warning C4566: character represented by universal-character-name '\u221A' cannot be represented in the current code page (1257)
+c:\users\steven zimdin\documents\visual studio 2015\projects\kalkulaator_tartu\kalkulaator_tartu\Ruut.h(805): warning C4566: character represented by universal-character-name '\u221A' cannot be represented in the current code page (1257)
+c:\users\steven zimdin\documents\visual studio 2015\projects\kalkulaator_tartu\kalkulaator_tartu\Ruut.h(708): warning C4018: '<': signed/unsigned mismatch
+c:\users\steven zimdin\documents\visual studio 2015\projects\kalkulaator_tartu\kalkulaator_tartu\Ring.h(791): warning C4566: character represented by universal-character-name '\u221A' cannot be represented in the current code page (1257)
+c:\users\steven zimdin\documents\visual studio 2015\projects\kalkulaator_tartu\kalkulaator_tartu\Ring.h(799): warning C4566: character represented by universal-character-name '\u221A' cannot be represented in the current code page (1257)
+c:\users\steven zimdin\documents\visual studio 2015\projects\kalkulaator_tartu\kalkulaator_tartu\Ring.h(805): warning C4566: character represented by universal-character-name '\u221A' cannot be represented in the current code page (1257)
+c:\users\steven zimdin\documents\visual studio 2015\projects\kalkulaator_tartu\kalkulaator_tartu\Ring.h(806): warning C4566: character represented by universal-character-name '\u221A' cannot be represented in the current code page (1257)
+c:\users\steven zimdin\documents\visual studio 2015\projects\kalkulaator_tartu\kalkulaator_tartu\Ring.h(812): warning C4566: character represented by universal-character-name '\u221A' cannot be represented in the current code page (1257)
+c:\users\steven zimdin\documents\visual studio 2015\projects\kalkulaator_tartu\kalkulaator_tartu\Ring.h(714): warning C4018: '<': signed/unsigned mismatch
+  Pohi.obj : /DEBUG:FASTLINK is not supported when managed code is present; restarting link with /DEBUG:FULL
+  Kalkulaator_Tartu.vcxproj -> C:\Users\Steven Zimdin\documents\visual studio 2015\Projects\Kalkulaator_Tartu\Debug\Kalkulaator_Tartu.exe
+  Kalkulaator_Tartu.vcxproj -> C:\Users\Steven Zimdin\documents\visual studio 2015\Projects\Kalkulaator_Tartu\Debug\Kalkulaator_Tartu.pdb (Partial PDB)
