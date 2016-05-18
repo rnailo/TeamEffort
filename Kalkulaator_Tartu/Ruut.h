@@ -847,7 +847,7 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 	Close();// see on sulgemisnupu käsk.
 }
 private: System::Void Ruut_Load(System::Object^  sender, System::EventArgs^  e) {
-	this->pictureBox1->Image = Image::FromFile(L"C:\\Users\\Steven Zimdin\\Documents\\Visual Studio 2015\\Projects\\Kalkulaator_Tartu\\Kalkulaator_Tartu\\media\\Ruut.jpg"); //pildi sisselaadimine akna avamisel.
+	//this->pictureBox1->Image = Image::FromFile(L"C:\\Users\\Steven Zimdin\\Documents\\Visual Studio 2015\\Projects\\Kalkulaator_Tartu\\Kalkulaator_Tartu\\media\\Ruut.jpg"); //pildi sisselaadimine akna avamisel.
 	this->dragging = false; 
 }
 private: System::Void Ruut_MouseDown(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) {//1
