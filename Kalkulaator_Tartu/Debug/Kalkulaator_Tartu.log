@@ -5,13 +5,7 @@ c:\users\mailis\source\repos\teameffort\kalkulaator_tartu\Ruut.h(798): warning C
 c:\users\mailis\source\repos\teameffort\kalkulaator_tartu\Ruut.h(799): warning C4566: character represented by universal-character-name '\u221A' cannot be represented in the current code page (1252)
 c:\users\mailis\source\repos\teameffort\kalkulaator_tartu\Ruut.h(805): warning C4566: character represented by universal-character-name '\u221A' cannot be represented in the current code page (1252)
 c:\users\mailis\source\repos\teameffort\kalkulaator_tartu\Ruut.h(708): warning C4018: '<': signed/unsigned mismatch
-c:\users\mailis\source\repos\teameffort\kalkulaator_tartu\Ring.h(800): warning C4566: character represented by universal-character-name '\u221A' cannot be represented in the current code page (1252)
-c:\users\mailis\source\repos\teameffort\kalkulaator_tartu\Ring.h(806): warning C4566: character represented by universal-character-name '\u221A' cannot be represented in the current code page (1252)
-c:\users\mailis\source\repos\teameffort\kalkulaator_tartu\Ring.h(808): warning C4566: character represented by universal-character-name '\u221A' cannot be represented in the current code page (1252)
-c:\users\mailis\source\repos\teameffort\kalkulaator_tartu\Ring.h(814): warning C4566: character represented by universal-character-name '\u221A' cannot be represented in the current code page (1252)
 c:\users\mailis\source\repos\teameffort\kalkulaator_tartu\Ring.h(715): warning C4018: '<': signed/unsigned mismatch
-c:\users\mailis\source\repos\teameffort\kalkulaator_tartu\ring.h(793): warning C4700: uninitialized local variable 'pi' used
-c:\users\mailis\source\repos\teameffort\kalkulaator_tartu\ring.h(807): warning C4700: uninitialized local variable 'c' used
   Pohi.obj : /DEBUG:FASTLINK is not supported when managed code is present; restarting link with /DEBUG:FULL
   Kalkulaator_Tartu.vcxproj -> C:\Users\mailis\Source\Repos\TeamEffort\Debug\Kalkulaator_Tartu.exe
   Kalkulaator_Tartu.vcxproj -> C:\Users\mailis\Source\Repos\TeamEffort\Debug\Kalkulaator_Tartu.pdb (Partial PDB)

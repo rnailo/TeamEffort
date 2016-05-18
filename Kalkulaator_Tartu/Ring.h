@@ -782,38 +782,39 @@ namespace RingNS {
 			 void calculate(double i, int j) { // i on textBoxi sisestatud väärtus ja j on mitmes textBox ehk, mis väärtus sisestati.
 				 i = conventor(i, j);// siit küsitakse conventori käest andmeid meetrites
 
-				 double r, d, s, c, pi;
+				 double r, d, s, c;
+				 double pi = std::atan(1) * 4;
 				 int error = 0; // kui ikkagi tekib mingi probleem
 				 switch (j)// siin arvutatakse andmed. Valemeid kasutatakse sõltuvalt, mis sisestati. Siin toimub ka lisainfo väljastamine label´itesse.
 				 {
 				 case 1: //R
 					 std::cout << "calc. c1" << j << std::endl;
 					 r = i;	label1->Text = "R - Known";
-					 d = 2 * r; label2->Text = "D = 2 * R = " + d;
-					 s = pi * r * r; label3->Text = ("S = pi * r² = " + s);
-					 c = 2 * pi * r; label4->Text = ("C = 2 * pi * r = " + c);
+					 d = 2 * r; label2->Text = "D = 2 * R = " + d + "m";
+					 s = pi *r * r; label3->Text = "S = pi * r² = " + s + "m²";
+					 c = 2 * pi * r; label4->Text = "C = 2 * pi * r = " + c + "m";
 					 break;
 				 case 2: //D
 					 std::cout << "calc. c2" << j << std::endl;
 					 d = i;	label2->Text = "D - Known";
-					 r = d / 2; label1->Text = "A = P / 4 = " + d + "m / 4 = " + r + "m";
-					 c = d * pi; label4->Text = "C = A * √2 = " + r + "m * √2 = " + c + "m";
-					 s = pi * r * r; label3->Text = ("S = A * A = " + r + "m * " + r + "m = " + s + "m²");
+					 r = d / 2; label1->Text = "R = D / 2 = " + r + "m";
+					 c = d * pi; label4->Text = "C = D * pi = " + c + "m";
+					 s = pi * r * r; label3->Text = "S = pi * r² = " + s + "m²";
 					 break;
 				 case 3: //S
-					 std::cout << "calc. c3" << j << std::endl;
+					 std::cout << "calc. c3" << j << " pi " << pi << std::endl;
 					 s = i;	label3->Text = "S - Known";
-					 r = sqrt(s / pi); label1->Text = "A = √S = √" + s + "m² = " + r + "m";
-					 d = 2 * r;	label2->Text = ("P = 4 * A = 4 * " + r + "m = " + c + "m");
-					 c = d * pi; label4->Text = "C = A * √2 = " + r + "m * √2 = " + c + "m";
+					 r = sqrt(s / pi); label1->Text = "R = D / 2 = " + r + "m";
+					 d = 2 * r;	label2->Text = "D = 2 * R = " + d + "m";
+					 c = d * pi; label4->Text = "C = D * pi = " + c + "m";
 					 
 					 break;
 				 case 4: //C
 					 std::cout << "calc. c4" << std::endl;
 					 c = i;	label4->Text = "C - Known";
-					 r = c / (2 * pi); label1->Text = ("A = C / 2 = " + c + "m / √2 = " + r + "m");
-					 d = 2 * r; label2->Text = ("P = 4 * A = 4 * " + r + "m = " + d + "m");
-					 s = pi * r * r; label3->Text = ("S = A * A = " + r + "m * " + r + "m = " + s + "m²");
+					 r = c / (2 * pi); label1->Text = "R = D / 2 = " + r + "m";
+					 d = 2 * r; label2->Text = "D = 2 * R = " + d + "m";
+					 s = pi * r * r; label3->Text = "S = pi * r² = " + s + "m²";
 					 break;
 				 default:
 					 std::cout << "calc. ERROR" << std::endl;
