@@ -789,9 +789,9 @@ namespace RingNS {
 				 case 1: //R
 					 std::cout << "calc. c1" << j << std::endl;
 					 r = i;	label1->Text = "R - Known";
-					 d = 2 * r; label4->Text = "D = 2 * R = " + r + "m * √2 = " + c + "m";
-					 s = pi * r * r; label3->Text = ("S = A * A = " + r + "m * " + r + "m = " + s + "m²");
-					 c = 2 * pi * r; label2->Text = ("P = 4 * A = 4 * " + r + "m = " + d + "m");
+					 d = 2 * r; label2->Text = "D = 2 * R = " + d;
+					 s = pi * r * r; label3->Text = ("S = pi * r² = " + s);
+					 c = 2 * pi * r; label4->Text = ("C = 2 * pi * r = " + c);
 					 break;
 				 case 2: //D
 					 std::cout << "calc. c2" << j << std::endl;
@@ -804,8 +804,9 @@ namespace RingNS {
 					 std::cout << "calc. c3" << j << std::endl;
 					 s = i;	label3->Text = "S - Known";
 					 r = sqrt(s / pi); label1->Text = "A = √S = √" + s + "m² = " + r + "m";
-					 c = d * pi; label4->Text = "C = A * √2 = " + r + "m * √2 = " + c + "m";
 					 d = 2 * r;	label2->Text = ("P = 4 * A = 4 * " + r + "m = " + c + "m");
+					 c = d * pi; label4->Text = "C = A * √2 = " + r + "m * √2 = " + c + "m";
+					 
 					 break;
 				 case 4: //C
 					 std::cout << "calc. c4" << std::endl;
