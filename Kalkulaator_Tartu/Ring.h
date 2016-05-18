@@ -4,6 +4,7 @@
 #include <algorithm>
 #include <iostream>
 #include <conio.h>
+#include <math.h>
 
 namespace RingNS {
 	std::string textB;
@@ -711,7 +712,7 @@ namespace RingNS {
 				 std::cout << "DIGITCHECK" << std::endl;
 				 int dotCount = 0; // Punktide arv textBoxis
 				 int minusCount = 0; // Miinuste arv textBoxis
-				 for (int i = 0;i < str.length();i++) {
+				 for (int i = 0; i < str.length(); i++) {
 					 std::cout << i << std::endl;
 					 switch (str.at(i))
 					 {
@@ -725,13 +726,13 @@ namespace RingNS {
 						 break;*/
 					 case ',':dotCount++; std::cout << "DC/for/switch/." << dotCount << std::endl;
 						 if (dotCount > 1 || i == 0) {// Kustutus, kui on üle 1 punkti.
-							 dotCount--;erased = 1;selecting = i;
+							 dotCount--; erased = 1; selecting = i;
 							 str.erase(i, 1); std::cout << ", erased" << std::endl;
 						 }
 						 break;
 					 default:std::cout << "DC/for/switch/default" << std::endl;// Kustutus, kui esineb täht
-						 str.erase(i, 1);std::cout << "lastC erased" << std::endl;
-						 erased = 1;selecting = i;
+						 str.erase(i, 1); std::cout << "lastC erased" << std::endl;
+						 erased = 1; selecting = i;
 						 break;
 					 }
 				 }
@@ -781,56 +782,56 @@ namespace RingNS {
 			 void calculate(double i, int j) { // i on textBoxi sisestatud väärtus ja j on mitmes textBox ehk, mis väärtus sisestati.
 				 i = conventor(i, j);// siit küsitakse conventori käest andmeid meetrites
 
-				 double c, s, p, a;
+				 double r, d, s, c, pi;
 				 int error = 0; // kui ikkagi tekib mingi probleem
 				 switch (j)// siin arvutatakse andmed. Valemeid kasutatakse sõltuvalt, mis sisestati. Siin toimub ka lisainfo väljastamine label´itesse.
 				 {
-				 case 1: //A
+				 case 1: //R
 					 std::cout << "calc. c1" << j << std::endl;
-					 a = i;	label1->Text = "A - Known";
-					 c = a*sqrt(2);label4->Text = "C = A * √2 = " + a + "m * √2 = " + c + "m";
-					 s = a*a;label3->Text = ("S = A * A = " + a + "m * " + a + "m = " + s + "m²");
-					 p = 4 * a;label2->Text = ("P = 4 * A = 4 * " + a + "m = " + p + "m");
+					 r = i;	label1->Text = "R - Known";
+					 d = 2 * r; label4->Text = "D = 2 * R = " + r + "m * √2 = " + c + "m";
+					 s = pi * r * r; label3->Text = ("S = A * A = " + r + "m * " + r + "m = " + s + "m²");
+					 c = 2 * pi * r; label2->Text = ("P = 4 * A = 4 * " + r + "m = " + d + "m");
 					 break;
-				 case 2: //P
+				 case 2: //D
 					 std::cout << "calc. c2" << j << std::endl;
-					 p = i;	label2->Text = "P - Known";
-					 a = p / 4;label1->Text = "A = P / 4 = " + p + "m / 4 = " + a + "m";
-					 c = a*sqrt(2);label4->Text = "C = A * √2 = " + a + "m * √2 = " + c + "m";
-					 s = a*a;label3->Text = ("S = A * A = " + a + "m * " + a + "m = " + s + "m²");
+					 d = i;	label2->Text = "D - Known";
+					 r = d / 2; label1->Text = "A = P / 4 = " + d + "m / 4 = " + r + "m";
+					 c = d * pi; label4->Text = "C = A * √2 = " + r + "m * √2 = " + c + "m";
+					 s = pi * r * r; label3->Text = ("S = A * A = " + r + "m * " + r + "m = " + s + "m²");
 					 break;
 				 case 3: //S
 					 std::cout << "calc. c3" << j << std::endl;
 					 s = i;	label3->Text = "S - Known";
-					 a = sqrt(s);label1->Text = "A = √S = √" + s + "m² = " + a + "m";
-					 c = a*sqrt(2);label4->Text = "C = A * √2 = " + a + "m * √2 = " + c + "m";
-					 p = 4 * a;	label2->Text = ("P = 4 * A = 4 * " + a + "m = " + p + "m");
+					 r = sqrt(s / pi); label1->Text = "A = √S = √" + s + "m² = " + r + "m";
+					 c = d * pi; label4->Text = "C = A * √2 = " + r + "m * √2 = " + c + "m";
+					 d = 2 * r;	label2->Text = ("P = 4 * A = 4 * " + r + "m = " + c + "m");
 					 break;
 				 case 4: //C
 					 std::cout << "calc. c4" << std::endl;
 					 c = i;	label4->Text = "C - Known";
-					 a = c / sqrt(2);label1->Text = ("A = C / 2 = " + c + "m / √2 = " + a + "m");
-					 p = 4 * a;label2->Text = ("P = 4 * A = 4 * " + a + "m = " + p + "m");
-					 s = a*a;label3->Text = ("S = A * A = " + a + "m * " + a + "m = " + s + "m²");
+					 r = c / (2 * pi); label1->Text = ("A = C / 2 = " + c + "m / √2 = " + r + "m");
+					 d = 2 * r; label2->Text = ("P = 4 * A = 4 * " + r + "m = " + d + "m");
+					 s = pi * r * r; label3->Text = ("S = A * A = " + r + "m * " + r + "m = " + s + "m²");
 					 break;
 				 default:
 					 std::cout << "calc. ERROR" << std::endl;
 					 error = 1; // siis see kuvatakse
 					 break;
 				 }
-				 answReturner(c, a, p, s, error, j);
+				 answReturner(c, r, d, s, error, j);
 			 }
 			 //ANSWRETURNER
-			 void answReturner(double c, double a, double p, double s, int error, int j) { // siin tagastatakse töödeldud, kontrollitud ja arvutatud andmed õigetesse lahtritesse. Ainuke mida ei muudeta on lahter kuhu parasjagu kirjutatakse.
+			 void answReturner(double c, double r, double d, double s, int error, int j) { // r, d, s, c, pi siin tagastatakse töödeldud, kontrollitud ja arvutatud andmed õigetesse lahtritesse. Ainuke mida ei muudeta on lahter kuhu parasjagu kirjutatakse.
 				 if (j != 1) {
 					 std::cout << "answR. 1" << std::endl;
-					 if (error == 0) { textBox1->Text = unit(a, 1); }
+					 if (error == 0) { textBox1->Text = unit(r, 1); }
 					 else { textBox1->Text = "ERROR"; }
 				 }
 				 if (j != 2) {
 					 std::cout << "answR. 2" << std::endl;
 					 if (error == 0) {
-						 textBox2->Text = unit(p, 2);
+						 textBox2->Text = unit(d, 2);
 					 }
 					 else { textBox2->Text = "ERROR"; }
 				 }
