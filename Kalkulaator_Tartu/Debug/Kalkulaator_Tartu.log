@@ -1,20 +1,5 @@
-﻿  Pohi.cpp
-c:\users\mailis\source\repos\teameffort\kalkulaator_tartu\Ruut.h(784): warning C4566: character represented by universal-character-name '\u221A' cannot be represented in the current code page (1252)
-c:\users\mailis\source\repos\teameffort\kalkulaator_tartu\Ruut.h(792): warning C4566: character represented by universal-character-name '\u221A' cannot be represented in the current code page (1252)
-c:\users\mailis\source\repos\teameffort\kalkulaator_tartu\Ruut.h(798): warning C4566: character represented by universal-character-name '\u221A' cannot be represented in the current code page (1252)
-c:\users\mailis\source\repos\teameffort\kalkulaator_tartu\Ruut.h(799): warning C4566: character represented by universal-character-name '\u221A' cannot be represented in the current code page (1252)
-c:\users\mailis\source\repos\teameffort\kalkulaator_tartu\Ruut.h(805): warning C4566: character represented by universal-character-name '\u221A' cannot be represented in the current code page (1252)
-c:\users\mailis\source\repos\teameffort\kalkulaator_tartu\Ruut.h(708): warning C4018: '<': signed/unsigned mismatch
-c:\users\mailis\source\repos\teameffort\kalkulaator_tartu\Ring.h(792): warning C4566: character represented by universal-character-name '\u221A' cannot be represented in the current code page (1252)
-c:\users\mailis\source\repos\teameffort\kalkulaator_tartu\Ring.h(800): warning C4566: character represented by universal-character-name '\u221A' cannot be represented in the current code page (1252)
-c:\users\mailis\source\repos\teameffort\kalkulaator_tartu\Ring.h(806): warning C4566: character represented by universal-character-name '\u221A' cannot be represented in the current code page (1252)
-c:\users\mailis\source\repos\teameffort\kalkulaator_tartu\Ring.h(807): warning C4566: character represented by universal-character-name '\u221A' cannot be represented in the current code page (1252)
-c:\users\mailis\source\repos\teameffort\kalkulaator_tartu\Ring.h(813): warning C4566: character represented by universal-character-name '\u221A' cannot be represented in the current code page (1252)
-c:\users\mailis\source\repos\teameffort\kalkulaator_tartu\Ring.h(715): warning C4018: '<': signed/unsigned mismatch
-c:\users\mailis\source\repos\teameffort\kalkulaator_tartu\ring.h(792): warning C4700: uninitialized local variable 'c' used
-c:\users\mailis\source\repos\teameffort\kalkulaator_tartu\ring.h(793): warning C4700: uninitialized local variable 'pi' used
-c:\users\mailis\source\repos\teameffort\kalkulaator_tartu\ring.h(807): warning C4700: uninitialized local variable 'd' used
-  .NETFramework,Version=v4.5.2.AssemblyAttributes.cpp
-  Pohi.obj : /DEBUG:FASTLINK is not supported when managed code is present; restarting link with /DEBUG:FULL
-  Kalkulaator_Tartu.vcxproj -> C:\Users\mailis\Source\Repos\TeamEffort\Debug\Kalkulaator_Tartu.exe
-  Kalkulaator_Tartu.vcxproj -> C:\Users\mailis\Source\Repos\TeamEffort\Debug\Kalkulaator_Tartu.pdb (Partial PDB)
+﻿Build started 18.05.2016 15:44.03.
+
+Build succeeded.
+
+Time Elapsed 00:00:00.02
