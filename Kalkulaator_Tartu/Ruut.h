@@ -117,7 +117,8 @@ namespace RuutNS {
 			this->checkBox1->BackColor = System::Drawing::SystemColors::Window;
 			this->checkBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(186)));
-			this->checkBox1->ForeColor = System::Drawing::Color::Black;
+			this->checkBox1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(128)),
+				static_cast<System::Int32>(static_cast<System::Byte>(0)));
 			this->checkBox1->Location = System::Drawing::Point(7, 191);
 			this->checkBox1->Name = L"checkBox1";
 			this->checkBox1->Size = System::Drawing::Size(104, 24);
@@ -131,7 +132,7 @@ namespace RuutNS {
 			this->checkBox2->BackColor = System::Drawing::SystemColors::Window;
 			this->checkBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(186)));
-			this->checkBox2->ForeColor = System::Drawing::Color::Black;
+			this->checkBox2->ForeColor = System::Drawing::Color::LimeGreen;
 			this->checkBox2->Location = System::Drawing::Point(7, 219);
 			this->checkBox2->Name = L"checkBox2";
 			this->checkBox2->Size = System::Drawing::Size(104, 24);
@@ -145,7 +146,8 @@ namespace RuutNS {
 			this->checkBox3->BackColor = System::Drawing::SystemColors::Window;
 			this->checkBox3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(186)));
-			this->checkBox3->ForeColor = System::Drawing::Color::Black;
+			this->checkBox3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
+				static_cast<System::Int32>(static_cast<System::Byte>(192)));
 			this->checkBox3->Location = System::Drawing::Point(7, 248);
 			this->checkBox3->Name = L"checkBox3";
 			this->checkBox3->Size = System::Drawing::Size(104, 24);
@@ -159,7 +161,7 @@ namespace RuutNS {
 			this->checkBox4->BackColor = System::Drawing::SystemColors::Window;
 			this->checkBox4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(186)));
-			this->checkBox4->ForeColor = System::Drawing::Color::Black;
+			this->checkBox4->ForeColor = System::Drawing::SystemColors::Highlight;
 			this->checkBox4->Location = System::Drawing::Point(7, 276);
 			this->checkBox4->Name = L"checkBox4";
 			this->checkBox4->Size = System::Drawing::Size(104, 24);
@@ -847,7 +849,7 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 	Close();// see on sulgemisnupu käsk.
 }
 private: System::Void Ruut_Load(System::Object^  sender, System::EventArgs^  e) {
-	//this->pictureBox1->Image = Image::FromFile(L"C:\\Users\\Steven Zimdin\\Documents\\Visual Studio 2015\\Projects\\Kalkulaator_Tartu\\Kalkulaator_Tartu\\media\\Ruut.jpg"); //pildi sisselaadimine akna avamisel.
+	this->pictureBox1->Image = Image::FromFile(L".\\media\\Ruut.jpg"); //pildi sisselaadimine akna avamisel.
 	this->dragging = false; 
 }
 private: System::Void Ruut_MouseDown(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) {//1
