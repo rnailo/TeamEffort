@@ -27,11 +27,9 @@ namespace RistkylikNS {
 		int cb4 = 0;// v‰‰rtus millega m‰‰ran eelnevalt valitud checkBoxi.
 		int cb5 = 0;// v‰‰rtus millega m‰‰ran eelnevalt valitud checkBoxi.
 		int erased = 0;// v‰‰rtus millega kontrollin, kas on infot kustutatud kontrollija poolt.
-	private: System::Windows::Forms::PictureBox^  pictureBox1;
-	private: System::Windows::Forms::Label^  label5;
-	private: System::Windows::Forms::Panel^  panel1;
-	private: System::Windows::Forms::Button^  button1;
-	
+
+
+
 	public:
 			int selecting = 0;// v‰‰rtus millega m‰‰ran koha, kust j‰tkab kirjutamine p‰rast kustutust.
 
