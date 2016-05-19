@@ -881,6 +881,7 @@ namespace RingNS {
 		Close();// see on sulgemisnupu käsk.
 	}
 	private: System::Void Ring_Load(System::Object^  sender, System::EventArgs^  e) {
+		this->pictureBox1->Image = Image::FromFile(L".\\media\\Ring.jpg"); //pildi sisselaadimine akna avamisel.
 		this->dragging = false;
 	}
 	private: System::Void Ring_MouseDown(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) {//1
