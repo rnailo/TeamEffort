@@ -154,14 +154,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Kolmnurk.resx">
-      <DependentUpon>Kolmnurk.h</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Pohi.resx">
       <DependentUpon>Pohi.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ring.resx">
       <DependentUpon>Ring.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ristkylik.resx">
+      <DependentUpon>Ristkylik.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ruut.resx">
       <DependentUpon>Ruut.h</DependentUpon>
