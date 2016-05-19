@@ -160,6 +160,9 @@
     <EmbeddedResource Include="Ring.resx">
       <DependentUpon>Ring.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ristkylik.resx">
+      <DependentUpon>Ristkylik.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ruut.resx">
       <DependentUpon>Ruut.h</DependentUpon>
       <DeploymentContent>true</DeploymentContent>
