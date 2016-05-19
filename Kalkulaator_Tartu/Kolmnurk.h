@@ -260,7 +260,6 @@ namespace KolmnurkNS {
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->Size = System::Drawing::Size(193, 20);
 			this->textBox3->TabIndex = 34;
-			this->textBox3->TextChanged += gcnew System::EventHandler(this, &Kolmnurk::textBox3_TextChanged);
 			// 
 			// textBox2
 			// 
@@ -325,7 +324,6 @@ namespace KolmnurkNS {
 			this->label5->Size = System::Drawing::Size(163, 58);
 			this->label5->TabIndex = 40;
 			this->label5->Text = L"Triangle";
-			this->label5->Click += gcnew System::EventHandler(this, &Kolmnurk::label5_Click);
 			// 
 			// label6
 			// 
@@ -506,12 +504,11 @@ namespace KolmnurkNS {
 	private: System::Void Kolmnurk_MouseUp(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) {
 		this->dragging = false;
 	}
-	private: System::Void textBox3_TextChanged(System::Object^  sender, System::EventArgs^  e) {
+
+
+
+
+	private: System::Void checkBox4_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
 	}
-
-
-
-
-private: System::Void checkBox4_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-}
+	};
 }
