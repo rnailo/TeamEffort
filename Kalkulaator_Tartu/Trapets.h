@@ -26,9 +26,11 @@ namespace TrapetsNS {
 		int cb3 = 0;// väärtus millega määran eelnevalt valitud checkBoxi.
 		int cb4 = 0;// väärtus millega määran eelnevalt valitud checkBoxi.
 		int cb5 = 0;// väärtus millega määran eelnevalt valitud checkBoxi.
+		int cb6 = 0;// väärtus millega määran eelnevalt valitud checkBoxi.
+		int cb7 = 0;// väärtus millega määran eelnevalt valitud checkBoxi.
 		int erased = 0;// väärtus millega kontrollin, kas on infot kustutatud kontrollija poolt.
 	private: System::Windows::Forms::PictureBox^  pictureBox1;
-	private: System::Windows::Forms::Label^  label6;
+	private: System::Windows::Forms::Label^  label8;
 	private: System::Windows::Forms::Panel^  panel1;
 	private: System::Windows::Forms::Button^  button1;
 
@@ -60,11 +62,15 @@ namespace TrapetsNS {
 	public: System::Windows::Forms::CheckBox^  checkBox3;
 	public: System::Windows::Forms::CheckBox^  checkBox4;
 	public: System::Windows::Forms::CheckBox^  checkBox5;
+	public: System::Windows::Forms::CheckBox^  checkBox6;
+	public: System::Windows::Forms::CheckBox^  checkBox7;
 	public: System::Windows::Forms::TextBox^  textBox1;
 	public: System::Windows::Forms::TextBox^  textBox2;
 	public: System::Windows::Forms::TextBox^  textBox3;
 	public: System::Windows::Forms::TextBox^  textBox4;
 	public: System::Windows::Forms::TextBox^  textBox5;
+	public: System::Windows::Forms::TextBox^  textBox6;
+	public: System::Windows::Forms::TextBox^  textBox7;
 	private: bool dragging;
 	private: Point offset;
 	private: System::Windows::Forms::Label^  label1;
@@ -72,11 +78,15 @@ namespace TrapetsNS {
 	private: System::Windows::Forms::Label^  label3;
 	private: System::Windows::Forms::Label^  label4;
 	private: System::Windows::Forms::Label^  label5;
+	private: System::Windows::Forms::Label^  label6;
+	private: System::Windows::Forms::Label^  label7;
 	private: System::Windows::Forms::ComboBox^  comboBox1;
 	private: System::Windows::Forms::ComboBox^  comboBox2;
 	private: System::Windows::Forms::ComboBox^  comboBox3;
 	private: System::Windows::Forms::ComboBox^  comboBox4;
 	private: System::Windows::Forms::ComboBox^  comboBox5;
+	private: System::Windows::Forms::ComboBox^  comboBox6;
+	private: System::Windows::Forms::ComboBox^  comboBox7;
 	protected:
 
 	private:
@@ -98,23 +108,31 @@ namespace TrapetsNS {
 			this->checkBox3 = (gcnew System::Windows::Forms::CheckBox());
 			this->checkBox4 = (gcnew System::Windows::Forms::CheckBox());
 			this->checkBox5 = (gcnew System::Windows::Forms::CheckBox());
+			this->checkBox6 = (gcnew System::Windows::Forms::CheckBox());
+			this->checkBox7 = (gcnew System::Windows::Forms::CheckBox());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
 			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
 			this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
 			this->comboBox3 = (gcnew System::Windows::Forms::ComboBox());
 			this->comboBox4 = (gcnew System::Windows::Forms::ComboBox());
 			this->comboBox5 = (gcnew System::Windows::Forms::ComboBox());
+			this->comboBox6 = (gcnew System::Windows::Forms::ComboBox());
+			this->comboBox7 = (gcnew System::Windows::Forms::ComboBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->label5 = (gcnew System::Windows::Forms::Label());
-			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
@@ -127,11 +145,11 @@ namespace TrapetsNS {
 			this->checkBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(186)));
 			this->checkBox1->ForeColor = System::Drawing::Color::Black;
-			this->checkBox1->Location = System::Drawing::Point(7, 168);
+			this->checkBox1->Location = System::Drawing::Point(7, 228);
 			this->checkBox1->Name = L"checkBox1";
 			this->checkBox1->Size = System::Drawing::Size(104, 24);
-			this->checkBox1->TabIndex = 32;
-			this->checkBox1->Text = L"A -";
+			this->checkBox1->TabIndex = 31;
+			this->checkBox1->Text = L"a -";
 			this->checkBox1->UseVisualStyleBackColor = false;
 			this->checkBox1->CheckedChanged += gcnew System::EventHandler(this, &Trapets::checkBox1_CheckedChanged);
 			// 
@@ -141,11 +159,11 @@ namespace TrapetsNS {
 			this->checkBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(186)));
 			this->checkBox2->ForeColor = System::Drawing::Color::Black;
-			this->checkBox2->Location = System::Drawing::Point(7, 196);
+			this->checkBox2->Location = System::Drawing::Point(7, 256);
 			this->checkBox2->Name = L"checkBox2";
 			this->checkBox2->Size = System::Drawing::Size(104, 24);
-			this->checkBox2->TabIndex = 31;
-			this->checkBox2->Text = L"B -";
+			this->checkBox2->TabIndex = 32;
+			this->checkBox2->Text = L"b -";
 			this->checkBox2->UseVisualStyleBackColor = false;
 			this->checkBox2->CheckedChanged += gcnew System::EventHandler(this, &Trapets::checkBox2_CheckedChanged);
 			// 
@@ -155,11 +173,11 @@ namespace TrapetsNS {
 			this->checkBox3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(186)));
 			this->checkBox3->ForeColor = System::Drawing::Color::Black;
-			this->checkBox3->Location = System::Drawing::Point(7, 224);
+			this->checkBox3->Location = System::Drawing::Point(7, 284);
 			this->checkBox3->Name = L"checkBox3";
 			this->checkBox3->Size = System::Drawing::Size(104, 24);
-			this->checkBox3->TabIndex = 30;
-			this->checkBox3->Text = L"H -";
+			this->checkBox3->TabIndex = 33;
+			this->checkBox3->Text = L"c -";
 			this->checkBox3->UseVisualStyleBackColor = false;
 			this->checkBox3->CheckedChanged += gcnew System::EventHandler(this, &Trapets::checkBox3_CheckedChanged);
 			// 
@@ -169,11 +187,11 @@ namespace TrapetsNS {
 			this->checkBox4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(186)));
 			this->checkBox4->ForeColor = System::Drawing::Color::Black;
-			this->checkBox4->Location = System::Drawing::Point(7, 252);
+			this->checkBox4->Location = System::Drawing::Point(7, 312);
 			this->checkBox4->Name = L"checkBox4";
 			this->checkBox4->Size = System::Drawing::Size(104, 24);
-			this->checkBox4->TabIndex = 29;
-			this->checkBox4->Text = L"S -";
+			this->checkBox4->TabIndex = 34;
+			this->checkBox4->Text = L"d -";
 			this->checkBox4->UseVisualStyleBackColor = false;
 			this->checkBox4->CheckedChanged += gcnew System::EventHandler(this, &Trapets::checkBox4_CheckedChanged);
 			// 
@@ -183,72 +201,120 @@ namespace TrapetsNS {
 			this->checkBox5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(186)));
 			this->checkBox5->ForeColor = System::Drawing::Color::Black;
-			this->checkBox5->Location = System::Drawing::Point(7, 280);
-			this->checkBox5->Name = L"checkBox5";
+			this->checkBox5->Location = System::Drawing::Point(7, 340);
+			this->checkBox5->Name = L"checkBox4";
 			this->checkBox5->Size = System::Drawing::Size(104, 24);
-			this->checkBox5->TabIndex = 34;
-			this->checkBox5->Text = L"P -";
+			this->checkBox5->TabIndex = 35;
+			this->checkBox5->Text = L"h -";
 			this->checkBox5->UseVisualStyleBackColor = false;
 			this->checkBox5->CheckedChanged += gcnew System::EventHandler(this, &Trapets::checkBox5_CheckedChanged);
+			// 
+			// checkBox6
+			// 
+			this->checkBox6->BackColor = System::Drawing::SystemColors::Window;
+			this->checkBox6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(186)));
+			this->checkBox6->ForeColor = System::Drawing::Color::Black;
+			this->checkBox6->Location = System::Drawing::Point(7, 368);
+			this->checkBox6->Name = L"checkBox4";
+			this->checkBox6->Size = System::Drawing::Size(104, 24);
+			this->checkBox6->TabIndex = 36;
+			this->checkBox6->Text = L"S -";
+			this->checkBox6->UseVisualStyleBackColor = false;
+			this->checkBox6->CheckedChanged += gcnew System::EventHandler(this, &Trapets::checkBox6_CheckedChanged);
+			// 
+			// checkBox7
+			// 
+			this->checkBox7->BackColor = System::Drawing::SystemColors::Window;
+			this->checkBox7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(186)));
+			this->checkBox7->ForeColor = System::Drawing::Color::Black;
+			this->checkBox7->Location = System::Drawing::Point(7, 396);
+			this->checkBox7->Name = L"checkBox5";
+			this->checkBox7->Size = System::Drawing::Size(104, 24);
+			this->checkBox7->TabIndex = 37;
+			this->checkBox7->Text = L"P -";
+			this->checkBox7->UseVisualStyleBackColor = false;
+			this->checkBox7->CheckedChanged += gcnew System::EventHandler(this, &Trapets::checkBox7_CheckedChanged);
 			// 
 			// textBox1
 			// 
 			this->textBox1->Enabled = false;
-			this->textBox1->Location = System::Drawing::Point(319, 224);
+			this->textBox1->Location = System::Drawing::Point(319, 284);
 			this->textBox1->MaxLength = 1;
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(364, 22);
-			this->textBox1->TabIndex = 35;
+			this->textBox1->TabIndex = 38;
 			this->textBox1->KeyUp += gcnew System::Windows::Forms::KeyEventHandler(this, &Trapets::textBox1_KeyUp);
 			// 
 			// textBox2
 			// 
 			this->textBox2->Enabled = false;
-			this->textBox2->Location = System::Drawing::Point(319, 252);
+			this->textBox2->Location = System::Drawing::Point(319, 312);
 			this->textBox2->MaxLength = 1;
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->Size = System::Drawing::Size(364, 22);
-			this->textBox2->TabIndex = 36;
+			this->textBox2->TabIndex = 39;
 			this->textBox2->KeyUp += gcnew System::Windows::Forms::KeyEventHandler(this, &Trapets::textBox2_KeyUp);
 			// 
 			// textBox3
 			// 
 			this->textBox3->Enabled = false;
-			this->textBox3->Location = System::Drawing::Point(319, 280);
+			this->textBox3->Location = System::Drawing::Point(319, 340);
 			this->textBox3->MaxLength = 1;
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->Size = System::Drawing::Size(364, 22);
-			this->textBox3->TabIndex = 37;
+			this->textBox3->TabIndex = 40;
 			this->textBox3->KeyUp += gcnew System::Windows::Forms::KeyEventHandler(this, &Trapets::textBox3_KeyUp);
 			// 
 			// textBox4
 			// 
 			this->textBox4->Enabled = false;
-			this->textBox4->Location = System::Drawing::Point(319, 308);
+			this->textBox4->Location = System::Drawing::Point(319, 368);
 			this->textBox4->MaxLength = 1;
 			this->textBox4->Name = L"textBox4";
 			this->textBox4->Size = System::Drawing::Size(364, 22);
-			this->textBox4->TabIndex = 38;
+			this->textBox4->TabIndex = 41;
 			this->textBox4->KeyUp += gcnew System::Windows::Forms::KeyEventHandler(this, &Trapets::textBox4_KeyUp);
 			// 
 			// textBox5
 			// 
 			this->textBox5->Enabled = false;
-			this->textBox5->Location = System::Drawing::Point(319, 336);
+			this->textBox5->Location = System::Drawing::Point(319, 396);
 			this->textBox5->MaxLength = 1;
-			this->textBox5->Name = L"textBox5";
+			this->textBox5->Name = L"textBox4";
 			this->textBox5->Size = System::Drawing::Size(364, 22);
-			this->textBox5->TabIndex = 43;
-			this->textBox5->KeyUp += gcnew System::Windows::Forms::KeyEventHandler(this, &Trapets::textBox5_KeyUp);
+			this->textBox5->TabIndex = 42;
+			this->textBox5->KeyUp += gcnew System::Windows::Forms::KeyEventHandler(this, &Trapets::textBox4_KeyUp);
+			// 
+			// textBox6
+			// 
+			this->textBox6->Enabled = false;
+			this->textBox6->Location = System::Drawing::Point(319, 424);
+			this->textBox6->MaxLength = 1;
+			this->textBox6->Name = L"textBox4";
+			this->textBox6->Size = System::Drawing::Size(364, 22);
+			this->textBox6->TabIndex = 43;
+			this->textBox6->KeyUp += gcnew System::Windows::Forms::KeyEventHandler(this, &Trapets::textBox6_KeyUp);
+			// 
+			// textBox7
+			// 
+			this->textBox7->Enabled = false;
+			this->textBox7->Location = System::Drawing::Point(319, 452);
+			this->textBox7->MaxLength = 1;
+			this->textBox7->Name = L"textBox5";
+			this->textBox7->Size = System::Drawing::Size(364, 22);
+			this->textBox7->TabIndex = 44;
+			this->textBox7->KeyUp += gcnew System::Windows::Forms::KeyEventHandler(this, &Trapets::textBox7_KeyUp);
 			// 
 			// comboBox1
 			// 
 			this->comboBox1->FormattingEnabled = true;
 			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(6) { L"mm", L"Cm", L"Dm", L"m", L"Km", L"In" });
-			this->comboBox1->Location = System::Drawing::Point(689, 224);
+			this->comboBox1->Location = System::Drawing::Point(689, 284);
 			this->comboBox1->Name = L"comboBox1";
 			this->comboBox1->Size = System::Drawing::Size(58, 24);
-			this->comboBox1->TabIndex = 39;
+			this->comboBox1->TabIndex = 45;
 			this->comboBox1->Text = L"m";
 			this->comboBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &Trapets::comboBox1_SelectedIndexChanged);
 			// 
@@ -256,10 +322,10 @@ namespace TrapetsNS {
 			// 
 			this->comboBox2->FormattingEnabled = true;
 			this->comboBox2->Items->AddRange(gcnew cli::array< System::Object^  >(6) { L"mm", L"Cm", L"Dm", L"m", L"Km", L"In" });
-			this->comboBox2->Location = System::Drawing::Point(689, 252);
+			this->comboBox2->Location = System::Drawing::Point(689, 312);
 			this->comboBox2->Name = L"comboBox2";
 			this->comboBox2->Size = System::Drawing::Size(58, 24);
-			this->comboBox2->TabIndex = 40;
+			this->comboBox2->TabIndex = 46;
 			this->comboBox2->Text = L"m";
 			this->comboBox2->SelectedIndexChanged += gcnew System::EventHandler(this, &Trapets::comboBox2_SelectedIndexChanged);
 			// 
@@ -267,34 +333,56 @@ namespace TrapetsNS {
 			// 
 			this->comboBox3->FormattingEnabled = true;
 			this->comboBox3->Items->AddRange(gcnew cli::array< System::Object^  >(6) { L"mm", L"Cm", L"Dm", L"m", L"Km", L"In" });
-			this->comboBox3->Location = System::Drawing::Point(689, 280);
+			this->comboBox3->Location = System::Drawing::Point(689, 340);
 			this->comboBox3->Name = L"comboBox3";
 			this->comboBox3->Size = System::Drawing::Size(58, 24);
-			this->comboBox3->TabIndex = 42;
+			this->comboBox3->TabIndex = 47;
 			this->comboBox3->Text = L"m";
 			this->comboBox3->SelectedIndexChanged += gcnew System::EventHandler(this, &Trapets::comboBox3_SelectedIndexChanged);
 			// 
 			// comboBox4
 			// 
 			this->comboBox4->FormattingEnabled = true;
-			this->comboBox4->Items->AddRange(gcnew cli::array< System::Object^  >(6) { L"mm^2", L"Cm^2", L"Dm^2", L"m^2", L"Km^2", L"In^2" });
-			this->comboBox4->Location = System::Drawing::Point(689, 308);
-			this->comboBox4->Name = L"comboBox4";
+			this->comboBox4->Items->AddRange(gcnew cli::array< System::Object^  >(6) { L"mm", L"Cm", L"Dm", L"m", L"Km", L"In" });
+			this->comboBox4->Location = System::Drawing::Point(689, 368);
+			this->comboBox4->Name = L"comboBox3";
 			this->comboBox4->Size = System::Drawing::Size(58, 24);
-			this->comboBox4->TabIndex = 45;
-			this->comboBox4->Text = L"m^2";
+			this->comboBox4->TabIndex = 48;
+			this->comboBox4->Text = L"m";
 			this->comboBox4->SelectedIndexChanged += gcnew System::EventHandler(this, &Trapets::comboBox4_SelectedIndexChanged);
 			// 
 			// comboBox5
 			// 
 			this->comboBox5->FormattingEnabled = true;
 			this->comboBox5->Items->AddRange(gcnew cli::array< System::Object^  >(6) { L"mm", L"Cm", L"Dm", L"m", L"Km", L"In" });
-			this->comboBox5->Location = System::Drawing::Point(689, 336);
-			this->comboBox5->Name = L"comboBox5";
+			this->comboBox5->Location = System::Drawing::Point(689, 396);
+			this->comboBox5->Name = L"comboBox3";
 			this->comboBox5->Size = System::Drawing::Size(58, 24);
-			this->comboBox5->TabIndex = 46;
+			this->comboBox5->TabIndex = 49;
 			this->comboBox5->Text = L"m";
 			this->comboBox5->SelectedIndexChanged += gcnew System::EventHandler(this, &Trapets::comboBox5_SelectedIndexChanged);
+			// 
+			// comboBox6
+			// 
+			this->comboBox6->FormattingEnabled = true;
+			this->comboBox6->Items->AddRange(gcnew cli::array< System::Object^  >(6) { L"mm^2", L"Cm^2", L"Dm^2", L"m^2", L"Km^2", L"In^2" });
+			this->comboBox6->Location = System::Drawing::Point(689, 424);
+			this->comboBox6->Name = L"comboBox4";
+			this->comboBox6->Size = System::Drawing::Size(58, 24);
+			this->comboBox6->TabIndex = 50;
+			this->comboBox6->Text = L"m^2";
+			this->comboBox6->SelectedIndexChanged += gcnew System::EventHandler(this, &Trapets::comboBox6_SelectedIndexChanged);
+			// 
+			// comboBox7
+			// 
+			this->comboBox7->FormattingEnabled = true;
+			this->comboBox7->Items->AddRange(gcnew cli::array< System::Object^  >(6) { L"mm", L"Cm", L"Dm", L"m", L"Km", L"In" });
+			this->comboBox7->Location = System::Drawing::Point(689, 452);
+			this->comboBox7->Name = L"comboBox5";
+			this->comboBox7->Size = System::Drawing::Size(58, 24);
+			this->comboBox7->TabIndex = 51;
+			this->comboBox7->Text = L"m";
+			this->comboBox7->SelectedIndexChanged += gcnew System::EventHandler(this, &Trapets::comboBox7_SelectedIndexChanged);
 			// 
 			// label1
 			// 
@@ -351,23 +439,45 @@ namespace TrapetsNS {
 			this->label5->Size = System::Drawing::Size(475, 30);
 			this->label5->TabIndex = 27;
 			// 
+			// label6
+			// 
+			this->label6->BackColor = System::Drawing::SystemColors::InactiveBorder;
+			this->label6->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->label6->Cursor = System::Windows::Forms::Cursors::No;
+			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Bold));
+			this->label6->Location = System::Drawing::Point(272, 214);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(475, 30);
+			this->label6->TabIndex = 28;
+			// 
+			// label7
+			// 
+			this->label7->BackColor = System::Drawing::SystemColors::InactiveBorder;
+			this->label7->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->label7->Cursor = System::Windows::Forms::Cursors::No;
+			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Bold));
+			this->label7->Location = System::Drawing::Point(272, 244);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(475, 30);
+			this->label7->TabIndex = 29;
+			// 
 			// pictureBox1
 			// 
 			this->pictureBox1->Location = System::Drawing::Point(12, 135);
 			this->pictureBox1->Name = L"pictureBox1";
 			this->pictureBox1->Size = System::Drawing::Size(247, 243);
-			this->pictureBox1->TabIndex = 48;
+			this->pictureBox1->TabIndex = 52;
 			this->pictureBox1->TabStop = false;
 			// 
-			// label6
+			// label8
 			// 
-			this->label6->AutoSize = true;
-			this->label6->Font = (gcnew System::Drawing::Font(L"Sitka Banner", 34, System::Drawing::FontStyle::Bold));
-			this->label6->Location = System::Drawing::Point(0, 45);
-			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(220, 87);
-			this->label6->TabIndex = 28;
-			this->label6->Text = L"TRAPEZE";
+			this->label8->AutoSize = true;
+			this->label8->Font = (gcnew System::Drawing::Font(L"Sitka Banner", 34, System::Drawing::FontStyle::Bold));
+			this->label8->Location = System::Drawing::Point(0, 45);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(220, 87);
+			this->label8->TabIndex = 30;
+			this->label8->Text = L"TRAPEZE";
 			// 
 			// panel1
 			// 
@@ -378,11 +488,13 @@ namespace TrapetsNS {
 			this->panel1->Controls->Add(this->checkBox3);
 			this->panel1->Controls->Add(this->checkBox4);
 			this->panel1->Controls->Add(this->checkBox5);
+			this->panel1->Controls->Add(this->checkBox6);
+			this->panel1->Controls->Add(this->checkBox7);
 			this->panel1->ForeColor = System::Drawing::Color::Coral;
 			this->panel1->Location = System::Drawing::Point(265, 56);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(495, 313);
-			this->panel1->TabIndex = 47;
+			this->panel1->Size = System::Drawing::Size(495, 429);
+			this->panel1->TabIndex = 53;
 			// 
 			// button1
 			// 
@@ -412,20 +524,26 @@ namespace TrapetsNS {
 			this->AutoSize = true;
 			this->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
 			this->BackColor = System::Drawing::SystemColors::Window;
-			this->ClientSize = System::Drawing::Size(772, 381);
+			this->ClientSize = System::Drawing::Size(772, 497);
 			this->Controls->Add(this->button1);
-			this->Controls->Add(this->label6);
+			this->Controls->Add(this->label8);
 			this->Controls->Add(this->pictureBox1);
+			this->Controls->Add(this->label7);
+			this->Controls->Add(this->label6);
 			this->Controls->Add(this->label5);
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
+			this->Controls->Add(this->comboBox7);
+			this->Controls->Add(this->comboBox6);
 			this->Controls->Add(this->comboBox5);
 			this->Controls->Add(this->comboBox4);
 			this->Controls->Add(this->comboBox3);
 			this->Controls->Add(this->comboBox2);
 			this->Controls->Add(this->comboBox1);
+			this->Controls->Add(this->textBox7);
+			this->Controls->Add(this->textBox6);
 			this->Controls->Add(this->textBox5);
 			this->Controls->Add(this->textBox4);
 			this->Controls->Add(this->textBox3);
@@ -469,6 +587,12 @@ namespace TrapetsNS {
 	}
 	public: System::Void checkBox5_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {// checkBoxi kuulaja.
 		switcher(5);
+	}
+	public: System::Void checkBox6_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {// checkBoxi kuulaja.
+		switcher(6);
+	}
+	public: System::Void checkBox7_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {// checkBoxi kuulaja.
+		switcher(7);
 	}
 			//SWITCHER
 			void switcher(int i) {// teeb checkBoxide järgi textBoxe aktiivseks.
@@ -526,16 +650,39 @@ namespace TrapetsNS {
 					if (i == cb5) {//... ja vastupidi
 						std::cout << "5-unchecked" << std::endl;
 						cb5 = 0;
-						textBox4->Enabled = false;
+						textBox5->Enabled = false;
 					}
 					else {
 						std::cout << "5-checked" << std::endl;
 						cb5 = i;
-						textBox4->Enabled = true;
+						textBox5->Enabled = true;
+					}
+					break;
+				case 6:// kui paned linnukese 7. checkBoxi taha siis aktiveerub 7. textBox ja vastupidi.
+					if (i == cb6) {//... ja vastupidi
+						std::cout << "6-unchecked" << std::endl;
+						cb6 = 0;
+						textBox6->Enabled = false;
+					}
+					else {
+						std::cout << "6-checked" << std::endl;
+						cb6 = i;
+						textBox6->Enabled = true;
+					}
+					break;
+				case 7:// kui paned linnukese 7. checkBoxi taha siis aktiveerub 7. textBox ja vastupidi.
+					if (i == cb7) {//... ja vastupidi
+						std::cout << "7-unchecked" << std::endl;
+						cb7 = 0;
+						textBox7->Enabled = false;
+					}
+					else {
+						std::cout << "7-checked" << std::endl;
+						cb7 = i;
+						textBox7->Enabled = true;
 					}
 					break;
 				}
-
 			}
 
 
@@ -543,6 +690,12 @@ namespace TrapetsNS {
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 /*COMBOBOXID*/
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
+private: System::Void comboBox7_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {//P
+	getText(fixUnit(cb7, 7));
+}
+private: System::Void comboBox6_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {//P
+	getText(fixUnit(cb6, 6));
+}
 private: System::Void comboBox5_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {//P
 	getText(fixUnit(cb5, 5));
 }
@@ -566,7 +719,7 @@ int fixUnit(int i, int j) { //Selle eesmärk on fixida paari bugi, mis tekkis se
 					 return i;
 
 				 }
-				 else if (cb1 == 0 && cb2 == 0 && cb3 == 0 && cb4 == 0 && cb5 == 0) {
+				 else if (cb1 == 0 && cb2 == 0 && cb3 == 0 && cb4 == 0 && cb5 == 0 && cb6 == 0 && cb7 == 0) {
 					 return j;
 				 }
 				 else
@@ -586,6 +739,12 @@ int fixUnit(int i, int j) { //Selle eesmärk on fixida paari bugi, mis tekkis se
 					 }if (cb5 == 5)
 					 {
 						 return cb5;
+					 }if (cb6 == 6)
+					 {
+						 return cb6;
+					 }if (cb7 == 7)
+					 {
+						 return cb7;
 					 }
 				 }
 				return 0;
@@ -609,6 +768,12 @@ std::string getUnit(int j) { //see block muretseb ühikud comboBoxidest ja tagas
 						 break;
 					 case 5:
 						 str = (msclr::interop::marshal_as<std::string>(comboBox5->Text));
+						 break;
+					 case 6:
+						 str = (msclr::interop::marshal_as<std::string>(comboBox6->Text));
+						 break;
+					 case 7:
+						 str = (msclr::interop::marshal_as<std::string>(comboBox7->Text));
 						 break;
 					 }
 					 return str;
@@ -744,10 +909,37 @@ private: System::Void textBox4_KeyUp(System::Object^  sender, System::Windows::F
 private: System::Void textBox5_KeyUp(System::Object^  sender, System::Windows::Forms::KeyEventArgs^  e) {getText(cb5);
 
 }
+private: System::Void textBox6_KeyUp(System::Object^  sender, System::Windows::Forms::KeyEventArgs^  e) {getText(cb6);
+
+}
+private: System::Void textBox7_KeyUp(System::Object^  sender, System::Windows::Forms::KeyEventArgs^  e) {getText(cb7);
+
+}
 //GETTEXT
 void getText(int f) {std::cout << std::endl;
 		std::cout << "GETTEXT" << std::endl;
-		if (f == 4) {   // aktiveerib funktsiooni aind märgitud checkBoxi järgi.
+		if (f == 7) {   // aktiveerib funktsiooni aind märgitud checkBoxi järgi.
+			textB = msclr::interop::marshal_as<std::string>(textBox7->Text);//teen teksti System::Stringist std::stringiks, et saaksin mugavamalt kontrollida.
+			if (textB.length() >= arv1) {// kontrolli siis, kui on vähemalt 1 tähemärk.
+				std::cout << "7/1+" << std::endl;
+				digitCheck(textB, 7); //teksti kontroll
+			}
+			textBox7->MaxLength = (textB.length() + 1);
+	}	if (f == 6) {   // aktiveerib funktsiooni aind märgitud checkBoxi järgi.
+			textB = msclr::interop::marshal_as<std::string>(textBox6->Text);//teen teksti System::Stringist std::stringiks, et saaksin mugavamalt kontrollida.
+			if (textB.length() >= arv1) {// kontrolli siis, kui on vähemalt 1 tähemärk.
+				std::cout << "6/1+" << std::endl;
+				digitCheck(textB, 6); //teksti kontroll
+			}
+			textBox6->MaxLength = (textB.length() + 1);
+	}	if (f == 5) {   // aktiveerib funktsiooni aind märgitud checkBoxi järgi.
+			textB = msclr::interop::marshal_as<std::string>(textBox5->Text);//teen teksti System::Stringist std::stringiks, et saaksin mugavamalt kontrollida.
+			if (textB.length() >= arv1) {// kontrolli siis, kui on vähemalt 1 tähemärk.
+				std::cout << "5/1+" << std::endl;
+				digitCheck(textB, 5); //teksti kontroll
+			}
+			textBox5->MaxLength = (textB.length() + 1);
+	}	if (f == 4) {   // aktiveerib funktsiooni aind märgitud checkBoxi järgi.
 			textB = msclr::interop::marshal_as<std::string>(textBox4->Text);//teen teksti System::Stringist std::stringiks, et saaksin mugavamalt kontrollida.
 			if (textB.length() >= arv1) {// kontrolli siis, kui on vähemalt 1 tähemärk.
 				std::cout << "4/1+" << std::endl;
