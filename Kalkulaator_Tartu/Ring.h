@@ -118,10 +118,11 @@ namespace RingNS {
 			this->checkBox1->BackColor = System::Drawing::SystemColors::Window;
 			this->checkBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(186)));
-			this->checkBox1->ForeColor = System::Drawing::Color::Black;
-			this->checkBox1->Location = System::Drawing::Point(7, 191);
+			this->checkBox1->ForeColor = System::Drawing::Color::Red;
+			this->checkBox1->Location = System::Drawing::Point(6, 153);
+			this->checkBox1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->checkBox1->Name = L"checkBox1";
-			this->checkBox1->Size = System::Drawing::Size(104, 24);
+			this->checkBox1->Size = System::Drawing::Size(83, 19);
 			this->checkBox1->TabIndex = 25;
 			this->checkBox1->Text = L"R -";
 			this->checkBox1->UseVisualStyleBackColor = false;
@@ -132,10 +133,11 @@ namespace RingNS {
 			this->checkBox2->BackColor = System::Drawing::SystemColors::Window;
 			this->checkBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(186)));
-			this->checkBox2->ForeColor = System::Drawing::Color::Black;
-			this->checkBox2->Location = System::Drawing::Point(7, 219);
+			this->checkBox2->ForeColor = System::Drawing::Color::MediumBlue;
+			this->checkBox2->Location = System::Drawing::Point(6, 175);
+			this->checkBox2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->checkBox2->Name = L"checkBox2";
-			this->checkBox2->Size = System::Drawing::Size(104, 24);
+			this->checkBox2->Size = System::Drawing::Size(83, 19);
 			this->checkBox2->TabIndex = 24;
 			this->checkBox2->Text = L"D -";
 			this->checkBox2->UseVisualStyleBackColor = false;
@@ -146,10 +148,11 @@ namespace RingNS {
 			this->checkBox3->BackColor = System::Drawing::SystemColors::Window;
 			this->checkBox3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(186)));
-			this->checkBox3->ForeColor = System::Drawing::Color::Black;
-			this->checkBox3->Location = System::Drawing::Point(7, 248);
+			this->checkBox3->ForeColor = System::Drawing::Color::Purple;
+			this->checkBox3->Location = System::Drawing::Point(6, 198);
+			this->checkBox3->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->checkBox3->Name = L"checkBox3";
-			this->checkBox3->Size = System::Drawing::Size(104, 24);
+			this->checkBox3->Size = System::Drawing::Size(83, 19);
 			this->checkBox3->TabIndex = 23;
 			this->checkBox3->Text = L"S -";
 			this->checkBox3->UseVisualStyleBackColor = false;
@@ -161,9 +164,10 @@ namespace RingNS {
 			this->checkBox4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(186)));
 			this->checkBox4->ForeColor = System::Drawing::Color::Black;
-			this->checkBox4->Location = System::Drawing::Point(7, 276);
+			this->checkBox4->Location = System::Drawing::Point(6, 221);
+			this->checkBox4->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->checkBox4->Name = L"checkBox4";
-			this->checkBox4->Size = System::Drawing::Size(104, 24);
+			this->checkBox4->Size = System::Drawing::Size(83, 19);
 			this->checkBox4->TabIndex = 22;
 			this->checkBox4->Text = L"C -";
 			this->checkBox4->UseVisualStyleBackColor = false;
@@ -172,40 +176,44 @@ namespace RingNS {
 			// textBox1
 			// 
 			this->textBox1->Enabled = false;
-			this->textBox1->Location = System::Drawing::Point(318, 249);
+			this->textBox1->Location = System::Drawing::Point(254, 199);
+			this->textBox1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->textBox1->MaxLength = 1;
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(364, 22);
+			this->textBox1->Size = System::Drawing::Size(292, 20);
 			this->textBox1->TabIndex = 4;
 			this->textBox1->KeyUp += gcnew System::Windows::Forms::KeyEventHandler(this, &Ring::textBox1_KeyUp);
 			// 
 			// textBox2
 			// 
 			this->textBox2->Enabled = false;
-			this->textBox2->Location = System::Drawing::Point(319, 277);
+			this->textBox2->Location = System::Drawing::Point(255, 222);
+			this->textBox2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->textBox2->MaxLength = 1;
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(364, 22);
+			this->textBox2->Size = System::Drawing::Size(292, 20);
 			this->textBox2->TabIndex = 5;
 			this->textBox2->KeyUp += gcnew System::Windows::Forms::KeyEventHandler(this, &Ring::textBox2_KeyUp);
 			// 
 			// textBox3
 			// 
 			this->textBox3->Enabled = false;
-			this->textBox3->Location = System::Drawing::Point(319, 305);
+			this->textBox3->Location = System::Drawing::Point(255, 244);
+			this->textBox3->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->textBox3->MaxLength = 1;
 			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(364, 22);
+			this->textBox3->Size = System::Drawing::Size(292, 20);
 			this->textBox3->TabIndex = 6;
 			this->textBox3->KeyUp += gcnew System::Windows::Forms::KeyEventHandler(this, &Ring::textBox3_KeyUp);
 			// 
 			// textBox4
 			// 
 			this->textBox4->Enabled = false;
-			this->textBox4->Location = System::Drawing::Point(319, 334);
+			this->textBox4->Location = System::Drawing::Point(255, 267);
+			this->textBox4->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->textBox4->MaxLength = 1;
 			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(364, 22);
+			this->textBox4->Size = System::Drawing::Size(292, 20);
 			this->textBox4->TabIndex = 7;
 			this->textBox4->KeyUp += gcnew System::Windows::Forms::KeyEventHandler(this, &Ring::textBox4_KeyUp);
 			// 
@@ -213,9 +221,10 @@ namespace RingNS {
 			// 
 			this->comboBox1->FormattingEnabled = true;
 			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(6) { L"mm", L"Cm", L"Dm", L"m", L"Km", L"In" });
-			this->comboBox1->Location = System::Drawing::Point(689, 243);
+			this->comboBox1->Location = System::Drawing::Point(551, 194);
+			this->comboBox1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->comboBox1->Name = L"comboBox1";
-			this->comboBox1->Size = System::Drawing::Size(58, 24);
+			this->comboBox1->Size = System::Drawing::Size(47, 21);
 			this->comboBox1->TabIndex = 11;
 			this->comboBox1->Text = L"m";
 			this->comboBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &Ring::comboBox1_SelectedIndexChanged);
@@ -224,9 +233,10 @@ namespace RingNS {
 			// 
 			this->comboBox2->FormattingEnabled = true;
 			this->comboBox2->Items->AddRange(gcnew cli::array< System::Object^  >(6) { L"mm", L"Cm", L"Dm", L"m", L"Km", L"In" });
-			this->comboBox2->Location = System::Drawing::Point(689, 274);
+			this->comboBox2->Location = System::Drawing::Point(551, 219);
+			this->comboBox2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->comboBox2->Name = L"comboBox2";
-			this->comboBox2->Size = System::Drawing::Size(58, 24);
+			this->comboBox2->Size = System::Drawing::Size(47, 21);
 			this->comboBox2->TabIndex = 12;
 			this->comboBox2->Text = L"m";
 			this->comboBox2->SelectedIndexChanged += gcnew System::EventHandler(this, &Ring::comboBox2_SelectedIndexChanged);
@@ -235,9 +245,10 @@ namespace RingNS {
 			// 
 			this->comboBox3->FormattingEnabled = true;
 			this->comboBox3->Items->AddRange(gcnew cli::array< System::Object^  >(6) { L"mm^2", L"Cm^2", L"Dm^2", L"m^2", L"Km^2", L"In^2" });
-			this->comboBox3->Location = System::Drawing::Point(689, 305);
+			this->comboBox3->Location = System::Drawing::Point(551, 244);
+			this->comboBox3->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->comboBox3->Name = L"comboBox3";
-			this->comboBox3->Size = System::Drawing::Size(58, 24);
+			this->comboBox3->Size = System::Drawing::Size(47, 21);
 			this->comboBox3->TabIndex = 13;
 			this->comboBox3->Text = L"m^2";
 			this->comboBox3->SelectedIndexChanged += gcnew System::EventHandler(this, &Ring::comboBox3_SelectedIndexChanged);
@@ -246,9 +257,10 @@ namespace RingNS {
 			// 
 			this->comboBox4->FormattingEnabled = true;
 			this->comboBox4->Items->AddRange(gcnew cli::array< System::Object^  >(6) { L"mm", L"Cm", L"Dm", L"m", L"Km", L"In" });
-			this->comboBox4->Location = System::Drawing::Point(689, 336);
+			this->comboBox4->Location = System::Drawing::Point(551, 269);
+			this->comboBox4->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->comboBox4->Name = L"comboBox4";
-			this->comboBox4->Size = System::Drawing::Size(58, 24);
+			this->comboBox4->Size = System::Drawing::Size(47, 21);
 			this->comboBox4->TabIndex = 14;
 			this->comboBox4->Text = L"m";
 			this->comboBox4->SelectedIndexChanged += gcnew System::EventHandler(this, &Ring::comboBox4_SelectedIndexChanged);
@@ -259,9 +271,10 @@ namespace RingNS {
 			this->label1->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->label1->Cursor = System::Windows::Forms::Cursors::No;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Bold));
-			this->label1->Location = System::Drawing::Point(272, 64);
+			this->label1->Location = System::Drawing::Point(218, 51);
+			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(475, 40);
+			this->label1->Size = System::Drawing::Size(380, 32);
 			this->label1->TabIndex = 15;
 			// 
 			// label2
@@ -270,9 +283,10 @@ namespace RingNS {
 			this->label2->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->label2->Cursor = System::Windows::Forms::Cursors::No;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Bold));
-			this->label2->Location = System::Drawing::Point(272, 104);
+			this->label2->Location = System::Drawing::Point(218, 83);
+			this->label2->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(475, 40);
+			this->label2->Size = System::Drawing::Size(380, 32);
 			this->label2->TabIndex = 16;
 			// 
 			// label3
@@ -281,9 +295,10 @@ namespace RingNS {
 			this->label3->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->label3->Cursor = System::Windows::Forms::Cursors::No;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Bold));
-			this->label3->Location = System::Drawing::Point(272, 144);
+			this->label3->Location = System::Drawing::Point(218, 115);
+			this->label3->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(475, 40);
+			this->label3->Size = System::Drawing::Size(380, 32);
 			this->label3->TabIndex = 17;
 			// 
 			// label4
@@ -292,16 +307,18 @@ namespace RingNS {
 			this->label4->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->label4->Cursor = System::Windows::Forms::Cursors::No;
 			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Bold));
-			this->label4->Location = System::Drawing::Point(272, 184);
+			this->label4->Location = System::Drawing::Point(218, 147);
+			this->label4->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(475, 40);
+			this->label4->Size = System::Drawing::Size(380, 32);
 			this->label4->TabIndex = 18;
 			// 
 			// pictureBox1
 			// 
-			this->pictureBox1->Location = System::Drawing::Point(12, 135);
+			this->pictureBox1->Location = System::Drawing::Point(10, 108);
+			this->pictureBox1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(247, 243);
+			this->pictureBox1->Size = System::Drawing::Size(198, 194);
 			this->pictureBox1->TabIndex = 19;
 			this->pictureBox1->TabStop = false;
 			// 
@@ -309,9 +326,10 @@ namespace RingNS {
 			// 
 			this->label5->AutoSize = true;
 			this->label5->Font = (gcnew System::Drawing::Font(L"Sitka Banner", 36, System::Drawing::FontStyle::Bold));
-			this->label5->Location = System::Drawing::Point(12, 45);
+			this->label5->Location = System::Drawing::Point(10, 36);
+			this->label5->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(222, 87);
+			this->label5->Size = System::Drawing::Size(178, 69);
 			this->label5->TabIndex = 20;
 			this->label5->Text = L"CIRCLE";
 			// 
@@ -324,9 +342,10 @@ namespace RingNS {
 			this->panel1->Controls->Add(this->checkBox2);
 			this->panel1->Controls->Add(this->checkBox1);
 			this->panel1->ForeColor = System::Drawing::Color::Coral;
-			this->panel1->Location = System::Drawing::Point(265, 56);
+			this->panel1->Location = System::Drawing::Point(212, 45);
+			this->panel1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(495, 313);
+			this->panel1->Size = System::Drawing::Size(396, 250);
 			this->panel1->TabIndex = 22;
 			// 
 			// button1
@@ -338,10 +357,11 @@ namespace RingNS {
 			this->button1->Font = (gcnew System::Drawing::Font(L"Times New Roman", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(186)));
 			this->button1->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->button1->Location = System::Drawing::Point(715, 12);
+			this->button1->Location = System::Drawing::Point(572, 10);
+			this->button1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button1->Name = L"button1";
 			this->button1->Padding = System::Windows::Forms::Padding(2, 0, 0, 0);
-			this->button1->Size = System::Drawing::Size(32, 29);
+			this->button1->Size = System::Drawing::Size(27, 25);
 			this->button1->TabIndex = 23;
 			this->button1->Text = L"X";
 			this->button1->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -352,12 +372,12 @@ namespace RingNS {
 			// Ring
 			// 
 			this->AccessibleName = L"";
-			this->AutoScaleDimensions = System::Drawing::SizeF(120, 120);
+			this->AutoScaleDimensions = System::Drawing::SizeF(96, 96);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Dpi;
 			this->AutoSize = true;
 			this->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
 			this->BackColor = System::Drawing::SystemColors::Window;
-			this->ClientSize = System::Drawing::Size(772, 381);
+			this->ClientSize = System::Drawing::Size(618, 305);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->label5);
 			this->Controls->Add(this->pictureBox1);
@@ -376,6 +396,7 @@ namespace RingNS {
 			this->Controls->Add(this->panel1);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
 			this->ImeMode = System::Windows::Forms::ImeMode::On;
+			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->MaximizeBox = false;
 			this->MinimizeBox = false;
 			this->Name = L"Ring";
