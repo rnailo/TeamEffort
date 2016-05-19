@@ -99,9 +99,10 @@ namespace PohiNS {
 			this->panel1->Controls->Add(this->button3);
 			this->panel1->Controls->Add(this->button2);
 			this->panel1->Controls->Add(this->button1);
-			this->panel1->Location = System::Drawing::Point(12, 12);
+			this->panel1->Location = System::Drawing::Point(9, 10);
+			this->panel1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(258, 483);
+			this->panel1->Size = System::Drawing::Size(194, 392);
 			this->panel1->TabIndex = 0;
 			// 
 			// button6
@@ -113,10 +114,11 @@ namespace PohiNS {
 			this->button6->Font = (gcnew System::Drawing::Font(L"Times New Roman", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(186)));
 			this->button6->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->button6->Location = System::Drawing::Point(225, 3);
+			this->button6->Location = System::Drawing::Point(169, 2);
+			this->button6->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button6->Name = L"button6";
 			this->button6->Padding = System::Windows::Forms::Padding(2, 0, 0, 0);
-			this->button6->Size = System::Drawing::Size(30, 27);
+			this->button6->Size = System::Drawing::Size(27, 25);
 			this->button6->TabIndex = 24;
 			this->button6->Text = L"X";
 			this->button6->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -127,12 +129,13 @@ namespace PohiNS {
 			// label4
 			// 
 			this->label4->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->label4->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 36, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 36, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label4->ForeColor = System::Drawing::SystemColors::Highlight;
-			this->label4->Location = System::Drawing::Point(138, 93);
+			this->label4->Location = System::Drawing::Point(104, 76);
+			this->label4->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(100, 52);
+			this->label4->Size = System::Drawing::Size(75, 42);
 			this->label4->TabIndex = 0;
 			this->label4->Text = L"E";
 			this->label4->UseMnemonic = false;
@@ -140,12 +143,13 @@ namespace PohiNS {
 			// label3
 			// 
 			this->label3->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 36, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 36, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label3->ForeColor = System::Drawing::SystemColors::Highlight;
-			this->label3->Location = System::Drawing::Point(138, 25);
+			this->label3->Location = System::Drawing::Point(104, 20);
+			this->label3->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(100, 52);
+			this->label3->Size = System::Drawing::Size(75, 42);
 			this->label3->TabIndex = 1;
 			this->label3->Text = L"M";
 			this->label3->UseMnemonic = false;
@@ -153,12 +157,13 @@ namespace PohiNS {
 			// label2
 			// 
 			this->label2->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 36, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 36, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label2->ForeColor = System::Drawing::SystemColors::Highlight;
-			this->label2->Location = System::Drawing::Point(138, 227);
+			this->label2->Location = System::Drawing::Point(104, 184);
+			this->label2->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(100, 52);
+			this->label2->Size = System::Drawing::Size(75, 42);
 			this->label2->TabIndex = 2;
 			this->label2->Text = L"U";
 			this->label2->UseMnemonic = false;
@@ -166,73 +171,80 @@ namespace PohiNS {
 			// label1
 			// 
 			this->label1->BackColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Modern No. 20", 36, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 36, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label1->ForeColor = System::Drawing::SystemColors::Highlight;
-			this->label1->Location = System::Drawing::Point(138, 161);
+			this->label1->Location = System::Drawing::Point(104, 131);
+			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(100, 52);
+			this->label1->Size = System::Drawing::Size(75, 42);
 			this->label1->TabIndex = 3;
 			this->label1->Text = L"N";
 			this->label1->UseMnemonic = false;
 			// 
 			// button5
 			// 
-			this->button5->Location = System::Drawing::Point(17, 151);
+			this->button5->Location = System::Drawing::Point(13, 123);
+			this->button5->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(80, 28);
+			this->button5->Size = System::Drawing::Size(66, 23);
 			this->button5->TabIndex = 4;
-			this->button5->Text = L"Kolmnurk";
+			this->button5->Text = L"Triangle";
 			this->button5->UseVisualStyleBackColor = true;
 			this->button5->Click += gcnew System::EventHandler(this, &Pohi::button5_Click);
 			// 
 			// button4
 			// 
-			this->button4->Location = System::Drawing::Point(17, 117);
+			this->button4->Location = System::Drawing::Point(13, 95);
+			this->button4->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(80, 28);
+			this->button4->Size = System::Drawing::Size(66, 23);
 			this->button4->TabIndex = 5;
-			this->button4->Text = L"Ruutkülik";
+			this->button4->Text = L"Rectangle";
 			this->button4->UseVisualStyleBackColor = true;
 			this->button4->Click += gcnew System::EventHandler(this, &Pohi::button4_Click);
 			// 
 			// button3
 			// 
-			this->button3->Location = System::Drawing::Point(17, 83);
+			this->button3->Location = System::Drawing::Point(13, 67);
+			this->button3->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(80, 28);
+			this->button3->Size = System::Drawing::Size(66, 23);
 			this->button3->TabIndex = 6;
-			this->button3->Text = L"Trapets";
+			this->button3->Text = L"Trapeze";
 			this->button3->UseVisualStyleBackColor = true;
 			this->button3->Click += gcnew System::EventHandler(this, &Pohi::button3_Click);
 			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(17, 49);
+			this->button2->Location = System::Drawing::Point(13, 40);
+			this->button2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(80, 28);
+			this->button2->Size = System::Drawing::Size(66, 23);
 			this->button2->TabIndex = 7;
-			this->button2->Text = L"Ring";
+			this->button2->Text = L"Circle";
 			this->button2->UseVisualStyleBackColor = true;
 			this->button2->Click += gcnew System::EventHandler(this, &Pohi::button2_Click);
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(17, 15);
+			this->button1->Location = System::Drawing::Point(13, 12);
+			this->button1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(80, 28);
+			this->button1->Size = System::Drawing::Size(66, 23);
 			this->button1->TabIndex = 8;
-			this->button1->Text = L"Ruut";
+			this->button1->Text = L"Square";
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &Pohi::button1_Click);
 			// 
 			// Pohi
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(282, 507);
+			this->ClientSize = System::Drawing::Size(212, 412);
 			this->Controls->Add(this->panel1);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
+			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->Name = L"Pohi";
 			this->Load += gcnew System::EventHandler(this, &Pohi::Pohi_Load);
 			this->MouseDown += gcnew System::Windows::Forms::MouseEventHandler(this, &Pohi::Pohi_MouseDown);
