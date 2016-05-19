@@ -783,7 +783,7 @@ namespace RingNS {
 				 i = conventor(i, j);// siit küsitakse conventori käest andmeid meetrites
 
 				 double r, d, s, c;
-				 double pi = std::atan(1) * 4;
+				 double pi = std::atan(1) * 4; // pi
 				 int error = 0; // kui ikkagi tekib mingi probleem
 				 switch (j)// siin arvutatakse andmed. Valemeid kasutatakse sõltuvalt, mis sisestati. Siin toimub ka lisainfo väljastamine label´itesse.
 				 {
