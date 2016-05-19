@@ -548,14 +548,11 @@ void switcher(int i) {// teeb checkBoxide järgi textBoxe aktiivseks.
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
 		Close();
 	}
-	private: System::Void Ruut_Load(System::Object^  sender, System::EventArgs^  e) {
+	private: System::Void Ristkylik_Load(System::Object^  sender, System::EventArgs^  e) {
 		this->pictureBox1->Image = Image::FromFile(L".\\media\\ristkylik.png"); //pildi sisselaadimine akna avamisel.
 		this->dragging = false;
 	}
 	
-	private: System::Void Ristkylik_Load(System::Object^  sender, System::EventArgs^  e) {
-		this->dragging = false;
-	}
 	private: System::Void Ristkylik_MouseDown(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) {
 		this->dragging = true;
 		this->offset = Point(e->X, e->Y);
