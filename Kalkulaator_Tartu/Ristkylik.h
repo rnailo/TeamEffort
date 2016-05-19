@@ -1,7 +1,12 @@
 #pragma once
+#include <string>
+#include <msclr\marshal_cppstd.h>
+#include <algorithm>
+#include <iostream>
+#include <conio.h>
 
 namespace RistkylikNS {
-
+	std::string textB;
 	using namespace System;
 	using namespace System::ComponentModel;
 	using namespace System::Collections;
@@ -16,6 +21,20 @@ namespace RistkylikNS {
 	public ref class Ristkylik : public System::Windows::Forms::Form
 	{
 	public:
+		int cb1 = 0;// väärtus millega määran eelnevalt valitud checkBoxi.
+		int cb2 = 0;// väärtus millega määran eelnevalt valitud checkBoxi.
+		int cb3 = 0;// väärtus millega määran eelnevalt valitud checkBoxi.
+		int cb4 = 0;// väärtus millega määran eelnevalt valitud checkBoxi.
+		int cb5 = 0;// väärtus millega määran eelnevalt valitud checkBoxi.
+		int erased = 0;// väärtus millega kontrollin, kas on infot kustutatud kontrollija poolt.
+	private: System::Windows::Forms::PictureBox^  pictureBox1;
+	private: System::Windows::Forms::Label^  label5;
+	private: System::Windows::Forms::Panel^  panel1;
+	private: System::Windows::Forms::Button^  button1;
+	
+	public:
+			int selecting = 0;// väärtus millega määran koha, kust jätkab kirjutamine pärast kustutust.
+
 		Ristkylik(void)
 		{
 			InitializeComponent();
@@ -198,7 +217,7 @@ namespace RistkylikNS {
 			this->checkBox4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(186)));
 			this->checkBox4->ForeColor = System::Drawing::Color::Black;
-			this->checkBox4->Location = System::Drawing::Point(386, 247);
+			this->checkBox4->Location = System::Drawing::Point(301, 251);
 			this->checkBox4->Margin = System::Windows::Forms::Padding(2);
 			this->checkBox4->Name = L"checkBox4";
 			this->checkBox4->Size = System::Drawing::Size(83, 19);
@@ -212,7 +231,7 @@ namespace RistkylikNS {
 			this->checkBox3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(186)));
 			this->checkBox3->ForeColor = System::Drawing::Color::Black;
-			this->checkBox3->Location = System::Drawing::Point(386, 224);
+			this->checkBox3->Location = System::Drawing::Point(301, 228);
 			this->checkBox3->Margin = System::Windows::Forms::Padding(2);
 			this->checkBox3->Name = L"checkBox3";
 			this->checkBox3->Size = System::Drawing::Size(83, 19);
@@ -226,7 +245,7 @@ namespace RistkylikNS {
 			this->checkBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(186)));
 			this->checkBox2->ForeColor = System::Drawing::Color::Black;
-			this->checkBox2->Location = System::Drawing::Point(386, 203);
+			this->checkBox2->Location = System::Drawing::Point(301, 203);
 			this->checkBox2->Margin = System::Windows::Forms::Padding(2);
 			this->checkBox2->Name = L"checkBox2";
 			this->checkBox2->Size = System::Drawing::Size(83, 19);
@@ -240,7 +259,7 @@ namespace RistkylikNS {
 			this->checkBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(186)));
 			this->checkBox1->ForeColor = System::Drawing::Color::Black;
-			this->checkBox1->Location = System::Drawing::Point(386, 180);
+			this->checkBox1->Location = System::Drawing::Point(301, 180);
 			this->checkBox1->Margin = System::Windows::Forms::Padding(2);
 			this->checkBox1->Name = L"checkBox1";
 			this->checkBox1->Size = System::Drawing::Size(83, 19);
@@ -254,7 +273,7 @@ namespace RistkylikNS {
 			this->checkBox6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(186)));
 			this->checkBox6->ForeColor = System::Drawing::Color::Black;
-			this->checkBox6->Location = System::Drawing::Point(386, 273);
+			this->checkBox6->Location = System::Drawing::Point(301, 275);
 			this->checkBox6->Margin = System::Windows::Forms::Padding(2);
 			this->checkBox6->Name = L"checkBox6";
 			this->checkBox6->Size = System::Drawing::Size(83, 19);
@@ -265,31 +284,31 @@ namespace RistkylikNS {
 			// textBox4
 			// 
 			this->textBox4->Enabled = false;
-			this->textBox4->Location = System::Drawing::Point(433, 249);
+			this->textBox4->Location = System::Drawing::Point(357, 250);
 			this->textBox4->Margin = System::Windows::Forms::Padding(2);
 			this->textBox4->MaxLength = 1;
 			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(184, 20);
+			this->textBox4->Size = System::Drawing::Size(260, 20);
 			this->textBox4->TabIndex = 38;
 			// 
 			// textBox3
 			// 
 			this->textBox3->Enabled = false;
-			this->textBox3->Location = System::Drawing::Point(433, 224);
+			this->textBox3->Location = System::Drawing::Point(357, 227);
 			this->textBox3->Margin = System::Windows::Forms::Padding(2);
 			this->textBox3->MaxLength = 1;
 			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(184, 20);
+			this->textBox3->Size = System::Drawing::Size(260, 20);
 			this->textBox3->TabIndex = 37;
 			// 
 			// textBox2
 			// 
 			this->textBox2->Enabled = false;
-			this->textBox2->Location = System::Drawing::Point(433, 203);
+			this->textBox2->Location = System::Drawing::Point(357, 203);
 			this->textBox2->Margin = System::Windows::Forms::Padding(2);
 			this->textBox2->MaxLength = 1;
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(184, 20);
+			this->textBox2->Size = System::Drawing::Size(260, 20);
 			this->textBox2->TabIndex = 36;
 			// 
 			// comboBox2
@@ -307,7 +326,7 @@ namespace RistkylikNS {
 			// 
 			this->comboBox1->FormattingEnabled = true;
 			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(6) { L"mm", L"Cm", L"Dm", L"m", L"Km", L"In" });
-			this->comboBox1->Location = System::Drawing::Point(621, 180);
+			this->comboBox1->Location = System::Drawing::Point(621, 176);
 			this->comboBox1->Margin = System::Windows::Forms::Padding(2);
 			this->comboBox1->Name = L"comboBox1";
 			this->comboBox1->Size = System::Drawing::Size(47, 21);
@@ -318,7 +337,7 @@ namespace RistkylikNS {
 			// 
 			this->comboBox3->FormattingEnabled = true;
 			this->comboBox3->Items->AddRange(gcnew cli::array< System::Object^  >(6) { L"mm", L"Cm", L"Dm", L"m", L"Km", L"In" });
-			this->comboBox3->Location = System::Drawing::Point(621, 248);
+			this->comboBox3->Location = System::Drawing::Point(621, 249);
 			this->comboBox3->Margin = System::Windows::Forms::Padding(2);
 			this->comboBox3->Name = L"comboBox3";
 			this->comboBox3->Size = System::Drawing::Size(47, 21);
@@ -339,11 +358,11 @@ namespace RistkylikNS {
 			// textBox6
 			// 
 			this->textBox6->Enabled = false;
-			this->textBox6->Location = System::Drawing::Point(433, 271);
+			this->textBox6->Location = System::Drawing::Point(357, 274);
 			this->textBox6->Margin = System::Windows::Forms::Padding(2);
 			this->textBox6->MaxLength = 1;
 			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(184, 20);
+			this->textBox6->Size = System::Drawing::Size(260, 20);
 			this->textBox6->TabIndex = 43;
 			// 
 			// comboBox6
@@ -360,11 +379,11 @@ namespace RistkylikNS {
 			// textBox1
 			// 
 			this->textBox1->Enabled = false;
-			this->textBox1->Location = System::Drawing::Point(433, 181);
+			this->textBox1->Location = System::Drawing::Point(357, 180);
 			this->textBox1->Margin = System::Windows::Forms::Padding(2);
 			this->textBox1->MaxLength = 1;
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(184, 20);
+			this->textBox1->Size = System::Drawing::Size(260, 20);
 			this->textBox1->TabIndex = 35;
 			// 
 			// label5
