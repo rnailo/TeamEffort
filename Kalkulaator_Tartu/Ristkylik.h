@@ -447,6 +447,99 @@ namespace RistkylikNS {
 
 		}
 #pragma endregion
+
+/* CHECKBOX*/
+public: System::Void checkBox1_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {// checkBoxi kuulaja.
+	switcher(1);
+}
+public: System::Void checkBox2_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {// checkBoxi kuulaja.
+	switcher(2);
+	}
+public: System::Void checkBox3_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {// checkBoxi kuulaja.
+	switcher(3);
+	}
+public: System::Void checkBox4_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {// checkBoxi kuulaja.
+	switcher(4);
+	}
+public: System::Void checkBox6_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {// checkBoxi kuulaja.
+	switcher(5);
+	}
+
+//SWITCHER
+
+void switcher(int i) {// teeb checkBoxide järgi textBoxe aktiivseks.
+				std::cout << "Switcher function" << std::endl;
+				switch (i){
+				case 1:// kui paned linnukese 1. checkBoxi taha siis aktiveerub 1. textBox ja vastupidi.
+					if(i == cb1){//... ja vastupidi
+						std::cout << "1-unchecked" << std::endl;
+						cb1 = 0;
+						textBox1->Enabled = false;
+					}
+					else{
+						std::cout << "1-checked" << std::endl;
+						cb1 = i;
+						textBox1->Enabled = true;
+					}
+					break;
+				case 2:// kui paned linnukese 1. checkBoxi taha siis aktiveerub 1. textBox ja vastupidi.
+					if (i == cb2) {//... ja vastupidi
+						std::cout << "2-unchecked" << std::endl;
+						cb2 = 0;
+						textBox2->Enabled = false;
+					}
+					else {
+						std::cout << "2-checked" << std::endl;
+						cb2 = i;
+						textBox2->Enabled = true;
+					}
+					break;
+				case 3:// kui paned linnukese 1. checkBoxi taha siis aktiveerub 1. textBox ja vastupidi.
+					if (i == cb3) {//... ja vastupidi
+						std::cout << "3-unchecked" << std::endl;
+						cb3 = 0;
+						textBox3->Enabled = false;
+					}
+					else {
+						std::cout << "3-checked" << std::endl;
+						cb3 = i;
+						textBox3->Enabled = true;
+					}
+					break;
+				case 4:// kui paned linnukese 1. checkBoxi taha siis aktiveerub 1. textBox ja vastupidi.
+					if (i == cb4) {//... ja vastupidi
+						std::cout << "4-unchecked" << std::endl;
+						cb4 = 0;
+						textBox4->Enabled = false;
+					}
+					else {
+						std::cout << "4-checked" << std::endl;
+						cb4 = i;
+						textBox4->Enabled = true;
+					}
+					break;
+				case 5:// kui paned linnukese 1. checkBoxi taha siis aktiveerub 1. textBox ja vastupidi.
+					if (i == cb5) {//... ja vastupidi
+						std::cout << "5-unchecked" << std::endl;
+						cb5 = 0;
+						textBox6->Enabled = false;
+					}
+					else {
+						std::cout << "5-checked" << std::endl;
+						cb5 = i;
+						textBox6->Enabled = true;
+					}
+					break;
+				}
+				
+			 }
+ 
+		
+			
+			
+
+
+
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
 		Close();
 	}
