@@ -273,6 +273,7 @@ namespace KolmnurkNS {
 			this->textBox4->Name = L"textBox4";
 			this->textBox4->Size = System::Drawing::Size(193, 20);
 			this->textBox4->TabIndex = 35;
+			this->textBox4->KeyUp += gcnew System::Windows::Forms::KeyEventHandler(this, &Kolmnurk::textBox4_KeyUp);
 			// 
 			// textBox3
 			// 
@@ -283,6 +284,7 @@ namespace KolmnurkNS {
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->Size = System::Drawing::Size(193, 20);
 			this->textBox3->TabIndex = 34;
+			this->textBox3->KeyUp += gcnew System::Windows::Forms::KeyEventHandler(this, &Kolmnurk::textBox3_KeyUp);
 			// 
 			// textBox2
 			// 
@@ -293,6 +295,7 @@ namespace KolmnurkNS {
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->Size = System::Drawing::Size(193, 20);
 			this->textBox2->TabIndex = 33;
+			this->textBox2->KeyUp += gcnew System::Windows::Forms::KeyEventHandler(this, &Kolmnurk::textBox2_KeyUp);
 			// 
 			// textBox1
 			// 
@@ -303,6 +306,7 @@ namespace KolmnurkNS {
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(193, 20);
 			this->textBox1->TabIndex = 32;
+			this->textBox1->KeyUp += gcnew System::Windows::Forms::KeyEventHandler(this, &Kolmnurk::textBox1_KeyUp);
 			// 
 			// comboBox4
 			// 
@@ -393,6 +397,7 @@ namespace KolmnurkNS {
 			this->textBox5->Name = L"textBox5";
 			this->textBox5->Size = System::Drawing::Size(193, 20);
 			this->textBox5->TabIndex = 46;
+			this->textBox5->KeyUp += gcnew System::Windows::Forms::KeyEventHandler(this, &Kolmnurk::textBox6_KeyUp);
 			// 
 			// textBox6
 			// 
@@ -403,6 +408,7 @@ namespace KolmnurkNS {
 			this->textBox6->Name = L"textBox6";
 			this->textBox6->Size = System::Drawing::Size(193, 20);
 			this->textBox6->TabIndex = 45;
+			this->textBox6->KeyUp += gcnew System::Windows::Forms::KeyEventHandler(this, &Kolmnurk::textBox5_KeyUp);
 			// 
 			// checkBox5
 			// 
@@ -1033,19 +1039,22 @@ private: System::Void textBox6_KeyUp(System::Object^  sender, System::Windows::F
 		 void calculate(double i, int j) { // i on textBoxi sisestatud väärtus ja j on mitmes textBox ehk, mis väärtus sisestati.
 			 i = conventor(i, j);// siit küsitakse conventori käest andmeid meetrites
 
-			 double a, b, c, h, p, s;
+			 double a, c, h, p, s;
+			 double b;
 			 int error = 0; // kui ikkagi tekib mingi probleem
+
 			 switch (j)// siin arvutatakse andmed. Valemeid kasutatakse sõltuvalt, mis sisestati. Siin toimub ka lisainfo väljastamine label´itesse.
 			 {
 			 case 1: //a
 				 std::cout << "calc. c1" << j << std::endl;
 				 a = i;	label1->Text = "a - Known";
-				 b = i; label2->Text = "b - Known";
-				 c = i; label3->Text = "c - Known";
-				 h = i; label4->Text = "c - Known";
+				 label2->Text = "b - " +b;
+
+				 label3->Text = "c - Known" +c;
+				 label4->Text = "c - Known" +h;
 					 //RRR = a*sqrt(2); label4->Text = "C = A * √2 = " + a + "m * √2 = " + c + "m";
-				 s = (a*h) / 2; label6->Text = ("S = ( a * h ) / 2 = " + s + "m²"); //+ a + "m * " + a + "m = " + s + "m²");
-				 p = a + b + c; label5->Text = ("P = a + b + c = ");//"P = 4 * A = 4 * " + a + "m = " + p + "m");
+				// s = (a*h) / 2; label6->Text = ("S = ( a * h ) / 2 = " + s + "m²"); //+ a + "m * " + a + "m = " + s + "m²");
+				// p = a + b + c; label5->Text = ("P = a + b + c = " + p + "m²");//"P = 4 * A = 4 * " + a + "m = " + p + "m");
 				break;
 			 case 2: //b
 				 std::cout << "calc. c2" << j << std::endl;
@@ -1091,6 +1100,15 @@ private: System::Void textBox6_KeyUp(System::Object^  sender, System::Windows::F
 				 std::cout << "calc. ERROR" << std::endl;
 				 error = 1; // siis see kuvatakse
 				 break;
+			 }
+			 if (b < 0) {
+				 b = 0;
+			 }
+			 if (c < 0) {
+				 c = 0;
+			 }
+			 if (h < 0) {
+				 h = 0;
 			 }
 			 answReturner(a, b, c, h, p, s, error, j);
 		 }

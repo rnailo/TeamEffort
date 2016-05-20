@@ -154,6 +154,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Kolmnurk.resx">
+      <DependentUpon>Kolmnurk.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pohi.resx">
       <DependentUpon>Pohi.h</DependentUpon>
     </EmbeddedResource>
