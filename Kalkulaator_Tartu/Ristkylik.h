@@ -5,6 +5,7 @@
 #include <iostream>
 #include <conio.h>
 
+
 namespace RistkylikNS {
 	std::string textB;
 	using namespace System;
@@ -862,6 +863,13 @@ private: System::Void textBox5_KeyUp(System::Object^  sender, System::Windows::F
 					 textBox4->Select(selecting, 0);//määrab koha kust jätkad kirjutamist pärast kustutamist.
 				 }
 				 break;
+			 case 5:std::cout << "IC case 5" << std::endl;
+				 textBox4->Text = textBS; //tagastus
+				 if (erased == 1) { //kontrollib kas kontrollis on midagi kustutatud
+					 erased = 0;//ja kui on siis taastab väärtuse kuna koht saab järgmisel real määratud.
+					 textBox4->Select(selecting, 0);//määrab koha kust jätkad kirjutamist pärast kustutamist.
+				 }
+				 break;
 			 }std::cout << "isChar" << std::endl;
 			 if (s.empty()) {//if (s.at(0) != '-' || s.length() > 1) { !!!SEE ON SELLEKS KUI ON VAJA MIINUSEID btw. avastasin alles koodikirjutamise lõpus et geomeetrias pole miinuseid vaja :D
 				 textBS = "0";			 //teen juba kontrollitud teksti int väärtuseks, et saaks sellega arvutusi teha ja saadan selle väärtuse calculate(); funktsiooni.
@@ -888,7 +896,7 @@ private: System::Void textBox5_KeyUp(System::Object^  sender, System::Windows::F
 				 bit[5] = '1';
 				 // Lisa siia IF funktsioone juurde kui on rohkem checkboxe.
 			 }
-			 return (msclr::interop::marshal_as<int>(bit)); //returnime väärtuse bitSwitch funktsiooni switchi.
+			 return (std::stoi(bit)); //returnime väärtuse bitSwitch funktsiooni switchi.
 		 }
 
 		 //BITSWITCH
