@@ -1069,18 +1069,24 @@ private: System::Void textBox6_KeyUp(System::Object^  sender, System::Windows::F
 			 switch (bitter())
 			 {
 			 case 100100:// :)
+				 std::cout << "calc. c6" << j << std::endl;
 				 s = (a*h) / 2; label6->Text = ("S = ( a * h ) / 2 = " + s + " m²");
 				 break;
 			 case 111000:// mingi suvakas bitset jälle.
-				 p = a + b + c; label5->Text = ("P = a + b + c = " + p + " m²");
+				 std::cout << "calc. c5" << j << std::endl;
+				 a = i;	label1->Text = "a - Known";
+				 b = Convert::ToInt32(textBox2->Text); label2->Text = "b - Known";
+				 c = Convert::ToInt32(textBox3->Text); label3->Text = "c - Known";
+				 p = a + b + c; label5->Text = ("P = a + b + c = " + p + " m");
+
 				 break;
 			 case 111100:// :)
 				 std::cout << "calc. c1" << j << std::endl;
 				 a = i;	label1->Text = "a - Known";
 				 b = Convert::ToInt32(textBox2->Text); label2->Text = "b - Known";
 				 c = Convert::ToInt32(textBox3->Text); label3->Text = "c - Known";
-				 h = Convert::ToInt32(textBox4->Text); label4->Text = "c - Known";
-				 p = a + b + c; label5->Text = ("P = a + b + c = " + p + " m²");
+				 h = Convert::ToInt32(textBox4->Text); label4->Text = "h - Known";
+				 p = a + b + c; label5->Text = ("P = a + b + c = " + p + " m");
 				 s = (a*h) / 2; label6->Text = ("S = ( a * h ) / 2 = " + s + " m²");
 				 break;
 
