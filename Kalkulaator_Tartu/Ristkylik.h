@@ -28,6 +28,8 @@ namespace RistkylikNS {
 		int cb4 = 0;// väärtus millega määran eelnevalt valitud checkBoxi.
 		int cb5 = 0;// väärtus millega määran eelnevalt valitud checkBoxi.
 		int erased = 0;// väärtus millega kontrollin, kas on infot kustutatud kontrollija poolt.
+	private: System::Windows::Forms::Label^  label5;
+	public:
 
 
 
@@ -86,7 +88,11 @@ namespace RistkylikNS {
 	public:
 	private: System::Windows::Forms::ComboBox^  comboBox5;
 	public: System::Windows::Forms::TextBox^  textBox1;
-	private: System::Windows::Forms::Label^  label5;
+	private: System::Windows::Forms::Label^  label6;
+	public:
+
+	public:
+
 	private: System::Windows::Forms::PictureBox^  pictureBox1;
 	public:
 	private:
@@ -126,8 +132,9 @@ namespace RistkylikNS {
 			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
 			this->comboBox5 = (gcnew System::Windows::Forms::ComboBox());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			this->label5 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -158,7 +165,7 @@ namespace RistkylikNS {
 			this->label1->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->label1->Cursor = System::Windows::Forms::Cursors::No;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Bold));
-			this->label1->Location = System::Drawing::Point(301, 37);
+			this->label1->Location = System::Drawing::Point(301, 13);
 			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(367, 32);
@@ -170,7 +177,7 @@ namespace RistkylikNS {
 			this->label2->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->label2->Cursor = System::Windows::Forms::Cursors::No;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Bold));
-			this->label2->Location = System::Drawing::Point(301, 69);
+			this->label2->Location = System::Drawing::Point(301, 45);
 			this->label2->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(367, 32);
@@ -182,7 +189,7 @@ namespace RistkylikNS {
 			this->label3->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->label3->Cursor = System::Windows::Forms::Cursors::No;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Bold));
-			this->label3->Location = System::Drawing::Point(301, 101);
+			this->label3->Location = System::Drawing::Point(301, 77);
 			this->label3->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(367, 32);
@@ -194,7 +201,7 @@ namespace RistkylikNS {
 			this->label4->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->label4->Cursor = System::Windows::Forms::Cursors::No;
 			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Bold));
-			this->label4->Location = System::Drawing::Point(301, 133);
+			this->label4->Location = System::Drawing::Point(301, 108);
 			this->label4->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(367, 32);
@@ -399,16 +406,17 @@ namespace RistkylikNS {
 			this->textBox1->Size = System::Drawing::Size(260, 20);
 			this->textBox1->TabIndex = 35;
 			// 
-			// label5
+			// label6
 			// 
-			this->label5->AutoSize = true;
-			this->label5->Font = (gcnew System::Drawing::Font(L"Sitka Banner", 36, System::Drawing::FontStyle::Bold));
-			this->label5->Location = System::Drawing::Point(11, 11);
-			this->label5->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
-			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(279, 69);
-			this->label5->TabIndex = 46;
-			this->label5->Text = L"RECTANGLE";
+			this->label6->AutoSize = true;
+			this->label6->Font = (gcnew System::Drawing::Font(L"Sitka Banner", 36, System::Drawing::FontStyle::Bold));
+			this->label6->Location = System::Drawing::Point(11, 11);
+			this->label6->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(279, 69);
+			this->label6->TabIndex = 46;
+			this->label6->Text = L"RECTANGLE";
+			this->label6->Click += gcnew System::EventHandler(this, &Ristkylik::label8_Click);
 			// 
 			// pictureBox1
 			// 
@@ -419,14 +427,27 @@ namespace RistkylikNS {
 			this->pictureBox1->TabIndex = 47;
 			this->pictureBox1->TabStop = false;
 			// 
+			// label5
+			// 
+			this->label5->BackColor = System::Drawing::SystemColors::InactiveBorder;
+			this->label5->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->label5->Cursor = System::Windows::Forms::Cursors::No;
+			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Bold));
+			this->label5->Location = System::Drawing::Point(301, 140);
+			this->label5->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(367, 32);
+			this->label5->TabIndex = 48;
+			// 
 			// Ristkylik
 			// 
 			this->AccessibleName = L"RECTANGLE";
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(710, 328);
-			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->label5);
+			this->Controls->Add(this->pictureBox1);
+			this->Controls->Add(this->label6);
 			this->Controls->Add(this->comboBox5);
 			this->Controls->Add(this->textBox5);
 			this->Controls->Add(this->comboBox3);
@@ -1030,5 +1051,7 @@ private: System::Void textBox5_KeyUp(System::Object^  sender, System::Windows::F
 	private: System::Void Ristkylik_MouseUp(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) {
 		this->dragging = false;
 	}
+private: System::Void label8_Click(System::Object^  sender, System::EventArgs^  e) {
+}
 };
 }
