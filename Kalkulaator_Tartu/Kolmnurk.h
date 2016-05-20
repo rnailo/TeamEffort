@@ -75,9 +75,10 @@ namespace KolmnurkNS {
 
 	private: System::Windows::Forms::ComboBox^  comboBox2;
 	private: System::Windows::Forms::ComboBox^  comboBox1;
-	private: System::Windows::Forms::Label^  label5;
+	private: System::Windows::Forms::Label^  label9;
+
 	private: System::Windows::Forms::Label^  label6;
-	private: System::Windows::Forms::Label^  label7;
+	private: System::Windows::Forms::Label^  label5;
 
 	private: System::Windows::Forms::ComboBox^  comboBox6;
 	public: System::Windows::Forms::TextBox^  textBox5;
@@ -121,9 +122,9 @@ namespace KolmnurkNS {
 			this->comboBox4 = (gcnew System::Windows::Forms::ComboBox());
 			this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
 			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
-			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->label6 = (gcnew System::Windows::Forms::Label());
-			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->comboBox6 = (gcnew System::Windows::Forms::ComboBox());
 			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
@@ -273,6 +274,7 @@ namespace KolmnurkNS {
 			this->textBox4->Name = L"textBox4";
 			this->textBox4->Size = System::Drawing::Size(193, 20);
 			this->textBox4->TabIndex = 35;
+			this->textBox4->KeyUp += gcnew System::Windows::Forms::KeyEventHandler(this, &Kolmnurk::textBox4_KeyUp);
 			// 
 			// textBox3
 			// 
@@ -283,6 +285,7 @@ namespace KolmnurkNS {
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->Size = System::Drawing::Size(193, 20);
 			this->textBox3->TabIndex = 34;
+			this->textBox3->KeyUp += gcnew System::Windows::Forms::KeyEventHandler(this, &Kolmnurk::textBox3_KeyUp);
 			// 
 			// textBox2
 			// 
@@ -293,6 +296,7 @@ namespace KolmnurkNS {
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->Size = System::Drawing::Size(193, 20);
 			this->textBox2->TabIndex = 33;
+			this->textBox2->KeyUp += gcnew System::Windows::Forms::KeyEventHandler(this, &Kolmnurk::textBox2_KeyUp);
 			// 
 			// textBox1
 			// 
@@ -303,6 +307,7 @@ namespace KolmnurkNS {
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(193, 20);
 			this->textBox1->TabIndex = 32;
+			this->textBox1->KeyUp += gcnew System::Windows::Forms::KeyEventHandler(this, &Kolmnurk::textBox1_KeyUp);
 			// 
 			// comboBox4
 			// 
@@ -338,16 +343,16 @@ namespace KolmnurkNS {
 			this->comboBox1->TabIndex = 36;
 			this->comboBox1->Text = L"m";
 			// 
-			// label5
+			// label9
 			// 
-			this->label5->AutoSize = true;
-			this->label5->Font = (gcnew System::Drawing::Font(L"Sitka Banner", 30, System::Drawing::FontStyle::Bold));
-			this->label5->Location = System::Drawing::Point(11, 9);
-			this->label5->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
-			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(163, 58);
-			this->label5->TabIndex = 40;
-			this->label5->Text = L"Triangle";
+			this->label9->AutoSize = true;
+			this->label9->Font = (gcnew System::Drawing::Font(L"Sitka Banner", 30, System::Drawing::FontStyle::Bold));
+			this->label9->Location = System::Drawing::Point(11, 9);
+			this->label9->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(163, 58);
+			this->label9->TabIndex = 40;
+			this->label9->Text = L"Triangle";
 			// 
 			// label6
 			// 
@@ -361,17 +366,17 @@ namespace KolmnurkNS {
 			this->label6->Size = System::Drawing::Size(346, 22);
 			this->label6->TabIndex = 42;
 			// 
-			// label7
+			// label5
 			// 
-			this->label7->BackColor = System::Drawing::SystemColors::InactiveBorder;
-			this->label7->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->label7->Cursor = System::Windows::Forms::Cursors::No;
-			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Bold));
-			this->label7->Location = System::Drawing::Point(174, 180);
-			this->label7->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
-			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(346, 24);
-			this->label7->TabIndex = 41;
+			this->label5->BackColor = System::Drawing::SystemColors::InactiveBorder;
+			this->label5->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->label5->Cursor = System::Windows::Forms::Cursors::No;
+			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Bold));
+			this->label5->Location = System::Drawing::Point(174, 180);
+			this->label5->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(346, 24);
+			this->label5->TabIndex = 41;
 			// 
 			// comboBox6
 			// 
@@ -393,6 +398,7 @@ namespace KolmnurkNS {
 			this->textBox5->Name = L"textBox5";
 			this->textBox5->Size = System::Drawing::Size(193, 20);
 			this->textBox5->TabIndex = 46;
+			this->textBox5->KeyUp += gcnew System::Windows::Forms::KeyEventHandler(this, &Kolmnurk::textBox6_KeyUp);
 			// 
 			// textBox6
 			// 
@@ -403,6 +409,7 @@ namespace KolmnurkNS {
 			this->textBox6->Name = L"textBox6";
 			this->textBox6->Size = System::Drawing::Size(193, 20);
 			this->textBox6->TabIndex = 45;
+			this->textBox6->KeyUp += gcnew System::Windows::Forms::KeyEventHandler(this, &Kolmnurk::textBox5_KeyUp);
 			// 
 			// checkBox5
 			// 
@@ -482,8 +489,8 @@ namespace KolmnurkNS {
 			this->Controls->Add(this->checkBox5);
 			this->Controls->Add(this->checkBox6);
 			this->Controls->Add(this->label6);
-			this->Controls->Add(this->label7);
 			this->Controls->Add(this->label5);
+			this->Controls->Add(this->label9);
 			this->Controls->Add(this->comboBox4);
 			this->Controls->Add(this->comboBox2);
 			this->Controls->Add(this->comboBox1);
@@ -1026,112 +1033,167 @@ private: System::Void textBox6_KeyUp(System::Object^  sender, System::Windows::F
 			 if (s.empty()) {//if (s.at(0) != '-' || s.length() > 1) { !!!SEE ON SELLEKS KUI ON VAJA MIINUSEID btw. avastasin alles koodikirjutamise lõpus et geomeetrias pole miinuseid vaja :D
 				 textBS = "0";			 //teen juba kontrollitud teksti int väärtuseks, et saaks sellega arvutusi teha ja saadan selle väärtuse calculate(); funktsiooni.
 										 //}
-			 }calculate(double::Parse(textBS), i);
+			 }bitSwitch(double::Parse(textBS), i);
+		 }
+		 //BITTER
+		 int bitter() {
+			 std::string bit = "0000000";
+			 if (cb1 == 1) {// checkbox 1 muudab 1. "biti" üheks.
+				 bit[1] = '1';
+			 }
+			 if (cb2 == 2) {// checkbox 2 muudab 2. "biti" üheks.
+				 bit[2] = '1';
+			 }
+			 if (cb3 == 3) {// checkbox 3 muudab 3. "biti" üheks.
+				 bit[3] = '1';
+			 }
+			 if (cb4 == 4) {// checkbox 4 muudab 4. "biti" üheks.
+				 bit[4] = '1';
+			 }
+			 if (cb5 == 5) {// checkbox 5 muudab 5. "biti" üheks.
+				 bit[5] = '1';
+			 }
+			 if (cb6 == 6) {// checkbox 4 muudab 4. "biti" üheks.
+				 bit[6] = '1';
+			 }
+			 return (std::stoi(bit)); //returnime väärtuse bitSwitch funktsiooni switchi.
 		 }
 
-		 //CALCULATE
-		 void calculate(double i, int j) { // i on textBoxi sisestatud väärtus ja j on mitmes textBox ehk, mis väärtus sisestati.
+		 //BITSWITCH
+		 void bitSwitch(double i, int j) {
 			 i = conventor(i, j);// siit küsitakse conventori käest andmeid meetrites
-
 			 double a, b, c, h, p, s;
-			 int error = 0; // kui ikkagi tekib mingi probleem
-			 switch (j)// siin arvutatakse andmed. Valemeid kasutatakse sõltuvalt, mis sisestati. Siin toimub ka lisainfo väljastamine label´itesse.
+			 int error = 0;
+			 //bitSwitch(); tuleb panna kuhugi kus muidu calculate oleks... siia tuleb lisada veel double-id, valemid iga case puhul ja label määramised.
+			 i = conventor(i, j);
+			 switch (bitter())
 			 {
-			 case 1: //a
+			 case 100100:// :)
+				 s = (a*h) / 2; label6->Text = ("S = ( a * h ) / 2 = " + s + " m²");
+				 break;
+			 case 111000:// mingi suvakas bitset jälle.
+				 p = a + b + c; label5->Text = ("P = a + b + c = " + p + " m²");
+				 break;
+			 case 111100:// :)
 				 std::cout << "calc. c1" << j << std::endl;
 				 a = i;	label1->Text = "a - Known";
-				 b = i; label2->Text = "b - Known";
-				 c = i; label3->Text = "c - Known";
-				 h = i; label4->Text = "c - Known";
-					 //RRR = a*sqrt(2); label4->Text = "C = A * √2 = " + a + "m * √2 = " + c + "m";
-				 s = (a*h) / 2; label6->Text = ("S = ( a * h ) / 2 = " + s + "m²"); //+ a + "m * " + a + "m = " + s + "m²");
-				 p = a + b + c; label5->Text = ("P = a + b + c = ");//"P = 4 * A = 4 * " + a + "m = " + p + "m");
-				break;
-			 case 2: //b
-				 std::cout << "calc. c2" << j << std::endl;
-				 //a = i;
-				 //b = i;
-				 //c = 
-
-				 //p = i;	label2->Text = "P - Known";
-				 //a = p / 4; label1->Text = "A = P / 4 = " + p + "m / 4 = " + a + "m";
-				 //c = a*sqrt(2); label4->Text = "C = A * √2 = " + a + "m * √2 = " + c + "m";
-				 //s = a*a; label3->Text = ("S = A * A = " + a + "m * " + a + "m = " + s + "m²");
-				 break;
-			 case 3: //c
-				 std::cout << "calc. c3" << j << std::endl;
-				 //p = i;	label2->Text = "P - Known";
-				 //a = p / 4; label1->Text = "A = P / 4 = " + p + "m / 4 = " + a + "m";
-				 //c = a*sqrt(2); label4->Text = "C = A * √2 = " + a + "m * √2 = " + c + "m";
-				 //s = a*a; label3->Text = ("S = A * A = " + a + "m * " + a + "m = " + s + "m²");
-				 break;
-			 case 4: //h
-				 std::cout << "calc. c4" << j << std::endl;
-				 //p = i;	label2->Text = "P - Known";
-				 //a = p / 4; label1->Text = "A = P / 4 = " + p + "m / 4 = " + a + "m";
-				 //c = a*sqrt(2); label4->Text = "C = A * √2 = " + a + "m * √2 = " + c + "m";
-				 //s = a*a; label3->Text = ("S = A * A = " + a + "m * " + a + "m = " + s + "m²");
-				 break;
-			 case 5: //P
-				 std::cout << "calc. c5" << j << std::endl;
-				 //p = i;	label2->Text = "P - Known";
-				 //a = p / 4; label1->Text = "A = P / 4 = " + p + "m / 4 = " + a + "m";
-				 //c = a*sqrt(2); label4->Text = "C = A * √2 = " + a + "m * √2 = " + c + "m";
-				 //s = a*a; label3->Text = ("S = A * A = " + a + "m * " + a + "m = " + s + "m²");
-				 break;
-			 case 6: //S
-				 std::cout << "calc. c6" << j << std::endl;
-				 //s = i;	label3->Text = "S - Known";
-				 //a = sqrt(s); label1->Text = "A = √S = √" + s + "m² = " + a + "m";
-				 //c = a*sqrt(2); label4->Text = "C = A * √2 = " + a + "m * √2 = " + c + "m";
-				 //p = 4 * a;	label2->Text = ("P = 4 * A = 4 * " + a + "m = " + p + "m");
+				 b = Convert::ToInt32(textBox2->Text); label2->Text = "b - Known";
+				 c = Convert::ToInt32(textBox3->Text); label3->Text = "c - Known";
+				 h = Convert::ToInt32(textBox4->Text); label4->Text = "c - Known";
+				 p = a + b + c; label5->Text = ("P = a + b + c = " + p + " m²");
+				 s = (a*h) / 2; label6->Text = ("S = ( a * h ) / 2 = " + s + " m²");
 				 break;
 
-			 default:
-				 std::cout << "calc. ERROR" << std::endl;
-				 error = 1; // siis see kuvatakse
+			 default: // see on siis kõik mis jääb väljapoole case ehk, mis ei = mingi casega
+
 				 break;
+			 
+				 answReturner(a, b, c, h, p, s, error, j);
 			 }
-			 answReturner(a, b, c, h, p, s, error, j);
 		 }
+		 ////CALCULATE
+		 //void calculate(double i, int j) { // i on textBoxi sisestatud väärtus ja j on mitmes textBox ehk, mis väärtus sisestati.
+			// i = conventor(i, j);// siit küsitakse conventori käest andmeid meetrites
+
+
+			// int error = 0; // kui ikkagi tekib mingi probleem
+			// switch (j)// siin arvutatakse andmed. Valemeid kasutatakse sõltuvalt, mis sisestati. Siin toimub ka lisainfo väljastamine label´itesse.
+			// {
+			// case 1: //a
+			//	 std::cout << "calc. c1" << j << std::endl;
+			//	 a = i;	label1->Text = "a - Known";
+			//	 b = i; label2->Text = "b - Known";
+			//	 c = i; label3->Text = "c - Known";
+			//	 h = i; label4->Text = "c - Known";
+			//		 //RRR = a*sqrt(2); label4->Text = "C = A * √2 = " + a + "m * √2 = " + c + "m";
+			//	 s = (a*h) / 2; label6->Text = ("S = ( a * h ) / 2 = " + s + "m²"); //+ a + "m * " + a + "m = " + s + "m²");
+			//	 p = a + b + c; label5->Text = ("P = a + b + c = ");//"P = 4 * A = 4 * " + a + "m = " + p + "m");
+			//	break;
+			// case 2: //b
+			//	 std::cout << "calc. c2" << j << std::endl;
+			//	 //a = i;
+			//	 //b = i;
+			//	 //c = 
+
+			//	 //p = i;	label2->Text = "P - Known";
+			//	 //a = p / 4; label1->Text = "A = P / 4 = " + p + "m / 4 = " + a + "m";
+			//	 //c = a*sqrt(2); label4->Text = "C = A * √2 = " + a + "m * √2 = " + c + "m";
+			//	 //s = a*a; label3->Text = ("S = A * A = " + a + "m * " + a + "m = " + s + "m²");
+			//	 break;
+			// case 3: //c
+			//	 std::cout << "calc. c3" << j << std::endl;
+			//	 //p = i;	label2->Text = "P - Known";
+			//	 //a = p / 4; label1->Text = "A = P / 4 = " + p + "m / 4 = " + a + "m";
+			//	 //c = a*sqrt(2); label4->Text = "C = A * √2 = " + a + "m * √2 = " + c + "m";
+			//	 //s = a*a; label3->Text = ("S = A * A = " + a + "m * " + a + "m = " + s + "m²");
+			//	 break;
+			// case 4: //h
+			//	 std::cout << "calc. c4" << j << std::endl;
+			//	 //p = i;	label2->Text = "P - Known";
+			//	 //a = p / 4; label1->Text = "A = P / 4 = " + p + "m / 4 = " + a + "m";
+			//	 //c = a*sqrt(2); label4->Text = "C = A * √2 = " + a + "m * √2 = " + c + "m";
+			//	 //s = a*a; label3->Text = ("S = A * A = " + a + "m * " + a + "m = " + s + "m²");
+			//	 break;
+			// case 5: //P
+			//	 std::cout << "calc. c5" << j << std::endl;
+			//	 //p = i;	label2->Text = "P - Known";
+			//	 //a = p / 4; label1->Text = "A = P / 4 = " + p + "m / 4 = " + a + "m";
+			//	 //c = a*sqrt(2); label4->Text = "C = A * √2 = " + a + "m * √2 = " + c + "m";
+			//	 //s = a*a; label3->Text = ("S = A * A = " + a + "m * " + a + "m = " + s + "m²");
+			//	 break;
+			// case 6: //S
+			//	 std::cout << "calc. c6" << j << std::endl;
+			//	 //s = i;	label3->Text = "S - Known";
+			//	 //a = sqrt(s); label1->Text = "A = √S = √" + s + "m² = " + a + "m";
+			//	 //c = a*sqrt(2); label4->Text = "C = A * √2 = " + a + "m * √2 = " + c + "m";
+			//	 //p = 4 * a;	label2->Text = ("P = 4 * A = 4 * " + a + "m = " + p + "m");
+			//	 break;
+
+			// default:
+			//	 std::cout << "calc. ERROR" << std::endl;
+			//	 error = 1; // siis see kuvatakse
+			//	 break;
+			// }
+			// answReturner(a, b, c, h, p, s, error, j);
+		// }
 
 		 //ANSWRETURNER
 
 		 void answReturner(double a, double b, double c, double h, double p, double s, int error, int j) { // siin tagastatakse töödeldud, kontrollitud ja arvutatud andmed õigetesse lahtritesse. Ainuke mida ei muudeta on lahter kuhu parasjagu kirjutatakse.
-			 if (j != 1) {
+			 if (cb1 != 1) {
 				 std::cout << "answR. 1" << std::endl;
 				 if (error == 0) { textBox1->Text = unit(a, 1); }
 				 else { textBox1->Text = "ERROR"; }
 			 }
-			 if (j != 2) {
+			 if (cb2 != 2) {
 				 std::cout << "answR. 2" << std::endl;
 				 if (error == 0) {
 					 textBox2->Text = unit(b, 2);
 				 }
 				 else { textBox2->Text = "ERROR"; }
 			 }
-			 if (j != 3) {
+			 if (cb3 != 3) {
 				 std::cout << "answR. 3" << std::endl;
 				 if (error == 0) {
 					 textBox3->Text = unit(c, 3);
 				 }
 				 else { textBox3->Text = "ERROR"; }
 			 }
-			 if (j != 4) {
+			 if (cb4 != 4) {
 				 std::cout << "answR. 4" << std::endl;
 				 if (error == 0) {
 					 textBox4->Text = unit(h, 4);
 				 }
 				 else { textBox4->Text = "ERROR"; }
 			 }
-			 if (j != 5) {
+			 if (cb5 != 5) {
 				 std::cout << "answR. 5" << std::endl;
 				 if (error == 0) {
 					 textBox5->Text = unit(p, 5);
 				 }
 				 else { textBox5->Text = "ERROR"; }
 			 }
-			 if (j != 6) {
+			 if (cb6 != 6) {
 				 std::cout << "answR. 6" << std::endl;
 				 if (error == 0) {
 					 textBox6->Text = unit(s, 6);
