@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include <string>
 #include <msclr\marshal_cppstd.h>
 #include <algorithm>
@@ -21,17 +21,17 @@ namespace RistkylikNS {
 	public ref class Ristkylik : public System::Windows::Forms::Form
 	{
 	public:
-		int cb1 = 0;// v��rtus millega m��ran eelnevalt valitud checkBoxi.
-		int cb2 = 0;// v��rtus millega m��ran eelnevalt valitud checkBoxi.
-		int cb3 = 0;// v��rtus millega m��ran eelnevalt valitud checkBoxi.
-		int cb4 = 0;// v��rtus millega m��ran eelnevalt valitud checkBoxi.
-		int cb5 = 0;// v��rtus millega m��ran eelnevalt valitud checkBoxi.
-		int erased = 0;// v��rtus millega kontrollin, kas on infot kustutatud kontrollija poolt.
+		int cb1 = 0;// väärtus millega määran eelnevalt valitud checkBoxi.
+		int cb2 = 0;// väärtus millega määran eelnevalt valitud checkBoxi.
+		int cb3 = 0;// väärtus millega määran eelnevalt valitud checkBoxi.
+		int cb4 = 0;// väärtus millega määran eelnevalt valitud checkBoxi.
+		int cb5 = 0;// väärtus millega määran eelnevalt valitud checkBoxi.
+		int erased = 0;// väärtus millega kontrollin, kas on infot kustutatud kontrollija poolt.
 
 
 
 	public:
-			int selecting = 0;// v��rtus millega m��ran koha, kust j�tkab kirjutamine p�rast kustutust.
+			int selecting = 0;// väärtus millega määran koha, kust jätkab kirjutamine pärast kustutust.
 
 		Ristkylik(void)
 		{
@@ -80,7 +80,7 @@ namespace RistkylikNS {
 	private: System::Windows::Forms::ComboBox^  comboBox4;
 
 	private:
-	public: System::Windows::Forms::TextBox^  TextBox5;
+	public: System::Windows::Forms::TextBox^  textBox5;
 
 	public:
 	private: System::Windows::Forms::ComboBox^  comboBox5;
@@ -122,7 +122,7 @@ namespace RistkylikNS {
 			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
 			this->comboBox3 = (gcnew System::Windows::Forms::ComboBox());
 			this->comboBox4 = (gcnew System::Windows::Forms::ComboBox());
-			this->TextBox5 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
 			this->comboBox5 = (gcnew System::Windows::Forms::ComboBox());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->label5 = (gcnew System::Windows::Forms::Label());
@@ -140,7 +140,7 @@ namespace RistkylikNS {
 				static_cast<System::Byte>(186)));
 			this->button1->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->button1->Location = System::Drawing::Point(672, 11);
-			this->button1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->button1->Margin = System::Windows::Forms::Padding(2);
 			this->button1->Name = L"button1";
 			this->button1->Padding = System::Windows::Forms::Padding(2, 0, 0, 0);
 			this->button1->Size = System::Drawing::Size(27, 25);
@@ -216,7 +216,7 @@ namespace RistkylikNS {
 				static_cast<System::Byte>(186)));
 			this->checkBox4->ForeColor = System::Drawing::Color::Black;
 			this->checkBox4->Location = System::Drawing::Point(301, 251);
-			this->checkBox4->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->checkBox4->Margin = System::Windows::Forms::Padding(2);
 			this->checkBox4->Name = L"checkBox4";
 			this->checkBox4->Size = System::Drawing::Size(83, 19);
 			this->checkBox4->TabIndex = 29;
@@ -231,7 +231,7 @@ namespace RistkylikNS {
 				static_cast<System::Byte>(186)));
 			this->checkBox3->ForeColor = System::Drawing::Color::Blue;
 			this->checkBox3->Location = System::Drawing::Point(301, 228);
-			this->checkBox3->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->checkBox3->Margin = System::Windows::Forms::Padding(2);
 			this->checkBox3->Name = L"checkBox3";
 			this->checkBox3->Size = System::Drawing::Size(83, 19);
 			this->checkBox3->TabIndex = 30;
@@ -246,7 +246,7 @@ namespace RistkylikNS {
 				static_cast<System::Byte>(186)));
 			this->checkBox2->ForeColor = System::Drawing::Color::Green;
 			this->checkBox2->Location = System::Drawing::Point(301, 203);
-			this->checkBox2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->checkBox2->Margin = System::Windows::Forms::Padding(2);
 			this->checkBox2->Name = L"checkBox2";
 			this->checkBox2->Size = System::Drawing::Size(83, 19);
 			this->checkBox2->TabIndex = 31;
@@ -261,7 +261,7 @@ namespace RistkylikNS {
 				static_cast<System::Byte>(186)));
 			this->checkBox1->ForeColor = System::Drawing::Color::Red;
 			this->checkBox1->Location = System::Drawing::Point(301, 180);
-			this->checkBox1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->checkBox1->Margin = System::Windows::Forms::Padding(2);
 			this->checkBox1->Name = L"checkBox1";
 			this->checkBox1->Size = System::Drawing::Size(83, 19);
 			this->checkBox1->TabIndex = 32;
@@ -276,7 +276,7 @@ namespace RistkylikNS {
 				static_cast<System::Byte>(186)));
 			this->checkBox5->ForeColor = System::Drawing::Color::Purple;
 			this->checkBox5->Location = System::Drawing::Point(301, 275);
-			this->checkBox5->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->checkBox5->Margin = System::Windows::Forms::Padding(2);
 			this->checkBox5->Name = L"checkBox5";
 			this->checkBox5->Size = System::Drawing::Size(83, 19);
 			this->checkBox5->TabIndex = 34;
@@ -288,102 +288,111 @@ namespace RistkylikNS {
 			// 
 			this->textBox4->Enabled = false;
 			this->textBox4->Location = System::Drawing::Point(357, 250);
-			this->textBox4->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBox4->Margin = System::Windows::Forms::Padding(2);
 			this->textBox4->MaxLength = 1;
 			this->textBox4->Name = L"textBox4";
 			this->textBox4->Size = System::Drawing::Size(260, 20);
 			this->textBox4->TabIndex = 38;
+			this->textBox4->KeyUp += gcnew System::Windows::Forms::KeyEventHandler(this, &Ristkylik::textBox4_KeyUp);
 			// 
 			// textBox3
 			// 
 			this->textBox3->Enabled = false;
 			this->textBox3->Location = System::Drawing::Point(357, 227);
-			this->textBox3->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBox3->Margin = System::Windows::Forms::Padding(2);
 			this->textBox3->MaxLength = 1;
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->Size = System::Drawing::Size(260, 20);
 			this->textBox3->TabIndex = 37;
+			this->textBox3->KeyUp += gcnew System::Windows::Forms::KeyEventHandler(this, &Ristkylik::textBox3_KeyUp);
 			// 
 			// textBox2
 			// 
 			this->textBox2->Enabled = false;
 			this->textBox2->Location = System::Drawing::Point(357, 203);
-			this->textBox2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBox2->Margin = System::Windows::Forms::Padding(2);
 			this->textBox2->MaxLength = 1;
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->Size = System::Drawing::Size(260, 20);
 			this->textBox2->TabIndex = 36;
+			this->textBox2->KeyUp += gcnew System::Windows::Forms::KeyEventHandler(this, &Ristkylik::textBox2_KeyUp);
 			// 
 			// comboBox2
 			// 
 			this->comboBox2->FormattingEnabled = true;
 			this->comboBox2->Items->AddRange(gcnew cli::array< System::Object^  >(6) { L"mm", L"Cm", L"Dm", L"m", L"Km", L"In" });
 			this->comboBox2->Location = System::Drawing::Point(621, 201);
-			this->comboBox2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->comboBox2->Margin = System::Windows::Forms::Padding(2);
 			this->comboBox2->Name = L"comboBox2";
 			this->comboBox2->Size = System::Drawing::Size(47, 21);
 			this->comboBox2->TabIndex = 40;
 			this->comboBox2->Text = L"m";
+			this->comboBox2->SelectedIndexChanged += gcnew System::EventHandler(this, &Ristkylik::comboBox2_SelectedIndexChanged);
 			// 
 			// comboBox1
 			// 
 			this->comboBox1->FormattingEnabled = true;
 			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(6) { L"mm", L"Cm", L"Dm", L"m", L"Km", L"In" });
 			this->comboBox1->Location = System::Drawing::Point(621, 176);
-			this->comboBox1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->comboBox1->Margin = System::Windows::Forms::Padding(2);
 			this->comboBox1->Name = L"comboBox1";
 			this->comboBox1->Size = System::Drawing::Size(47, 21);
 			this->comboBox1->TabIndex = 39;
 			this->comboBox1->Text = L"m";
+			this->comboBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &Ristkylik::comboBox1_SelectedIndexChanged);
 			// 
 			// comboBox3
 			// 
 			this->comboBox3->FormattingEnabled = true;
 			this->comboBox3->Items->AddRange(gcnew cli::array< System::Object^  >(6) { L"mm", L"Cm", L"Dm", L"m", L"Km", L"In" });
 			this->comboBox3->Location = System::Drawing::Point(621, 249);
-			this->comboBox3->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->comboBox3->Margin = System::Windows::Forms::Padding(2);
 			this->comboBox3->Name = L"comboBox3";
 			this->comboBox3->Size = System::Drawing::Size(47, 21);
 			this->comboBox3->TabIndex = 42;
 			this->comboBox3->Text = L"m";
+			this->comboBox3->SelectedIndexChanged += gcnew System::EventHandler(this, &Ristkylik::comboBox3_SelectedIndexChanged);
 			// 
 			// comboBox4
 			// 
 			this->comboBox4->FormattingEnabled = true;
 			this->comboBox4->Items->AddRange(gcnew cli::array< System::Object^  >(6) { L"mm", L"Cm", L"Dm", L"m", L"Km", L"In" });
 			this->comboBox4->Location = System::Drawing::Point(621, 224);
-			this->comboBox4->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->comboBox4->Margin = System::Windows::Forms::Padding(2);
 			this->comboBox4->Name = L"comboBox4";
 			this->comboBox4->Size = System::Drawing::Size(47, 21);
 			this->comboBox4->TabIndex = 41;
 			this->comboBox4->Text = L"m";
+			this->comboBox4->SelectedIndexChanged += gcnew System::EventHandler(this, &Ristkylik::comboBox4_SelectedIndexChanged);
 			// 
-			// TextBox5
+			// textBox5
 			// 
-			this->TextBox5->Enabled = false;
-			this->TextBox5->Location = System::Drawing::Point(357, 274);
-			this->TextBox5->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
-			this->TextBox5->MaxLength = 1;
-			this->TextBox5->Name = L"TextBox5";
-			this->TextBox5->Size = System::Drawing::Size(260, 20);
-			this->TextBox5->TabIndex = 43;
+			this->textBox5->Enabled = false;
+			this->textBox5->Location = System::Drawing::Point(357, 274);
+			this->textBox5->Margin = System::Windows::Forms::Padding(2);
+			this->textBox5->MaxLength = 1;
+			this->textBox5->Name = L"textBox5";
+			this->textBox5->Size = System::Drawing::Size(260, 20);
+			this->textBox5->TabIndex = 43;
+			this->textBox5->KeyUp += gcnew System::Windows::Forms::KeyEventHandler(this, &Ristkylik::textBox5_KeyUp);
 			// 
 			// comboBox5
 			// 
 			this->comboBox5->FormattingEnabled = true;
 			this->comboBox5->Items->AddRange(gcnew cli::array< System::Object^  >(6) { L"mm^2", L"Cm^2", L"Dm^2", L"m^2", L"Km^2", L"In^2" });
 			this->comboBox5->Location = System::Drawing::Point(621, 273);
-			this->comboBox5->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->comboBox5->Margin = System::Windows::Forms::Padding(2);
 			this->comboBox5->Name = L"comboBox5";
 			this->comboBox5->Size = System::Drawing::Size(47, 21);
 			this->comboBox5->TabIndex = 45;
 			this->comboBox5->Text = L"m^2";
+			this->comboBox5->SelectedIndexChanged += gcnew System::EventHandler(this, &Ristkylik::comboBox5_SelectedIndexChanged);
 			// 
 			// textBox1
 			// 
 			this->textBox1->Enabled = false;
 			this->textBox1->Location = System::Drawing::Point(357, 180);
-			this->textBox1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBox1->Margin = System::Windows::Forms::Padding(2);
 			this->textBox1->MaxLength = 1;
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(260, 20);
@@ -403,7 +412,7 @@ namespace RistkylikNS {
 			// pictureBox1
 			// 
 			this->pictureBox1->Location = System::Drawing::Point(12, 108);
-			this->pictureBox1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->pictureBox1->Margin = System::Windows::Forms::Padding(2);
 			this->pictureBox1->Name = L"pictureBox1";
 			this->pictureBox1->Size = System::Drawing::Size(278, 209);
 			this->pictureBox1->TabIndex = 47;
@@ -418,7 +427,7 @@ namespace RistkylikNS {
 			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->label5);
 			this->Controls->Add(this->comboBox5);
-			this->Controls->Add(this->TextBox5);
+			this->Controls->Add(this->textBox5);
 			this->Controls->Add(this->comboBox3);
 			this->Controls->Add(this->comboBox4);
 			this->Controls->Add(this->comboBox2);
@@ -439,7 +448,7 @@ namespace RistkylikNS {
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->button1);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
-			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"Ristkylik";
 			this->Text = L"RECTANGLE";
 			this->Load += gcnew System::EventHandler(this, &Ristkylik::Ristkylik_Load);
@@ -472,7 +481,7 @@ public: System::Void checkBox5_CheckedChanged(System::Object^  sender, System::E
 
 //SWITCHER
 
-void switcher(int i) {// teeb checkBoxide j�rgi textBoxe aktiivseks.
+void switcher(int i) {// teeb checkBoxide järgi textBoxe aktiivseks.
 				std::cout << "Switcher function" << std::endl;
 				switch (i){
 				case 1:// kui paned linnukese 1. checkBoxi taha siis aktiveerub 1. textBox ja vastupidi.
@@ -527,21 +536,410 @@ void switcher(int i) {// teeb checkBoxide j�rgi textBoxe aktiivseks.
 					if (i == cb5) {//... ja vastupidi
 						std::cout << "5-unchecked" << std::endl;
 						cb5 = 0;
-						TextBox5->Enabled = false;
+						textBox5->Enabled = false;
 					}
 					else {
 						std::cout << "5-checked" << std::endl;
 						cb5 = i;
-						TextBox5->Enabled = true;
+						textBox5->Enabled = true;
 					}
 					break;
 				}
 				
 			 }
- 
-		
-			
-			
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+/*COMBOBOXID*/
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+private: System::Void comboBox4_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {//C
+	getText(fixUnit(cb4, 4));
+}
+private: System::Void comboBox3_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {//P
+	getText(fixUnit(cb3, 3));
+}
+private: System::Void comboBox2_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {//S
+	getText(fixUnit(cb2, 2));
+}
+private: System::Void comboBox1_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {//A
+	getText(fixUnit(cb1, 1));
+}
+private: System::Void comboBox5_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {//A
+	getText(fixUnit(cb5, 5));
+}
+		 unsigned _int64 arv1 = 0; //tegin väärtuse, mida saaks võrrelda std::string.length()´iga.
+								   //FIXUNIT
+		 int fixUnit(int i, int j) { //Selle eesmärk on fixida paari bugi, mis tekkis seoses ühiku muutmisega.
+			 if (i == j)
+			 {
+				 return i;
+
+			 }
+			 else if (cb1 == 0 && cb2 == 0 && cb3 == 0 && cb4 == 0) {
+				 return j;
+			 }
+			 else
+			 {
+				 if (cb1 == 1)
+				 {
+					 return cb1;
+				 }if (cb2 == 2)
+				 {
+					 return cb2;
+				 }if (cb3 == 3)
+				 {
+					 return cb3;
+				 }if (cb4 == 4)
+				 {
+					 return cb4;
+				 }
+			 }
+			 return 0;
+		 }
+		 //GETUNIT
+		 std::string getUnit(int j) { //see block muretseb ühikud comboBoxidest ja tagastab need mujale, küsija määrab millise comboBoxi Texti on vaja.
+			 std::string str;
+			 switch (j)
+			 {
+			 case 1:
+				 str = (msclr::interop::marshal_as<std::string>(comboBox1->Text));
+				 break;
+			 case 2:
+				 str = (msclr::interop::marshal_as<std::string>(comboBox2->Text));
+				 break;
+			 case 3:
+				 str = (msclr::interop::marshal_as<std::string>(comboBox3->Text));
+				 break;
+			 case 4:
+				 str = (msclr::interop::marshal_as<std::string>(comboBox4->Text));
+				 break;
+			 }
+			 return str;
+		 }
+		 //CONVERTOR
+		 double conventor(double v, int j) { //to meter. See teisendab kirjutatud arvud meetritesse olenevalt, mis ühikus need kirjutati. see on vajalik arvutusteks.
+			 if (j == 3)// ruudus ühikud ruutmeetriks
+			 {
+				 if (getUnit(j) == "mm^2")
+				 {
+					 v = v * 0.001 * 0.001;
+				 }
+				 else if (getUnit(j) == "Cm^2")
+				 {
+					 v = v * 0.01 * 0.01;
+				 }
+				 else if (getUnit(j) == "Dm^2")
+				 {
+					 v = v * 0.1 * 0.1;
+				 }
+				 else if (getUnit(j) == "m^2")
+				 {
+					 v = v * 1 * 1;
+				 }
+				 else if (getUnit(j) == "Km^2")
+				 {
+					 v = v * 1000 * 1000;
+				 }
+				 else if (getUnit(j) == "In^2")
+				 {
+					 v = v * 0.0254 * 0.0254;
+				 }
+
+			 }
+			 else {
+				 if (getUnit(j) == "mm")
+				 {
+					 v = v*0.001;
+				 }
+				 else if (getUnit(j) == "Cm")
+				 {
+					 v = v*0.01;
+				 }
+				 else if (getUnit(j) == "Dm")
+				 {
+					 v = v*0.1;
+				 }
+				 else if (getUnit(j) == "m")
+				 {
+					 v = v * 1;
+				 }
+				 else if (getUnit(j) == "Km")
+				 {
+					 v = v * 1000;
+				 }
+				 else if (getUnit(j) == "In")
+				 {
+					 v = v * 0.0254;
+				 }
+			 }return v;
+		 }
+		 //UNIT
+		 String^ unit(double v, int j) { //to unit. siin teisendatakse arvutatud andmed tagasi ühikuks, mida kasutaja soovib.
+			 if (j == 3)// ruutmeetrikd ruudus ühikuteks
+			 {
+				 if (getUnit(j) == "mm^2")
+				 {
+					 v = v * 1000 * 1000;
+				 }
+				 else if (getUnit(j) == "Cm^2")
+				 {
+					 v = v * 100 * 100;
+				 }
+				 else if (getUnit(j) == "Dm^2")
+				 {
+					 v = v * 10 * 10;
+				 }
+				 else if (getUnit(j) == "m^2")
+				 {
+					 v = v * 1 * 1;
+				 }
+				 else if (getUnit(j) == "Km^2")
+				 {
+					 v = v * 0.001 * 0.001;
+				 }
+				 else if (getUnit(j) == "In^2")
+				 {
+					 v = v * 39.37 * 39.37;
+				 }
+			 }
+			 else {
+				 if (getUnit(j) == "mm")
+				 {
+					 v = v * 1000;
+				 }
+				 else if (getUnit(j) == "Cm")
+				 {
+					 v = v * 100;
+				 }
+				 else if (getUnit(j) == "Dm")
+				 {
+					 v = v * 10;
+				 }
+				 else if (getUnit(j) == "m")
+				 {
+					 v = v * 1;
+				 }
+				 else if (getUnit(j) == "Km")
+				 {
+					 v = v * 0.001;
+				 }
+				 else if (getUnit(j) == "In")
+				 {
+					 v = v * 39.37;
+				 }
+			 }return System::Convert::ToString(v);
+		 }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+/*TEXTBOXID*/
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+private: System::Void textBox1_KeyUp(System::Object^  sender, System::Windows::Forms::KeyEventArgs^  e) {
+	getText(cb1);
+
+}
+private: System::Void textBox2_KeyUp(System::Object^  sender, System::Windows::Forms::KeyEventArgs^  e) {
+	getText(cb2);
+
+}
+private: System::Void textBox3_KeyUp(System::Object^  sender, System::Windows::Forms::KeyEventArgs^  e) {
+	getText(cb3);
+
+}
+private: System::Void textBox4_KeyUp(System::Object^  sender, System::Windows::Forms::KeyEventArgs^  e) {
+	getText(cb4);
+
+}
+private: System::Void textBox5_KeyUp(System::Object^  sender, System::Windows::Forms::KeyEventArgs^  e) {
+	getText(cb5);
+
+}
+		 //GETTEXT
+		 void getText(int f) {
+			 std::cout << std::endl;
+			 std::cout << "GETTEXT" << std::endl;
+			 if (f == 4) {   // aktiveerib funktsiooni aind märgitud checkBoxi järgi.
+				 textB = msclr::interop::marshal_as<std::string>(textBox4->Text);//teen teksti System::Stringist std::stringiks, et saaksin mugavamalt kontrollida.
+				 if (textB.length() >= arv1) {// kontrolli siis, kui on vähemalt 1 tähemärk.
+					 std::cout << "4/1+" << std::endl;
+					 digitCheck(textB, 4); //teksti kontroll
+				 }
+				 textBox4->MaxLength = (textB.length() + 1);
+			 }	if (f == 3) {	 // aktiveerib funktsiooni aind märgitud checkBoxi järgi.
+				 textB = msclr::interop::marshal_as<std::string>(textBox3->Text);//teen teksti System::Stringist std::stringiks, et saaksin mugavamalt kontrollida.
+				 std::cout << std::endl;
+				 if (textB.length() >= arv1) {// kontrolli siis, kui on vähemalt 1 tähemärk.
+					 std::cout << "3/1+" << std::endl;
+					 digitCheck(textB, 3); //teksti kontroll
+				 }
+				 textBox3->MaxLength = (textB.length() + 1);
+			 }	if (f == 2) {	 // aktiveerib funktsiooni aind märgitud checkBoxi järgi.
+				 textB = msclr::interop::marshal_as<std::string>(textBox2->Text);//teen teksti System::Stringist std::stringiks, et saaksin mugavamalt kontrollida.
+				 std::cout << std::endl;
+				 if (textB.length() >= arv1) {// kontrolli siis, kui on vähemalt 1 tähemärk.
+					 std::cout << "2/1+" << std::endl;
+					 digitCheck(textB, 2); //teksti kontroll
+				 }
+				 textBox2->MaxLength = (textB.length() + 1);
+			 }	if (f == 1) { // aktiveerib funktsiooni aind märgitud checkBoxi järgi.
+				 textB = msclr::interop::marshal_as<std::string>(textBox1->Text); //teen teksti System::Stringist std::stringiks, et saaksin mugavamalt kontrollida.
+				 std::cout << std::endl;
+				 if (textB.length() >= arv1) {// kontrolli siis, kui on vähemalt 1 tähemärk.
+					 std::cout << "1/1+" << std::endl;
+					 digitCheck(textB, 1); //teksti kontroll
+				 }
+				 textBox1->MaxLength = (textB.length() + 1);// see määrab selle, et ei saaks sisestada üle 1 arvu korraga. rohkem arve tekitas buge.
+			 }  if (f == 5) {   // aktiveerib funktsiooni aind märgitud checkBoxi järgi.
+				 textB = msclr::interop::marshal_as<std::string>(textBox5->Text);//teen teksti System::Stringist std::stringiks, et saaksin mugavamalt kontrollida.
+				 if (textB.length() >= arv1) {// kontrolli siis, kui on vähemalt 1 tähemärk.
+					 std::cout << "5/1+" << std::endl;
+					 digitCheck(textB, 5); //teksti kontroll
+				 }
+				 textBox5->MaxLength = (textB.length() + 1);
+			 }
+		 }
+		 //DIGITCHECK
+		 void digitCheck(std::string &str, int j) { //kontrollib sisestust
+			 std::cout << "DIGITCHECK" << std::endl;
+			 int dotCount = 0; // Punktide arv textBoxis
+			 int minusCount = 0; // Miinuste arv textBoxis
+			 for (int i = 0; i < str.length(); i++) {
+				 std::cout << i << std::endl;
+				 switch (str.at(i))
+				 {
+				 case '1':case '2':case '3':case '4':case '5':case '6':case '7':case '8':case '9':case '0':std::cout << "DC/while/switch/numb" << std::endl;
+					 break;
+					 /*				 case '-':minusCount++; std::cout << "DC/for/switch/-" << minusCount << std::endl;
+					 if (minusCount > 1||i!=0) {// Kustutus, kui on üle 1 miinuse.
+					 minusCount--;erased = 1;selecting = i;
+					 str.erase(i,1); std::cout << "- erased" << std::endl;			ETTEVALMISTUS MIINUSTEKS (kui neid kunagi peaks tulema)
+					 }
+					 break;*/
+				 case ',':dotCount++; std::cout << "DC/for/switch/." << dotCount << std::endl;
+					 if (dotCount > 1 || i == 0) {// Kustutus, kui on üle 1 punkti.
+						 dotCount--; erased = 1; selecting = i;
+						 str.erase(i, 1); std::cout << ", erased" << std::endl;
+					 }
+					 break;
+				 default:std::cout << "DC/for/switch/default" << std::endl;// Kustutus, kui esineb täht
+					 str.erase(i, 1); std::cout << "lastC erased" << std::endl;
+					 erased = 1; selecting = i;
+					 break;
+				 }
+			 }
+			 std::cout << "forward str - " << str << " and j - " << j << " value to inputReturner" << std::endl;
+			 inputReturner(str, j);
+		 }
+		 //INPUTRETURNER
+		 void inputReturner(std::string s, int i) { // std::string s saadetakse nupuvajutusel kuulajast, mis asub ülevalpool (see tuleb läbi digitChecki . int i määrab, milliselt textBoxilt nupuvajutus tuleb.
+			 String^ textBS = msclr::interop::marshal_as<String^>(s);// tekst tuleb kontrollist ja see tehakse tagasi System::Stringiks, et saaks selle tagastada textBoxi.
+			 switch (i)
+			 {
+			 case 1:std::cout << "IC case 1" << std::endl;
+				 textBox1->Text = textBS; //tagastus
+				 if (erased == 1) { //kontrollib kas kontrollis on midagi kustutatud
+					 erased = 0;//ja kui on siis taastab väärtuse kuna koht saab järgmisel real määratud.
+					 textBox1->Select(selecting, 0);//määrab koha kust jätkad kirjutamist pärast kustutamist.
+				 }
+				 break;
+			 case 2:std::cout << "IC case 2" << std::endl;
+				 textBox2->Text = textBS; //tagastus
+				 if (erased == 1) { //kontrollib kas kontrollis on midagi kustutatud
+					 erased = 0;//ja kui on siis taastab väärtuse kuna koht saab järgmisel real määratud.
+					 textBox2->Select(selecting, 0);//määrab koha kust jätkad kirjutamist pärast kustutamist.
+				 }
+				 break;
+			 case 3:std::cout << "IC case 3" << std::endl;
+				 textBox3->Text = textBS; //tagastus
+				 if (erased == 1) { //kontrollib kas kontrollis on midagi kustutatud
+					 erased = 0;//ja kui on siis taastab väärtuse kuna koht saab järgmisel real määratud.
+					 textBox3->Select(selecting, 0);//määrab koha kust jätkad kirjutamist pärast kustutamist.
+				 }
+				 break;
+			 case 4:std::cout << "IC case 4" << std::endl;
+				 textBox4->Text = textBS; //tagastus
+				 if (erased == 1) { //kontrollib kas kontrollis on midagi kustutatud
+					 erased = 0;//ja kui on siis taastab väärtuse kuna koht saab järgmisel real määratud.
+					 textBox4->Select(selecting, 0);//määrab koha kust jätkad kirjutamist pärast kustutamist.
+				 }
+				 break;
+			 }std::cout << "isChar" << std::endl;
+			 if (s.empty()) {//if (s.at(0) != '-' || s.length() > 1) { !!!SEE ON SELLEKS KUI ON VAJA MIINUSEID btw. avastasin alles koodikirjutamise lõpus et geomeetrias pole miinuseid vaja :D
+				 textBS = "0";			 //teen juba kontrollitud teksti int väärtuseks, et saaks sellega arvutusi teha ja saadan selle väärtuse calculate(); funktsiooni.
+										 //}
+			 }calculate(double::Parse(textBS), i);
+		 }
+		 //CALCULATE
+		 void calculate(double i, int j) { // i on textBoxi sisestatud väärtus ja j on mitmes textBox ehk, mis väärtus sisestati.
+			 i = conventor(i, j);// siit küsitakse conventori käest andmeid meetrites
+
+			 double c, s, p, a;
+			 int error = 0; // kui ikkagi tekib mingi probleem
+			 switch (j)// siin arvutatakse andmed. Valemeid kasutatakse sõltuvalt, mis sisestati. Siin toimub ka lisainfo väljastamine label´itesse.
+			 {
+			 case 1: //A
+				 std::cout << "calc. c1" << j << std::endl;
+				 a = i;	label1->Text = "A - Known";
+				 c = a*sqrt(2); label4->Text = "C = A * √2 = " + a + "m * √2 = " + c + "m";
+				 s = a*a; label3->Text = ("S = A * A = " + a + "m * " + a + "m = " + s + "m²");
+				 p = 4 * a; label2->Text = ("P = 4 * A = 4 * " + a + "m = " + p + "m");
+				 break;
+			 case 2: //P
+				 std::cout << "calc. c2" << j << std::endl;
+				 p = i;	label2->Text = "P - Known";
+				 a = p / 4; label1->Text = "A = P / 4 = " + p + "m / 4 = " + a + "m";
+				 c = a*sqrt(2); label4->Text = "C = A * √2 = " + a + "m * √2 = " + c + "m";
+				 s = a*a; label3->Text = ("S = A * A = " + a + "m * " + a + "m = " + s + "m²");
+				 break;
+			 case 3: //S
+				 std::cout << "calc. c3" << j << std::endl;
+				 s = i;	label3->Text = "S - Known";
+				 a = sqrt(s); label1->Text = "A = √S = √" + s + "m² = " + a + "m";
+				 c = a*sqrt(2); label4->Text = "C = A * √2 = " + a + "m * √2 = " + c + "m";
+				 p = 4 * a;	label2->Text = ("P = 4 * A = 4 * " + a + "m = " + p + "m");
+				 break;
+			 case 4: //C
+				 std::cout << "calc. c4" << std::endl;
+				 c = i;	label4->Text = "C - Known";
+				 a = c / sqrt(2); label1->Text = ("A = C / 2 = " + c + "m / √2 = " + a + "m");
+				 p = 4 * a; label2->Text = ("P = 4 * A = 4 * " + a + "m = " + p + "m");
+				 s = a*a; label3->Text = ("S = A * A = " + a + "m * " + a + "m = " + s + "m²");
+				 break;
+			 default:
+				 std::cout << "calc. ERROR" << std::endl;
+				 error = 1; // siis see kuvatakse
+				 break;
+			 }
+			 answReturner(c, a, p, s, error, j);
+		 }
+		 //ANSWRETURNER
+		 void answReturner(double c, double a, double p, double s, int error, int j) { // siin tagastatakse töödeldud, kontrollitud ja arvutatud andmed õigetesse lahtritesse. Ainuke mida ei muudeta on lahter kuhu parasjagu kirjutatakse.
+			 if (j != 1) {
+				 std::cout << "answR. 1" << std::endl;
+				 if (error == 0) { textBox1->Text = unit(a, 1); }
+				 else { textBox1->Text = "ERROR"; }
+			 }
+			 if (j != 2) {
+				 std::cout << "answR. 2" << std::endl;
+				 if (error == 0) {
+					 textBox2->Text = unit(p, 2);
+				 }
+				 else { textBox2->Text = "ERROR"; }
+			 }
+			 if (j != 3) {
+				 std::cout << "answR. 3" << std::endl;
+				 if (error == 0) {
+					 textBox3->Text = unit(s, 3);
+				 }
+				 else { textBox3->Text = "ERROR"; }
+			 }
+			 if (j != 4) {
+				 std::cout << "answR. 4" << std::endl;
+				 if (error == 0) {
+					 textBox4->Text = unit(c, 4);
+				 }
+				 else { textBox4->Text = "ERROR"; }
+			 }
+		 }
 
 
 
@@ -566,5 +964,5 @@ void switcher(int i) {// teeb checkBoxide j�rgi textBoxe aktiivseks.
 	private: System::Void Ristkylik_MouseUp(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) {
 		this->dragging = false;
 	}
-	};
+};
 }
