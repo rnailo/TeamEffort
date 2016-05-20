@@ -1037,14 +1037,218 @@ void digitCheck(std::string &str, int j) { //kontrollib sisestust
 						 textBox4->Select(selecting, 0);//määrab koha kust jätkad kirjutamist pärast kustutamist.
 					 }
 					 break;
+				 case 5:std::cout << "IC case 5" << std::endl;
+					 textBox5->Text = textBS; //tagastus
+					 if (erased == 1) { //kontrollib kas kontrollis on midagi kustutatud
+						 erased = 0;//ja kui on siis taastab väärtuse kuna koht saab järgmisel real määratud.
+						 textBox5->Select(selecting, 0);//määrab koha kust jätkad kirjutamist pärast kustutamist.
+					 }
+					 break;
+				 case 6:std::cout << "IC case 6" << std::endl;
+					 textBox6->Text = textBS; //tagastus
+					 if (erased == 1) { //kontrollib kas kontrollis on midagi kustutatud
+						 erased = 0;//ja kui on siis taastab väärtuse kuna koht saab järgmisel real määratud.
+						 textBox6->Select(selecting, 0);//määrab koha kust jätkad kirjutamist pärast kustutamist.
+					 }
+					 break;
+				 case 7:std::cout << "IC case 7" << std::endl;
+					 textBox7->Text = textBS; //tagastus
+					 if (erased == 1) { //kontrollib kas kontrollis on midagi kustutatud
+						 erased = 0;//ja kui on siis taastab väärtuse kuna koht saab järgmisel real määratud.
+						 textBox7->Select(selecting, 0);//määrab koha kust jätkad kirjutamist pärast kustutamist.
+					 }
+					 break;
 				 }std::cout << "isChar" << std::endl;
 				 if (s.empty()) {//if (s.at(0) != '-' || s.length() > 1) { !!!SEE ON SELLEKS KUI ON VAJA MIINUSEID btw. avastasin alles koodikirjutamise lõpus et geomeetrias pole miinuseid vaja :D
 					 textBS = "0";			 //teen juba kontrollitud teksti int väärtuseks, et saaks sellega arvutusi teha ja saadan selle väärtuse calculate(); funktsiooni.
 											 //}
-				 }calculate(double::Parse(textBS), i);
+				 }bitSwitch(double::Parse(textBS), i);
+			 }
+			 //BITTER
+			 int bitter() {
+				 std::string bit = "00000000";
+				 if (cb1 == 1) {// checkbox 1 muudab 1. "biti" üheks.
+					 bit[1] = '1';
+				 }
+				 if (cb2 == 2) {// checkbox 2 muudab 2. "biti" üheks.
+					 bit[2] = '1';
+				 }
+				 if (cb3 == 3) {// checkbox 3 muudab 3. "biti" üheks.
+					 bit[3] = '1';
+				 }
+				 if (cb4 == 4) {// checkbox 4 muudab 4. "biti" üheks.
+					 bit[4] = '1';
+				 }
+				 if (cb5 == 5) {// checkbox 5 muudab 5. "biti" üheks.
+					 bit[5] = '1';
+				 }
+				 if (cb6 == 6) {// checkbox 6 muudab 6. "biti" üheks.
+					 bit[6] = '1';
+				 }
+				 if (cb7 == 7) {// checkbox 7 muudab 7. "biti" üheks.
+					 bit[7] = '1';
+					 // Lisa siia IF funktsioone juurde kui on rohkem checkboxe.
+				 }
+				 return (std::stoi(bit)); //returnime väärtuse bitSwitch funktsiooni switchi.
+			 }
+
+			 //BITSWITCH
+			 void bitSwitch(double i, int j) { //bitSwitch(); tuleb panna kuhugi kus muidu calculate oleks... siia tuleb lisada veel double-id, valemid iga case puhul ja label määramised.
+				 i = conventor(i, j);
+
+				 double a, b, c, d, h, S, P;
+				 int error = 0;
+				 switch (bitter())
+				 {
+					//case 1
+					//P = a + b + c + d
+					//S = (a + b) / 2 * h
+				 case 1111100:// Vaata bitter funktsiooni, et teada, mis CB´d on aktiivsed selle bitseti puhul
+					 std::cout << "calc. c1" << j << std::endl;
+					 a = i;	label1->Text = "a - Known";
+					 //b = std::stoi(textBox2->Text);
+					 b = Convert::ToInt32(textBox2->Text);	label2->Text = "b - Known";
+					 c = Convert::ToInt32(textBox3->Text);	label3->Text = "c - Known";
+					 d = Convert::ToInt32(textBox4->Text);	label4->Text = "d - Known";
+					 h = Convert::ToInt32(textBox5->Text);	label5->Text = "h - Known";
+					 S = (a+b)/2*h; label6->Text = ("S = (a + b) / 2 * h = " + "m (" + a + "m + " + b + "m) " + "m / " + "m 2 " + "m * " + h + "m = " + S + "m²");
+					 P = a+b+c+d; label7->Text = ("P = a + b + c + d = " + a + "m + " + b + "m + " + c + "m + " + d + "m = " + P + "m");
+					 break;
+					//case 2
+					//d = P - a - b - c
+					//S = (a + b) / 2 * h
+				 case 1110101:// :)
+
+					 break;
+					//case 3
+					//c = P - a - b - d
+					//S = (a + b) / 2 * h
+				 case 1101101:// mingi suvakas bitset jälle.
+
+					 break;
+					//case 4
+					//a = P - b - c - d
+					//S = (a + b) / 2 * h
+				 case 0111101:// mingi suvakas bitset jälle.
+
+					 break;
+					//case 5
+					//b = P - a - c - d
+					//S = (a + b) / 2 * h
+				 case 1011101:// mingi suvakas bitset jälle.
+
+					 break;
+					//case 6
+					//P = (a + b) + c + d
+					//(a + b) = 2 * S / h
+				 case 0011110:// mingi suvakas bitset jälle.
+
+					 break;
+					//case 7
+					//c = P - (a + b) - d
+					//(a + b) = 2 * S / h
+				 case 0001111:// mingi suvakas bitset jälle.
+
+					 break;
+					//case 8
+					//d = P - (a + b) - c
+					//(a + b) = 2 * S / h
+				 case 0010111:// mingi suvakas bitset jälle.
+
+					 break;
+					//case 9
+					//(a + b) = P - c - d
+					//S = (a + b) / 2 * h
+				 case 0011101:// mingi suvakas bitset jälle.
+
+					 break;
+					//case 10
+					//P = a + b + c + d
+					//S = h is not known((a + b) / 2)h
+				 case 1111000:// mingi suvakas bitset jälle.
+
+					 break;
+					//case 11
+					//d = P - a - b - c
+					//S = h is not known((a + b) / 2)h
+				 case 1110001:// mingi suvakas bitset jälle.
+
+					 break;
+					//case 12
+					//c = P - a - b - d
+					//S = h is not known((a + b) / 2)h
+				 case 1101001:// mingi suvakas bitset jälle.
+
+					 break;
+					//case 13
+					//b = P - a - c - d
+					//S = h is not known((a + b) / 2)h
+				 case 1011001:// mingi suvakas bitset jälle.
+
+					 break;
+					//case 14
+					//a = P - b - c - d
+					//S = h is not known((a + b) / 2)h
+				 case 0111001:// mingi suvakas bitset jälle.
+
+					 break;
+					//case 15
+					//P = c, d are not known((a + b) + c + d)
+					//h = 2 * S / (a + b)
+				 case 1100010:// mingi suvakas bitset jälle.
+
+					 break;
+					//case 16
+					//P = a + b + c + d
+					//h = 2 * S / (a + b)
+				 case 1111010:// mingi suvakas bitset jälle.
+
+					 break;
+					//case 17
+					//c = P - a - b - d
+					//h = 2 * S / (a + b)
+				 case 1101011:// mingi suvakas bitset jälle.
+
+					 break;
+					//case 18
+					//d = P - a - b - c
+					//h = 2 * S / (a + b)
+				 case 1110011:// mingi suvakas bitset jälle.
+
+					 break;
+					//case 19
+					//a = P - b - c - d
+					//h = 2 * S / (a + b)
+				 case 0111011:// mingi suvakas bitset jälle.
+
+					 break;
+					//case 20
+					//b = P - a - c - d
+					//h = 2 * S / (a + b)
+				 case 1011011:// mingi suvakas bitset jälle.
+
+					 break;
+					//case 21
+					//a = b is not known(a + b) - b
+					//b = a is not known(a + b) - a
+					//(a + b) = P - c - d
+					//h = 2 * S / (a + b)
+				 case 0011011:// mingi suvakas bitset jälle.
+
+					 break;
+					//case 22
+					//P = c and d are not known(a + b) + c + d
+					//S = (a + b) / 2 * h
+				 case 1100100:// mingi suvakas bitset jälle.
+					
+
+					 break;
+				 default: // see on siis kõik mis jääb väljapoole case ehk, mis ei = mingi casega
+					 break;
+				 }answReturner(a, b, c, d, h, S, P, error, j);
 			 }
 			 //CALCULATE
-			 void calculate(double i, int j) { // i on textBoxi sisestatud väärtus ja j on mitmes textBox ehk, mis väärtus sisestati.
+			 /*void calculate(double i, int j) { // i on textBoxi sisestatud väärtus ja j on mitmes textBox ehk, mis väärtus sisestati.
 				 i = conventor(i, j);// siit küsitakse conventori käest andmeid meetrites
 
 				 double c, s, p, a;
@@ -1085,34 +1289,57 @@ void digitCheck(std::string &str, int j) { //kontrollib sisestust
 					 break;
 				 }
 				 answReturner(c, a, p, s, error, j);
-			 }
+			 }*/
 			 //ANSWRETURNER
-			 void answReturner(double c, double a, double p, double s, int error, int j) { // siin tagastatakse töödeldud, kontrollitud ja arvutatud andmed õigetesse lahtritesse. Ainuke mida ei muudeta on lahter kuhu parasjagu kirjutatakse.
-				 if (j != 1) {
+			 void answReturner(double a, double b, double c, double d, double h, double S, double P, int error, int j) { // siin tagastatakse töödeldud, kontrollitud ja arvutatud andmed õigetesse lahtritesse. Ainuke mida ei muudeta on lahter kuhu parasjagu kirjutatakse.
+				 if (cb1 != 1) {
 					 std::cout << "answR. 1" << std::endl;
-					 if (error == 0) { textBox1->Text = unit(a, 1); }
+					 if (error == 0) { 
+						 textBox1->Text = unit(a, 1);
+					 }
 					 else { textBox1->Text = "ERROR"; }
 				 }
-				 if (j != 2) {
+				 if (cb2 != 2) {
 					 std::cout << "answR. 2" << std::endl;
 					 if (error == 0) {
-						 textBox2->Text = unit(p, 2);
+						 textBox2->Text = unit(b, 2);
 					 }
 					 else { textBox2->Text = "ERROR"; }
 				 }
-				 if (j != 3) {
+				 if (cb3 != 3) {
 					 std::cout << "answR. 3" << std::endl;
 					 if (error == 0) {
-						 textBox3->Text = unit(s, 3);
+						 textBox3->Text = unit(c, 3);
 					 }
 					 else { textBox3->Text = "ERROR"; }
 				 }
-				 if (j != 4) {
+				 if (cb4 != 4) {
 					 std::cout << "answR. 4" << std::endl;
 					 if (error == 0) {
-						 textBox4->Text = unit(c, 4);
+						 textBox4->Text = unit(d, 4);
 					 }
 					 else { textBox4->Text = "ERROR"; }
+				 }
+				 if (cb5 != 5) {
+					 std::cout << "answR. 5" << std::endl;
+					 if (error == 0) {
+						 textBox5->Text = unit(h, 5);
+					 }
+					 else { textBox5->Text = "ERROR"; }
+				 }
+				 if (cb6 != 6) {
+					 std::cout << "answR. 6" << std::endl;
+					 if (error == 0) {
+						 textBox6->Text = unit(S, 6);
+					 }
+					 else { textBox6->Text = "ERROR"; }
+				 }
+				 if (cb7 != 7) {
+					 std::cout << "answR. 7" << std::endl;
+					 if (error == 0) {
+						 textBox7->Text = unit(P, 7);
+					 }
+					 else { textBox7->Text = "ERROR"; }
 				 }
 			 }
 
@@ -1138,6 +1365,5 @@ void digitCheck(std::string &str, int j) { //kontrollib sisestust
 	private: System::Void Trapets_MouseUp(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) {
 		this->dragging = false;
 	}
-
-			 };
+	};
 	}
