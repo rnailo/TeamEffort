@@ -80,10 +80,10 @@ namespace RistkylikNS {
 	private: System::Windows::Forms::ComboBox^  comboBox4;
 
 	private:
-	public: System::Windows::Forms::TextBox^  textBox6;
+	public: System::Windows::Forms::TextBox^  TextBox5;
 
 	public:
-	private: System::Windows::Forms::ComboBox^  comboBox6;
+	private: System::Windows::Forms::ComboBox^  comboBox5;
 	public: System::Windows::Forms::TextBox^  textBox1;
 	private: System::Windows::Forms::Label^  label5;
 	private: System::Windows::Forms::PictureBox^  pictureBox1;
@@ -122,8 +122,8 @@ namespace RistkylikNS {
 			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
 			this->comboBox3 = (gcnew System::Windows::Forms::ComboBox());
 			this->comboBox4 = (gcnew System::Windows::Forms::ComboBox());
-			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
-			this->comboBox6 = (gcnew System::Windows::Forms::ComboBox());
+			this->TextBox5 = (gcnew System::Windows::Forms::TextBox());
+			this->comboBox5 = (gcnew System::Windows::Forms::ComboBox());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
@@ -358,26 +358,26 @@ namespace RistkylikNS {
 			this->comboBox4->TabIndex = 41;
 			this->comboBox4->Text = L"m";
 			// 
-			// textBox6
+			// TextBox5
 			// 
-			this->textBox6->Enabled = false;
-			this->textBox6->Location = System::Drawing::Point(357, 274);
-			this->textBox6->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
-			this->textBox6->MaxLength = 1;
-			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(260, 20);
-			this->textBox6->TabIndex = 43;
+			this->TextBox5->Enabled = false;
+			this->TextBox5->Location = System::Drawing::Point(357, 274);
+			this->TextBox5->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->TextBox5->MaxLength = 1;
+			this->TextBox5->Name = L"TextBox5";
+			this->TextBox5->Size = System::Drawing::Size(260, 20);
+			this->TextBox5->TabIndex = 43;
 			// 
-			// comboBox6
+			// comboBox5
 			// 
-			this->comboBox6->FormattingEnabled = true;
-			this->comboBox6->Items->AddRange(gcnew cli::array< System::Object^  >(6) { L"mm^2", L"Cm^2", L"Dm^2", L"m^2", L"Km^2", L"In^2" });
-			this->comboBox6->Location = System::Drawing::Point(621, 273);
-			this->comboBox6->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
-			this->comboBox6->Name = L"comboBox6";
-			this->comboBox6->Size = System::Drawing::Size(47, 21);
-			this->comboBox6->TabIndex = 45;
-			this->comboBox6->Text = L"m^2";
+			this->comboBox5->FormattingEnabled = true;
+			this->comboBox5->Items->AddRange(gcnew cli::array< System::Object^  >(6) { L"mm^2", L"Cm^2", L"Dm^2", L"m^2", L"Km^2", L"In^2" });
+			this->comboBox5->Location = System::Drawing::Point(621, 273);
+			this->comboBox5->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->comboBox5->Name = L"comboBox5";
+			this->comboBox5->Size = System::Drawing::Size(47, 21);
+			this->comboBox5->TabIndex = 45;
+			this->comboBox5->Text = L"m^2";
 			// 
 			// textBox1
 			// 
@@ -417,8 +417,8 @@ namespace RistkylikNS {
 			this->ClientSize = System::Drawing::Size(710, 328);
 			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->label5);
-			this->Controls->Add(this->comboBox6);
-			this->Controls->Add(this->textBox6);
+			this->Controls->Add(this->comboBox5);
+			this->Controls->Add(this->TextBox5);
 			this->Controls->Add(this->comboBox3);
 			this->Controls->Add(this->comboBox4);
 			this->Controls->Add(this->comboBox2);
@@ -527,12 +527,12 @@ void switcher(int i) {// teeb checkBoxide järgi textBoxe aktiivseks.
 					if (i == cb5) {//... ja vastupidi
 						std::cout << "5-unchecked" << std::endl;
 						cb5 = 0;
-						textBox6->Enabled = false;
+						TextBox5->Enabled = false;
 					}
 					else {
 						std::cout << "5-checked" << std::endl;
 						cb5 = i;
-						textBox6->Enabled = true;
+						TextBox5->Enabled = true;
 					}
 					break;
 				}
