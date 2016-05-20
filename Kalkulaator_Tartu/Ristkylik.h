@@ -868,6 +868,48 @@ private: System::Void textBox5_KeyUp(System::Object^  sender, System::Windows::F
 										 //}
 			 }calculate(double::Parse(textBS), i);
 		 }
+
+		 //BITTER
+		 int bitter() {
+			 std::string bit = "00000";
+			 if (cb1 == 1) {// checkbox 1 muudab 1. "biti" üheks.
+				 bit[1] = '1';
+			 }
+			 if (cb2 == 2) {// checkbox 2 muudab 2. "biti" üheks.
+				 bit[2] = '1';
+			 }
+			 if (cb3 == 3) {// checkbox 3 muudab 3. "biti" üheks.
+				 bit[3] = '1';
+			 }
+			 if (cb4 == 4) {// checkbox 4 muudab 4. "biti" üheks.
+				 bit[4] = '1';
+			 }
+			 if (cb5 == 5) {// checkbox 5 muudab 5. "biti" üheks.
+				 bit[5] = '1';
+				 // Lisa siia IF funktsioone juurde kui on rohkem checkboxe.
+			 }
+			 return (msclr::interop::marshal_as<int>(bit)); //returnime väärtuse bitSwitch funktsiooni switchi.
+		 }
+
+		 //BITSWITCH
+		 void bitSwitch() { //bitSwitch(); tuleb panna kuhugi kus muidu calculate oleks... siia tuleb lisada veel double-id, valemid iga case puhul ja label määramised.
+			 switch (bitter())
+			 {
+			 case 10000:// Vaata bitter funktsiooni, et teada, mis CB´d on aktiivsed selle bitseti puhul
+
+				 break;
+			 case 11000:// :)
+
+				 break;
+			 case 01000:// mingi suvakas bitset jälle.
+
+				 break;
+
+			 default: // see on siis kõik mis jääb väljapoole case ehk, mis ei = mingi casega
+				 break;
+			 }
+		 }
+
 		 //CALCULATE
 		 void calculate(double i, int j) { // i on textBoxi sisestatud väärtus ja j on mitmes textBox ehk, mis väärtus sisestati.
 			 i = conventor(i, j);// siit küsitakse conventori käest andmeid meetrites
