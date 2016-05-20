@@ -874,12 +874,13 @@ private: System::Void textBox5_KeyUp(System::Object^  sender, System::Windows::F
 			 if (s.empty()) {//if (s.at(0) != '-' || s.length() > 1) { !!!SEE ON SELLEKS KUI ON VAJA MIINUSEID btw. avastasin alles koodikirjutamise lõpus et geomeetrias pole miinuseid vaja :D
 				 textBS = "0";			 //teen juba kontrollitud teksti int väärtuseks, et saaks sellega arvutusi teha ja saadan selle väärtuse calculate(); funktsiooni.
 										 //}
-			 }calculate(double::Parse(textBS), i);
+				 bitSwitch(double::Parse(textBS), i);
+				 
+			 }
 		 }
-
 		 //BITTER
 		 int bitter() {
-			 std::string bit = "00000";
+			 std::string bit = "000000";
 			 if (cb1 == 1) {// checkbox 1 muudab 1. "biti" üheks.
 				 bit[1] = '1';
 			 }
@@ -900,14 +901,21 @@ private: System::Void textBox5_KeyUp(System::Object^  sender, System::Windows::F
 		 }
 
 		 //BITSWITCH
-		 void bitSwitch() { //bitSwitch(); tuleb panna kuhugi kus muidu calculate oleks... siia tuleb lisada veel double-id, valemid iga case puhul ja label määramised.
+		 void bitSwitch(double i, int j) { //bitSwitch(); tuleb panna kuhugi kus muidu calculate oleks... siia tuleb lisada veel double-id, valemid iga case puhul ja label määramised.
+			 double a, b, d, c, s;
+			 int error = 0;
+			 std::cout << "bitter value - " << bitter() << std::endl;
+			 
 			 switch (bitter())
 			 {
-			 case 10000:// Vaata bitter funktsiooni, et teada, mis CB´d on aktiivsed selle bitseti puhul
+			
+			 case 11000://A ja B
 
-				 break;
-			 case 11000:// :)
-
+				 a = i; b = Convert::ToInt32(textBox2->Text);
+				 label1->Text = "A and B - Known";
+				 d = sqrt((a*a) + (b*b)); label4->Text = "D = √(A^2+B^2) = " + c + "m";
+				 s = a*b; label3->Text = ("S = A * B = " + a + "m * " + b + "m = " + s + "m²");
+				 c = 2 *(a+b); label2->Text = ("C = 4 * A = 4 * " + a + "m = " + c + "m");
 				 break;
 			 case 01000:// mingi suvakas bitset jälle.
 
@@ -916,73 +924,81 @@ private: System::Void textBox5_KeyUp(System::Object^  sender, System::Windows::F
 			 default: // see on siis kõik mis jääb väljapoole case ehk, mis ei = mingi casega
 				 break;
 			 }
+			 answReturner(a, b, d, c, s, error, j);
 		 }
 
 		 //CALCULATE
-		 void calculate(double i, int j) { // i on textBoxi sisestatud väärtus ja j on mitmes textBox ehk, mis väärtus sisestati.
-			 i = conventor(i, j);// siit küsitakse conventori käest andmeid meetrites
+		 //void calculate(double i, int j) { // i on textBoxi sisestatud väärtus ja j on mitmes textBox ehk, mis väärtus sisestati.
+			//i = conventor(i, j);// siit küsitakse conventori käest andmeid meetrites
 
-			 double c, s, p, a;
-			 int error = 0; // kui ikkagi tekib mingi probleem
-			 switch (j)// siin arvutatakse andmed. Valemeid kasutatakse sõltuvalt, mis sisestati. Siin toimub ka lisainfo väljastamine label´itesse.
-			 {
-			 case 1: //A
-				 std::cout << "calc. c1" << j << std::endl;
-				 a = i;	label1->Text = "A - Known";
-				 c = a*sqrt(2); label4->Text = "C = A * √2 = " + a + "m * √2 = " + c + "m";
-				 s = a*a; label3->Text = ("S = A * A = " + a + "m * " + a + "m = " + s + "m²");
-				 p = 4 * a; label2->Text = ("P = 4 * A = 4 * " + a + "m = " + p + "m");
-				 break;
-			 case 2: //P
-				 std::cout << "calc. c2" << j << std::endl;
-				 p = i;	label2->Text = "P - Known";
-				 a = p / 4; label1->Text = "A = P / 4 = " + p + "m / 4 = " + a + "m";
-				 c = a*sqrt(2); label4->Text = "C = A * √2 = " + a + "m * √2 = " + c + "m";
-				 s = a*a; label3->Text = ("S = A * A = " + a + "m * " + a + "m = " + s + "m²");
-				 break;
-			 case 3: //S
-				 std::cout << "calc. c3" << j << std::endl;
-				 s = i;	label3->Text = "S - Known";
-				 a = sqrt(s); label1->Text = "A = √S = √" + s + "m² = " + a + "m";
-				 c = a*sqrt(2); label4->Text = "C = A * √2 = " + a + "m * √2 = " + c + "m";
-				 p = 4 * a;	label2->Text = ("P = 4 * A = 4 * " + a + "m = " + p + "m");
-				 break;
-			 case 4: //C
-				 std::cout << "calc. c4" << std::endl;
-				 c = i;	label4->Text = "C - Known";
-				 a = c / sqrt(2); label1->Text = ("A = C / 2 = " + c + "m / √2 = " + a + "m");
-				 p = 4 * a; label2->Text = ("P = 4 * A = 4 * " + a + "m = " + p + "m");
-				 s = a*a; label3->Text = ("S = A * A = " + a + "m * " + a + "m = " + s + "m²");
-				 break;
-			 default:
-				 std::cout << "calc. ERROR" << std::endl;
-				 error = 1; // siis see kuvatakse
-				 break;
-			 }
-			 answReturner(c, a, p, s, error, j);
-		 }
+			// double c, s, p, a;
+			// int error = 0; // kui ikkagi tekib mingi probleem
+			// switch (j)// siin arvutatakse andmed. Valemeid kasutatakse sõltuvalt, mis sisestati. Siin toimub ka lisainfo väljastamine label´itesse.
+			// {
+			// case 1: //A
+			//	 std::cout << "calc. c1" << j << std::endl;
+			//	 a = i;	label1->Text = "A - Known";
+			//	 c = a*sqrt(2); label4->Text = "C = A * √2 = " + a + "m * √2 = " + c + "m";
+			//	 s = a*a; label3->Text = ("S = A * A = " + a + "m * " + a + "m = " + s + "m²");
+			//	 p = 4 * a; label2->Text = ("P = 4 * A = 4 * " + a + "m = " + p + "m");
+			//	 break;
+			// case 2: //P
+			//	 std::cout << "calc. c2" << j << std::endl;
+			//	 p = i;	label2->Text = "P - Known";
+			//	 a = p / 4; label1->Text = "A = P / 4 = " + p + "m / 4 = " + a + "m";
+			//	 c = a*sqrt(2); label4->Text = "C = A * √2 = " + a + "m * √2 = " + c + "m";
+			//	 s = a*a; label3->Text = ("S = A * A = " + a + "m * " + a + "m = " + s + "m²");
+			//	 break;
+			// case 3: //S
+			//	 std::cout << "calc. c3" << j << std::endl;
+			//	 s = i;	label3->Text = "S - Known";
+			//	 a = sqrt(s); label1->Text = "A = √S = √" + s + "m² = " + a + "m";
+			//	 c = a*sqrt(2); label4->Text = "C = A * √2 = " + a + "m * √2 = " + c + "m";
+			//	 p = 4 * a;	label2->Text = ("P = 4 * A = 4 * " + a + "m = " + p + "m");
+			//	 break;
+			// case 4: //C
+			//	 std::cout << "calc. c4" << std::endl;
+			//	 c = i;	label4->Text = "C - Known";
+			//	 a = c / sqrt(2); label1->Text = ("A = C / 2 = " + c + "m / √2 = " + a + "m");
+			//	 p = 4 * a; label2->Text = ("P = 4 * A = 4 * " + a + "m = " + p + "m");
+			//	 s = a*a; label3->Text = ("S = A * A = " + a + "m * " + a + "m = " + s + "m²");
+			//	 break;
+			// default:
+			//	 std::cout << "calc. ERROR" << std::endl;
+			//	 error = 1; // siis see kuvatakse
+			//	 break;
+			// }
+			// answReturner(c, a, p, s, error, j);
+		 //}
 		 //ANSWRETURNER
-		 void answReturner(double c, double a, double p, double s, int error, int j) { // siin tagastatakse töödeldud, kontrollitud ja arvutatud andmed õigetesse lahtritesse. Ainuke mida ei muudeta on lahter kuhu parasjagu kirjutatakse.
-			 if (j != 1) {
+		 void answReturner(double c, double a, double p, double s, double b, int error, int j) { // siin tagastatakse töödeldud, kontrollitud ja arvutatud andmed õigetesse lahtritesse. Ainuke mida ei muudeta on lahter kuhu parasjagu kirjutatakse.
+			 if (cb1 != 1) {
 				 std::cout << "answR. 1" << std::endl;
 				 if (error == 0) { textBox1->Text = unit(a, 1); }
 				 else { textBox1->Text = "ERROR"; }
 			 }
-			 if (j != 2) {
+			 if (cb2 != 2) {
 				 std::cout << "answR. 2" << std::endl;
 				 if (error == 0) {
 					 textBox2->Text = unit(p, 2);
 				 }
 				 else { textBox2->Text = "ERROR"; }
 			 }
-			 if (j != 3) {
+			 if (cb3 != 3) {
 				 std::cout << "answR. 3" << std::endl;
 				 if (error == 0) {
 					 textBox3->Text = unit(s, 3);
 				 }
 				 else { textBox3->Text = "ERROR"; }
 			 }
-			 if (j != 4) {
+			 if (cb4 != 4) {
+				 std::cout << "answR. 4" << std::endl;
+				 if (error == 0) {
+					 textBox4->Text = unit(c, 4);
+				 }
+				 else { textBox4->Text = "ERROR"; }
+			 }
+			 if (cb4 != 5) {
 				 std::cout << "answR. 4" << std::endl;
 				 if (error == 0) {
 					 textBox4->Text = unit(c, 4);
