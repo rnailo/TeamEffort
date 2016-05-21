@@ -753,6 +753,7 @@ namespace RingNS {
 						 break;
 					 case '.':
 						 str.replace(i, 1, ",");
+						 erased = 1; selecting = (i + 1);
 						 i--;
 						 break;
 					 default:std::cout << "DC/for/switch/default" << std::endl;// Kustutus, kui esineb täht

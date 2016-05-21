@@ -202,7 +202,7 @@ namespace TrapetsNS {
 				static_cast<System::Byte>(186)));
 			this->checkBox5->ForeColor = System::Drawing::Color::Black;
 			this->checkBox5->Location = System::Drawing::Point(7, 340);
-			this->checkBox5->Name = L"checkBox4";
+			this->checkBox5->Name = L"checkBox5";
 			this->checkBox5->Size = System::Drawing::Size(104, 24);
 			this->checkBox5->TabIndex = 35;
 			this->checkBox5->Text = L"h -";
@@ -216,7 +216,7 @@ namespace TrapetsNS {
 				static_cast<System::Byte>(186)));
 			this->checkBox6->ForeColor = System::Drawing::Color::Black;
 			this->checkBox6->Location = System::Drawing::Point(7, 368);
-			this->checkBox6->Name = L"checkBox4";
+			this->checkBox6->Name = L"checkBox6";
 			this->checkBox6->Size = System::Drawing::Size(104, 24);
 			this->checkBox6->TabIndex = 36;
 			this->checkBox6->Text = L"S -";
@@ -230,7 +230,7 @@ namespace TrapetsNS {
 				static_cast<System::Byte>(186)));
 			this->checkBox7->ForeColor = System::Drawing::Color::Black;
 			this->checkBox7->Location = System::Drawing::Point(7, 396);
-			this->checkBox7->Name = L"checkBox5";
+			this->checkBox7->Name = L"checkBox7";
 			this->checkBox7->Size = System::Drawing::Size(104, 24);
 			this->checkBox7->TabIndex = 37;
 			this->checkBox7->Text = L"P -";
@@ -282,17 +282,17 @@ namespace TrapetsNS {
 			this->textBox5->Enabled = false;
 			this->textBox5->Location = System::Drawing::Point(319, 396);
 			this->textBox5->MaxLength = 1;
-			this->textBox5->Name = L"textBox4";
+			this->textBox5->Name = L"textBox5";
 			this->textBox5->Size = System::Drawing::Size(364, 22);
 			this->textBox5->TabIndex = 42;
-			this->textBox5->KeyUp += gcnew System::Windows::Forms::KeyEventHandler(this, &Trapets::textBox4_KeyUp);
+			this->textBox5->KeyUp += gcnew System::Windows::Forms::KeyEventHandler(this, &Trapets::textBox5_KeyUp);
 			// 
 			// textBox6
 			// 
 			this->textBox6->Enabled = false;
 			this->textBox6->Location = System::Drawing::Point(319, 424);
 			this->textBox6->MaxLength = 1;
-			this->textBox6->Name = L"textBox4";
+			this->textBox6->Name = L"textBox6";
 			this->textBox6->Size = System::Drawing::Size(364, 22);
 			this->textBox6->TabIndex = 43;
 			this->textBox6->KeyUp += gcnew System::Windows::Forms::KeyEventHandler(this, &Trapets::textBox6_KeyUp);
@@ -302,7 +302,7 @@ namespace TrapetsNS {
 			this->textBox7->Enabled = false;
 			this->textBox7->Location = System::Drawing::Point(319, 452);
 			this->textBox7->MaxLength = 1;
-			this->textBox7->Name = L"textBox5";
+			this->textBox7->Name = L"textBox7";
 			this->textBox7->Size = System::Drawing::Size(364, 22);
 			this->textBox7->TabIndex = 44;
 			this->textBox7->KeyUp += gcnew System::Windows::Forms::KeyEventHandler(this, &Trapets::textBox7_KeyUp);
@@ -345,7 +345,7 @@ namespace TrapetsNS {
 			this->comboBox4->FormattingEnabled = true;
 			this->comboBox4->Items->AddRange(gcnew cli::array< System::Object^  >(6) { L"mm", L"Cm", L"Dm", L"m", L"Km", L"In" });
 			this->comboBox4->Location = System::Drawing::Point(689, 368);
-			this->comboBox4->Name = L"comboBox3";
+			this->comboBox4->Name = L"comboBox4";
 			this->comboBox4->Size = System::Drawing::Size(58, 24);
 			this->comboBox4->TabIndex = 48;
 			this->comboBox4->Text = L"m";
@@ -356,7 +356,7 @@ namespace TrapetsNS {
 			this->comboBox5->FormattingEnabled = true;
 			this->comboBox5->Items->AddRange(gcnew cli::array< System::Object^  >(6) { L"mm", L"Cm", L"Dm", L"m", L"Km", L"In" });
 			this->comboBox5->Location = System::Drawing::Point(689, 396);
-			this->comboBox5->Name = L"comboBox3";
+			this->comboBox5->Name = L"comboBox5";
 			this->comboBox5->Size = System::Drawing::Size(58, 24);
 			this->comboBox5->TabIndex = 49;
 			this->comboBox5->Text = L"m";
@@ -367,7 +367,7 @@ namespace TrapetsNS {
 			this->comboBox6->FormattingEnabled = true;
 			this->comboBox6->Items->AddRange(gcnew cli::array< System::Object^  >(6) { L"mm^2", L"Cm^2", L"Dm^2", L"m^2", L"Km^2", L"In^2" });
 			this->comboBox6->Location = System::Drawing::Point(689, 424);
-			this->comboBox6->Name = L"comboBox4";
+			this->comboBox6->Name = L"comboBox6";
 			this->comboBox6->Size = System::Drawing::Size(58, 24);
 			this->comboBox6->TabIndex = 50;
 			this->comboBox6->Text = L"m^2";
@@ -378,7 +378,7 @@ namespace TrapetsNS {
 			this->comboBox7->FormattingEnabled = true;
 			this->comboBox7->Items->AddRange(gcnew cli::array< System::Object^  >(6) { L"mm", L"Cm", L"Dm", L"m", L"Km", L"In" });
 			this->comboBox7->Location = System::Drawing::Point(689, 452);
-			this->comboBox7->Name = L"comboBox5";
+			this->comboBox7->Name = L"comboBox7";
 			this->comboBox7->Size = System::Drawing::Size(58, 24);
 			this->comboBox7->TabIndex = 51;
 			this->comboBox7->Text = L"m";
@@ -475,7 +475,7 @@ namespace TrapetsNS {
 			this->label8->Font = (gcnew System::Drawing::Font(L"Sitka Banner", 34, System::Drawing::FontStyle::Bold));
 			this->label8->Location = System::Drawing::Point(0, 45);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(220, 87);
+			this->label8->Size = System::Drawing::Size(259, 82);
 			this->label8->TabIndex = 30;
 			this->label8->Text = L"TRAPEZE";
 			// 
@@ -997,6 +997,7 @@ void digitCheck(std::string &str, int j) { //kontrollib sisestust
 						 break;
 					 case '.':
 						 str.replace(i, 1, ",");
+						 erased = 1; selecting = (i+1);
 						 i--;
 						 break;
 					 default:std::cout << "DC/for/switch/default" << std::endl;// Kustutus, kui esineb täht
@@ -1065,17 +1066,20 @@ void digitCheck(std::string &str, int j) { //kontrollib sisestust
 				 }std::cout << "isChar" << std::endl;
 				 if (s.empty()) {//if (s.at(0) != '-' || s.length() > 1) { !!!SEE ON SELLEKS KUI ON VAJA MIINUSEID btw. avastasin alles koodikirjutamise lõpus et geomeetrias pole miinuseid vaja :D
 					 textBS = "0";			 //teen juba kontrollitud teksti int väärtuseks, et saaks sellega arvutusi teha ja saadan selle väärtuse calculate(); funktsiooni.
-											 //}
-					 if (cbChecker()) { bitSwitch(double::Parse(textBS), i); }
+					 }						 //}
+					 if (cbChecker()) { bitSwitch(double::Parse(textBS), i);std::cout << "calculated!" << std::endl;
+					 }
+					 else {
+						 std::cout << "Not enaugh values to calculate" << std::endl;
 				 }
 			 }
 			 //CBCHECKER
 			 bool cbChecker() {
-				 bool cbc1, cbc2, cbc3, cbc4, cbc5;
+				 bool cbc1, cbc2, cbc3, cbc4, cbc5, cbc6, cbc7;
 
 				 if (cb1 == 1) {
 					 textB = msclr::interop::marshal_as<std::string>(textBox1->Text);
-					 if (textB[0] == NULL) {
+					 if (textB.length() == 0) {
 						 cbc1 = false;
 					 }
 					 else {
@@ -1087,7 +1091,7 @@ void digitCheck(std::string &str, int j) { //kontrollib sisestust
 				 }
 				 if (cb2 == 2) {
 					 textB = msclr::interop::marshal_as<std::string>(textBox2->Text);
-					 if (textB[0] == NULL) {
+					 if (textB.length() == 0) {
 						 cbc2 = false;
 					 }
 					 else {
@@ -1099,7 +1103,7 @@ void digitCheck(std::string &str, int j) { //kontrollib sisestust
 				 }
 				 if (cb3 == 3) {
 					 textB = msclr::interop::marshal_as<std::string>(textBox3->Text);
-					 if (textB[0] == NULL) {
+					 if (textB.length() == 0) {
 						 cbc3 = false;
 					 }
 					 else {
@@ -1111,7 +1115,7 @@ void digitCheck(std::string &str, int j) { //kontrollib sisestust
 				 }
 				 if (cb4 == 4) {
 					 textB = msclr::interop::marshal_as<std::string>(textBox4->Text);
-					 if (textB[0] == NULL) {
+					 if (textB.length() == 0) {
 						 cbc4 = false;
 					 }
 					 else {
@@ -1123,7 +1127,7 @@ void digitCheck(std::string &str, int j) { //kontrollib sisestust
 				 }
 				 if (cb5 == 5) {
 					 textB = msclr::interop::marshal_as<std::string>(textBox5->Text);
-					 if (textB[0] == NULL) {
+					 if (textB.length() == 0) {
 						 cbc5 = false;
 					 }
 					 else {
@@ -1133,7 +1137,31 @@ void digitCheck(std::string &str, int j) { //kontrollib sisestust
 				 else {
 					 cbc5 = true;
 				 }
-				 if (cbc5 == true && cbc4 == true && cbc3 == true && cbc2 == true && cbc1 == true) {
+				 if (cb6 == 6) {
+					 textB = msclr::interop::marshal_as<std::string>(textBox6->Text);
+					 if (textB.length() == 0) {
+						 cbc6 = false;
+					 }
+					 else {
+						 cbc6 = true;
+					 }
+				 }
+				 else {
+					 cbc6 = true;
+				 }
+				 if (cb7 == 7) {
+					 textB = msclr::interop::marshal_as<std::string>(textBox7->Text);
+					 if (textB.length() == 0) {
+						 cbc7 = false;
+					 }
+					 else {
+						 cbc7 = true;
+					 }
+				 }
+				 else {
+					 cbc7 = true;
+				 }
+				 if (cbc7 == true && cbc6 == true && cbc5 == true && cbc4 == true && cbc3 == true && cbc2 == true && cbc1 == true) {
 					 return true;
 				 }
 				 else { return false; }

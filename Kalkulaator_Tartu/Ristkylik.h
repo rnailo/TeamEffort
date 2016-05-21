@@ -844,6 +844,7 @@ private: System::Void textBox5_KeyUp(System::Object^  sender, System::Windows::F
 					 break;
 				 case '.':
 					 str.replace(i, 1, ",");
+					 erased = 1; selecting = (i + 1);
 					 i--;
 					 break;
 				 default:std::cout << "DC/for/switch/default" << std::endl;// Kustutus, kui esineb täht
@@ -898,8 +899,12 @@ private: System::Void textBox5_KeyUp(System::Object^  sender, System::Windows::F
 			 }std::cout << "isChar" << std::endl;
 			 if (s.empty()) {//if (s.at(0) != '-' || s.length() > 1) { !!!SEE ON SELLEKS KUI ON VAJA MIINUSEID btw. avastasin alles koodikirjutamise lõpus et geomeetrias pole miinuseid vaja :D
 				 textBS = "0";			 //teen juba kontrollitud teksti int väärtuseks, et saaks sellega arvutusi teha ja saadan selle väärtuse calculate(); funktsiooni.
-										 //}
-				 if(cbChecker()){bitSwitch(double::Parse(textBS), i);}
+			 }						 //}
+			 if (cbChecker()) {
+				 bitSwitch(double::Parse(textBS), i);std::cout << "calculated!" << std::endl;
+			 }
+			 else {
+				 std::cout << "Not enaugh values to calculate" << std::endl;
 			 }
 		 }
 		 //CBCHECKER
@@ -908,7 +913,7 @@ private: System::Void textBox5_KeyUp(System::Object^  sender, System::Windows::F
 			 
 			 if (cb1 == 1) {
 					 textB = msclr::interop::marshal_as<std::string>(textBox1->Text);
-				 if (textB[0] == NULL) {
+				 if (textB.length() == 0) {
 					 cbc1 = false;
 				 }else {
 					 cbc1 = true;}
@@ -916,7 +921,7 @@ private: System::Void textBox5_KeyUp(System::Object^  sender, System::Windows::F
 				 cbc1 = true;}
 			 if (cb2 == 2) {
 				 textB = msclr::interop::marshal_as<std::string>(textBox2->Text);
-				 if (textB[0] == NULL) {
+				 if (textB.length() == 0) {
 					 cbc2 = false;
 				 }else {
 					 cbc2 = true;}
@@ -924,7 +929,7 @@ private: System::Void textBox5_KeyUp(System::Object^  sender, System::Windows::F
 				 cbc2 = true;}
 			 if (cb3 == 3) {
 				 textB = msclr::interop::marshal_as<std::string>(textBox3->Text);
-				 if (textB[0] == NULL) {
+				 if (textB.length() == 0) {
 					 cbc3 = false;
 				 }else {
 					 cbc3 = true;}
@@ -932,7 +937,7 @@ private: System::Void textBox5_KeyUp(System::Object^  sender, System::Windows::F
 				 cbc3 = true;}
 			 if (cb4 == 4) {
 				 textB = msclr::interop::marshal_as<std::string>(textBox4->Text);
-				 if (textB[0] == NULL) {
+				 if (textB.length() == 0) {
 					 cbc4 = false;
 				 }else {
 					 cbc4 = true;}
@@ -940,7 +945,7 @@ private: System::Void textBox5_KeyUp(System::Object^  sender, System::Windows::F
 				 cbc4 = true;}
 			 if (cb5 == 5) {
 				 textB = msclr::interop::marshal_as<std::string>(textBox5->Text);
-				 if (textB[0] == NULL) {
+				 if (textB.length() == 0) {
 					 cbc5 = false;}else {
 					 cbc5 = true;
 				 }

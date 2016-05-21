@@ -972,6 +972,7 @@ private: System::Void textBox6_KeyUp(System::Object^  sender, System::Windows::F
 					 break;
 				 case '.':
 					 str.replace(i, 1, ",");
+					 erased = 1; selecting = (i + 1);
 					 i--;
 					 break;
 				 default:std::cout << "DC/for/switch/default" << std::endl;// Kustutus, kui esineb täht
@@ -1036,17 +1037,21 @@ private: System::Void textBox6_KeyUp(System::Object^  sender, System::Windows::F
 			 }std::cout << "isChar" << std::endl;
 			 if (s.empty()) {//if (s.at(0) != '-' || s.length() > 1) { !!!SEE ON SELLEKS KUI ON VAJA MIINUSEID btw. avastasin alles koodikirjutamise lõpus et geomeetrias pole miinuseid vaja :D
 				 textBS = "0";			 //teen juba kontrollitud teksti int väärtuseks, et saaks sellega arvutusi teha ja saadan selle väärtuse calculate(); funktsiooni.
-										 //}
-				 if (cbChecker()) { bitSwitch(double::Parse(textBS), i); }
+			 }						 //}
+			 if (cbChecker()) {
+				 bitSwitch(double::Parse(textBS), i);std::cout << "calculated!" << std::endl;
+			 }
+			 else {
+				 std::cout << "Not enaugh values to calculate" << std::endl;
 			 }
 		 }
 		 //CBCHECKER
 		 bool cbChecker() {
-			 bool cbc1, cbc2, cbc3, cbc4, cbc5;
+			 bool cbc1, cbc2, cbc3, cbc4, cbc5, cbc6;
 
 			 if (cb1 == 1) {
 				 textB = msclr::interop::marshal_as<std::string>(textBox1->Text);
-				 if (textB[0] == NULL) {
+				 if (textB.length() == 0) {
 					 cbc1 = false;
 				 }
 				 else {
@@ -1058,7 +1063,7 @@ private: System::Void textBox6_KeyUp(System::Object^  sender, System::Windows::F
 			 }
 			 if (cb2 == 2) {
 				 textB = msclr::interop::marshal_as<std::string>(textBox2->Text);
-				 if (textB[0] == NULL) {
+				 if (textB.length() == 0) {
 					 cbc2 = false;
 				 }
 				 else {
@@ -1070,7 +1075,7 @@ private: System::Void textBox6_KeyUp(System::Object^  sender, System::Windows::F
 			 }
 			 if (cb3 == 3) {
 				 textB = msclr::interop::marshal_as<std::string>(textBox3->Text);
-				 if (textB[0] == NULL) {
+				 if (textB.length() == 0) {
 					 cbc3 = false;
 				 }
 				 else {
@@ -1082,7 +1087,7 @@ private: System::Void textBox6_KeyUp(System::Object^  sender, System::Windows::F
 			 }
 			 if (cb4 == 4) {
 				 textB = msclr::interop::marshal_as<std::string>(textBox4->Text);
-				 if (textB[0] == NULL) {
+				 if (textB.length() == 0) {
 					 cbc4 = false;
 				 }
 				 else {
@@ -1094,7 +1099,7 @@ private: System::Void textBox6_KeyUp(System::Object^  sender, System::Windows::F
 			 }
 			 if (cb5 == 5) {
 				 textB = msclr::interop::marshal_as<std::string>(textBox5->Text);
-				 if (textB[0] == NULL) {
+				 if (textB.length() == 0) {
 					 cbc5 = false;
 				 }
 				 else {
@@ -1104,7 +1109,19 @@ private: System::Void textBox6_KeyUp(System::Object^  sender, System::Windows::F
 			 else {
 				 cbc5 = true;
 			 }
-			 if (cbc5 == true && cbc4 == true && cbc3 == true && cbc2 == true && cbc1 == true) {
+			 if (cb6 == 6) {
+				 textB = msclr::interop::marshal_as<std::string>(textBox6->Text);
+				 if (textB.length() == 0) {
+					 cbc6 = false;
+				 }
+				 else {
+					 cbc6 = true;
+				 }
+			 }
+			 else {
+				 cbc6 = true;
+			 }
+			 if (cbc6 == true && cbc5 == true && cbc4 == true && cbc3 == true && cbc2 == true && cbc1 == true) {
 				 return true;
 			 }
 			 else { return false; }
@@ -1143,11 +1160,9 @@ private: System::Void textBox6_KeyUp(System::Object^  sender, System::Windows::F
 			 switch (bitter())
 			 {
 			 case 100100:// :)
-				 std::cout << "calc. c6" << j << std::endl;
 				 s = (a*h) / 2; label6->Text = ("S = ( a * h ) / 2 = " + s + " m²");
 				 break;
 			 case 111000:// mingi suvakas bitset jälle.
-				 std::cout << "calc. c5" << j << std::endl;
 				 a = i;	label1->Text = "a - Known";
 				 b = Convert::ToInt32(textBox2->Text); label2->Text = "b - Known";
 				 c = Convert::ToInt32(textBox3->Text); label3->Text = "c - Known";
@@ -1155,7 +1170,6 @@ private: System::Void textBox6_KeyUp(System::Object^  sender, System::Windows::F
 
 				 break;
 			 case 111100:// :)
-				 std::cout << "calc. c1" << j << std::endl;
 				 a = i;	label1->Text = "a - Known";
 				 b = Convert::ToInt32(textBox2->Text); label2->Text = "b - Known";
 				 c = Convert::ToInt32(textBox3->Text); label3->Text = "c - Known";
