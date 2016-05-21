@@ -989,11 +989,15 @@ void digitCheck(std::string &str, int j) { //kontrollib sisestust
 						 str.erase(i,1); std::cout << "- erased" << std::endl;			ETTEVALMISTUS MIINUSTEKS (kui neid kunagi peaks tulema)
 						 }
 						 break;*/
-					 case ',':dotCount++; std::cout << "DC/for/switch/." << dotCount << std::endl;
-						 if (dotCount > 1 || i == 0) {// Kustutus, kui on üle 1 punkti.
+					 case ',': dotCount++; std::cout << "dc/for/switch/." << dotCount << std::endl;
+						 if (dotCount > 1 || i == 0) {// kustutus, kui on üle 1 punkti.
 							 dotCount--; erased = 1; selecting = i;
 							 str.erase(i, 1); std::cout << ", erased" << std::endl;
 						 }
+						 break;
+					 case '.':
+						 str.replace(i, 1, ",");
+						 i--;
 						 break;
 					 default:std::cout << "DC/for/switch/default" << std::endl;// Kustutus, kui esineb täht
 						 str.erase(i, 1); std::cout << "lastC erased" << std::endl;
@@ -1062,7 +1066,77 @@ void digitCheck(std::string &str, int j) { //kontrollib sisestust
 				 if (s.empty()) {//if (s.at(0) != '-' || s.length() > 1) { !!!SEE ON SELLEKS KUI ON VAJA MIINUSEID btw. avastasin alles koodikirjutamise lõpus et geomeetrias pole miinuseid vaja :D
 					 textBS = "0";			 //teen juba kontrollitud teksti int väärtuseks, et saaks sellega arvutusi teha ja saadan selle väärtuse calculate(); funktsiooni.
 											 //}
-				 }bitSwitch(double::Parse(textBS), i);
+					 if (cbChecker()) { bitSwitch(double::Parse(textBS), i); }
+				 }
+			 }
+			 //CBCHECKER
+			 bool cbChecker() {
+				 bool cbc1, cbc2, cbc3, cbc4, cbc5;
+
+				 if (cb1 == 1) {
+					 textB = msclr::interop::marshal_as<std::string>(textBox1->Text);
+					 if (textB[0] == NULL) {
+						 cbc1 = false;
+					 }
+					 else {
+						 cbc1 = true;
+					 }
+				 }
+				 else {
+					 cbc1 = true;
+				 }
+				 if (cb2 == 2) {
+					 textB = msclr::interop::marshal_as<std::string>(textBox2->Text);
+					 if (textB[0] == NULL) {
+						 cbc2 = false;
+					 }
+					 else {
+						 cbc2 = true;
+					 }
+				 }
+				 else {
+					 cbc2 = true;
+				 }
+				 if (cb3 == 3) {
+					 textB = msclr::interop::marshal_as<std::string>(textBox3->Text);
+					 if (textB[0] == NULL) {
+						 cbc3 = false;
+					 }
+					 else {
+						 cbc3 = true;
+					 }
+				 }
+				 else {
+					 cbc3 = true;
+				 }
+				 if (cb4 == 4) {
+					 textB = msclr::interop::marshal_as<std::string>(textBox4->Text);
+					 if (textB[0] == NULL) {
+						 cbc4 = false;
+					 }
+					 else {
+						 cbc4 = true;
+					 }
+				 }
+				 else {
+					 cbc4 = true;
+				 }
+				 if (cb5 == 5) {
+					 textB = msclr::interop::marshal_as<std::string>(textBox5->Text);
+					 if (textB[0] == NULL) {
+						 cbc5 = false;
+					 }
+					 else {
+						 cbc5 = true;
+					 }
+				 }
+				 else {
+					 cbc5 = true;
+				 }
+				 if (cbc5 == true && cbc4 == true && cbc3 == true && cbc2 == true && cbc1 == true) {
+					 return true;
+				 }
+				 else { return false; }
 			 }
 			 //BITTER
 			 int bitter() {

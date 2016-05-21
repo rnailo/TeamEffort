@@ -719,15 +719,19 @@ void digitCheck(std::string &str,int j) { //kontrollib sisestust
 						 str.erase(i,1); std::cout << "- erased" << std::endl;			ETTEVALMISTUS MIINUSTEKS (kui neid kunagi peaks tulema)
 					 }
 					 break;*/
-				 case ',':dotCount++; std::cout << "DC/for/switch/." << dotCount << std::endl;
-					 if (dotCount > 1||i==0) {// Kustutus, kui on üle 1 punkti.
-						 dotCount--;erased = 1;selecting = i;
-						 str.erase(i,1); std::cout << ", erased" <<  std::endl;
+				 case ',': dotCount++; std::cout << "dc/for/switch/." << dotCount << std::endl;
+					 if (dotCount > 1 || i == 0) {// kustutus, kui on üle 1 punkti.
+						 dotCount--; erased = 1; selecting = i;
+						 str.erase(i, 1); std::cout << ", erased" << std::endl;
 					 }
 					 break;
+				 case '.':
+					 str.replace(i, 1, ",");
+					 i--;
+					 break;
 				 default:std::cout << "DC/for/switch/default" << std::endl;// Kustutus, kui esineb täht
-					 str.erase(i,1);std::cout << "lastC erased" << std::endl;
-					 erased = 1;selecting = i;
+					 str.erase(i, 1); std::cout << "lastC erased" << std::endl;
+					 erased = 1; selecting = i;
 					 break;
 				 }
 			 }
