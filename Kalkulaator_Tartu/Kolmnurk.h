@@ -32,7 +32,8 @@ namespace KolmnurkNS {
 	
 	
 	private: System::Windows::Forms::Panel^  panel1;
-	
+	private: System::Windows::Forms::PictureBox^  pictureBox1;
+
 	public:
 		int selecting = 0;// väärtus millega määran koha, kust jätkab kirjutamine pärast kustutust.
 		Kolmnurk(void)
@@ -88,7 +89,7 @@ namespace KolmnurkNS {
 	public: System::Windows::Forms::CheckBox^  checkBox6;
 	private: System::Windows::Forms::ComboBox^  comboBox3;
 	private: System::Windows::Forms::ComboBox^  comboBox5;
-	private: System::Windows::Forms::PictureBox^  pictureBox1;
+
 	public:
 
 
@@ -106,6 +107,7 @@ namespace KolmnurkNS {
 	public:
 		virtual void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Kolmnurk::typeid));
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
@@ -210,7 +212,7 @@ namespace KolmnurkNS {
 			this->checkBox4->BackColor = System::Drawing::SystemColors::Window;
 			this->checkBox4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(186)));
-			this->checkBox4->ForeColor = System::Drawing::Color::Black;
+			this->checkBox4->ForeColor = System::Drawing::Color::Green;
 			this->checkBox4->Location = System::Drawing::Point(210, 329);
 			this->checkBox4->Margin = System::Windows::Forms::Padding(2);
 			this->checkBox4->Name = L"checkBox4";
@@ -240,7 +242,7 @@ namespace KolmnurkNS {
 			this->checkBox2->BackColor = System::Drawing::SystemColors::Window;
 			this->checkBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(186)));
-			this->checkBox2->ForeColor = System::Drawing::Color::Black;
+			this->checkBox2->ForeColor = System::Drawing::Color::Red;
 			this->checkBox2->Location = System::Drawing::Point(210, 279);
 			this->checkBox2->Margin = System::Windows::Forms::Padding(2);
 			this->checkBox2->Name = L"checkBox2";
@@ -255,7 +257,7 @@ namespace KolmnurkNS {
 			this->checkBox1->BackColor = System::Drawing::SystemColors::Window;
 			this->checkBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(186)));
-			this->checkBox1->ForeColor = System::Drawing::Color::Black;
+			this->checkBox1->ForeColor = System::Drawing::Color::MediumBlue;
 			this->checkBox1->Location = System::Drawing::Point(210, 255);
 			this->checkBox1->Margin = System::Windows::Forms::Padding(2);
 			this->checkBox1->Name = L"checkBox1";
@@ -466,10 +468,10 @@ namespace KolmnurkNS {
 			// 
 			// pictureBox1
 			// 
-			this->pictureBox1->Location = System::Drawing::Point(11, 246);
-			this->pictureBox1->Margin = System::Windows::Forms::Padding(2);
+			//this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
+			this->pictureBox1->Location = System::Drawing::Point(21, 246);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(187, 164);
+			this->pictureBox1->Size = System::Drawing::Size(163, 164);
 			this->pictureBox1->TabIndex = 51;
 			this->pictureBox1->TabStop = false;
 			// 
@@ -521,25 +523,7 @@ namespace KolmnurkNS {
 
 		}
 #pragma endregion
-	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
-		Close();
-	}
-	private: System::Void Kolmnurk_Load(System::Object^  sender, System::EventArgs^  e) {
-		this->dragging = false;
-	}
-	private: System::Void Kolmnurk_MouseDown(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) {
-		this->dragging = true;
-		this->offset = Point(e->X, e->Y);
-	}
-	private: System::Void Kolmnurk_MouseMove(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) {
-		if (this->dragging) {
-			Point currentScreenPos = PointToScreen(e->Location);
-			Location = Point(currentScreenPos.X - this->offset.X, currentScreenPos.Y - this->offset.Y);
-		}
-	}
-	private: System::Void Kolmnurk_MouseUp(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) {
-		this->dragging = false;
-	}
+	
 
 	
 
@@ -1296,4 +1280,26 @@ private: System::Void textBox6_KeyUp(System::Object^  sender, System::Windows::F
 			 }
 		  
 		 }
+
+
+	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+			 Close();
+		 }
+	private: System::Void Kolmnurk_Load(System::Object^  sender, System::EventArgs^  e) {
+		this->pictureBox1->Image = Image::FromFile(L".\\media\\triangle.jpg"); //pildi sisselaadimine akna avamisel.
+		this->dragging = false;
+	}
+	private: System::Void Kolmnurk_MouseDown(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) {
+		this->dragging = true;
+		this->offset = Point(e->X, e->Y);
+	}
+	private: System::Void Kolmnurk_MouseMove(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) {
+		if (this->dragging) {
+			Point currentScreenPos = PointToScreen(e->Location);
+			Location = Point(currentScreenPos.X - this->offset.X, currentScreenPos.Y - this->offset.Y);
+		}
+	}
+	private: System::Void Kolmnurk_MouseUp(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) {
+		this->dragging = false;
+	}
 };}
